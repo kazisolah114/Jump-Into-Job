@@ -1,0 +1,57 @@
+.banner-section{
+    /* background-color: #6161610d; */
+}
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.banner-content .banner-text{
+    width: 70%;
+}
+.banner-content .banner-text h2 {
+    color: #061421;
+    font-size: 35px;
+    line-height: 1.3em;
+    margin-bottom: 30px;
+}
+.banner-content .banner-text h2 span{
+    color: #3498db;
+}
+.banner-content .banner-text h6 {
+    font-size: 20px;
+    color: #061421;
+}
+.banner-content .banner-text p {
+    margin: 18px 0;
+    font-size: 19px;
+    color: #595959;
+}
+.banner-content .banner-text button {
+    width: 200px;
+    height: 40px;
+    background: #3498db;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: .3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+.banner-content .banner-text button:hover{
+    background-color: #2980B9;
+}
+.banner-content .banner-text button svg{
+    transition: .3s;
+}
+.banner-content .banner-text button:hover svg{
+    margin-left: 10px;
+}
+.banner-content .banner-image{}
+.banner-content .banner-image img{
+    width: 100%;
+}

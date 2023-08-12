@@ -1,0 +1,145 @@
+.banner-section {
+    /* background-image: url('https://img.freepik.com/premium-vector/diverse-group-business-people-entrepreneurs-office-workers-isolated-white-background-multinational-company-old-young-men-women-standing-together-flat-cartoon-vector-illustration_198278-13690.jpg?w=2000');
+    padding: 220px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    z-index: 1; */
+    padding: 50px 0;
+    border-bottom: 1px solid #80808057;
+}
+
+.banner-section::before {
+    /* content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.500);
+    z-index: -1; */
+}
+
+.home-banner-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.banner-titles {
+    flex-basis: 85%;
+}
+
+.banner-titles h1 {
+    color: #061421;
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+
+.banner-titles h1 span {
+    color: #3498db;
+}
+
+.banner-titles p {
+    font-size: 19px;
+    color: #061421;
+}
+
+.banner-data {
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px
+}
+
+.banner-data .banner-data-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    /* padding: 5px 15px;
+    box-shadow: 1px 2px 5px #80808024; */
+}
+
+.banner-data .banner-data-content .banner-data-logo {
+    position: relative;
+}
+
+.banner-data .banner-data-content .banner-data-logo::before {
+    content: '';
+    position: absolute;
+    border: 1px solid #3498db;
+    width: 22px;
+    height: 23px;
+    left: -11px;
+    top: -9px;
+    padding: 10px;
+    rotate: 45deg;
+    border-radius: 5px;
+}
+
+.banner-data .banner-data-content .banner-data-logo img {
+    width: 25px;
+}
+
+.banner-data .banner-data-content .banner-data-info {}
+
+.banner-data .banner-data-content .banner-data-info h5 {
+    font-size: 17px;
+    margin-bottom: 5px;
+    color: #3B3B3B;
+}
+
+.banner-data .banner-data-content .banner-data-info p {
+    color: #3498db;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.home-banner-buttons {
+    margin-top: 50px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-banner-buttons .banner-btn {
+    width: 240px;
+    height: 45px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.home-banner-buttons .find-job-btn {
+    background-color: #3498db;
+    padding: 10px 20px;
+    transition: .3s;
+}
+
+.home-banner-buttons .find-job-btn:hover {
+    background-color: #2980b9;
+}
+
+.home-banner-buttons .post-job-btn {
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 1px solid #2ecc71;
+    color: #111;
+    transition: .3s;
+}
+
+.home-banner-buttons .post-job-btn:hover {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.banner-image {}
+
+.banner-image img {
+    max-width: 100%;
+}

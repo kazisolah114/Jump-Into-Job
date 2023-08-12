@@ -1,0 +1,87 @@
+.whyus-section{
+    padding: 100px 0;
+    background-color: #F7F7F7;
+}
+.whyus-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px
+}
+.whyus-content .whyus-images {
+    display: flex;
+    gap: 20px;
+}
+.whyus-content .whyus-images img, div img{
+    
+}
+
+.whyus-content .whyus-images img {
+    width: 350px;
+    height: 550px;
+}
+.whyus-content .whyus-images div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.whyus-content .whyus-images div img {
+    height: 310px;
+    width: 280px;
+}
+.whyus-odd {
+    height: 220px!important;
+}
+.whyus-content .whyus-texts{}
+.whyus-content .whyus-texts h2 {
+    color: #061421;
+    font-size: 33px;
+    margin-bottom: 25px;
+}
+.whyus-content .whyus-texts p {
+    font-size: 17px;
+    line-height: 1.5em;
+    margin-bottom: 60px;
+    color: #595959;
+}
+.whyus-content .whyus-text-cont {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    gap: 30px;
+    position: relative;
+}
+.whyus-content .whyus-text-cont::before {
+    content: '';
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    border-radius: 50px;
+    background: #8080801c;
+}
+.whyus-content .whyus-text-cont::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 225px;
+    width: 2px;
+    height: 110%;
+    border-radius: 50px;
+    background: #8080801c;
+}
+.whyus-content .whyus-text-cont div{
+    display: flex;
+    align-items: center;
+    gap: 15px
+}
+.whyus-content .whyus-text-cont div img {
+    background: #D9ECF8;
+    width: 30px;
+    padding: 16px;
+    border-radius: 20px;
+}
+.whyus-content .whyus-text-cont div h4 {
+    font-size: 18px;
+    font-weight: 500;
+}

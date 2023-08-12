@@ -1,0 +1,97 @@
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #80808057;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.web-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.web-header .header-logo{}
+.web-header .header-menu {
+    display: flex;
+    gap: 90px;
+    align-items: center;
+}
+.web-header .header-menu .main-menu{
+    position: relative;
+}
+.web-header .header-menu .main-menu::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -45px;
+    background-color: #dfdfdf5e;
+    width: 1px;
+    height: 25px;
+    border-radius: 50px;
+}
+.web-header .header-menu ul {
+    display: flex;
+    gap: 15px;
+}
+.web-header .header-menu ul li{
+    list-style: none;
+}
+.web-header .header-menu ul li a {
+    text-decoration: none;
+    color: #061421;
+    font-size: 16px;
+    transition: .3s;
+    
+}
+.web-header .header-menu ul li a:hover{
+    color:#3498DB;
+}
+.web-header .header-menu .main-menu li:nth-child(2) a, .web-header .header-menu ul li:nth-child(5) a {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.web-header .header-menu ul li a svg{}
+.header-menu .account-menu {
+    flex-direction: row-reverse;
+}
+.register-btn {
+    background: #3498DB;
+    color: #fff!important;
+    display: block;
+    width: 120px;
+    height: 38px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 15px!important;
+    font-weight: bold;
+    border-radius: 4px;
+}
+.login-btn {
+    background: transparent;
+    border: 1px solid #80808057;
+    color: #3B3B3B!important;
+    display: block;
+    width: 120px;
+    height: 38px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 15px!important;
+    font-weight: bold;
+    transition: .3s;
+}
+.login-btn:hover{
+    background: #3498DB;
+    color: #fff!important;
+    border: 1px solid transparent;
+}
+.register-btn, .login-btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    justify-content: center;
+}
+/* .register-btn, .login-btn a{} */

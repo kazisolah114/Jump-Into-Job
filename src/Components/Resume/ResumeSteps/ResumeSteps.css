@@ -1,0 +1,67 @@
+.resume-steps{
+    padding: 100px 0;
+    /* background-color: #6161610d; */
+}
+.resume-steps-content{}
+.resume-steps-content .steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 80%;
+    margin: 40px auto;
+}
+.odd-steps {
+    flex-direction: row-reverse;
+}
+.steps-content{
+
+}
+.resume-steps-content .steps .steps-number {
+    background: #3498db;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px 0;
+}
+.resume-steps-content .steps .steps-info {
+    background: #F5F5F5;
+    border-radius: 12px;
+    padding: 92px 20px;
+    margin-top: 20px;
+}
+.resume-steps-content .steps .steps-info h2 {
+    color: #061421;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+.resume-steps-content .steps .steps-info p {
+    color: #5B636D;
+    font-size: 17px;
+    line-height: 1.5em;
+}
+.resume-steps-content .steps .steps-image{
+    
+}
+.resume-steps-content .steps .steps-image img{
+    max-width: 100%;
+    border-radius: 12px;
+}
+.create-my-resume{
+    text-align: center;
+}
+.create-my-resume button {
+    background: #2ECC71;
+    border: none;
+    color: #fff;
+    width: 240px;
+    height: 50px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    transition: .3s;
+}
+.create-my-resume button:hover{
+    background-color: #28e275;
+}

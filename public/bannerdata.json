@@ -1,0 +1,27 @@
+[
+    {
+      "id": "1",
+      "title": "Live Jobs",
+      "numbers": 794,
+      "logo": "https://demo-egenslab.b-cdn.net/html/jobes/preview/assets/images/icon/job2.svg"
+    },
+    {
+        "id": "2",
+      "title": "Companies",
+      "numbers": 128,
+      "logo": "https://demo-egenslab.b-cdn.net/html/jobes/preview/assets/images/icon/companies.svg"
+    },
+    {
+        "id": "3",
+      "title": "Candidates",
+      "numbers": 1053,
+      "logo": "https://demo-egenslab.b-cdn.net/html/jobes/preview/assets/images/icon/candidates.svg"
+    },
+    {
+        "id": "4",
+      "title": "New Jobs",
+      "numbers": 189,
+      "logo": "https://demo-egenslab.b-cdn.net/html/jobes/preview/assets/images/icon/new-jobs.svg"
+    }
+  ]
+  

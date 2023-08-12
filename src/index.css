@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+.container{
+    width: 1368px;
+    margin: 0 auto;
+}
+
+.section-header{
+    text-align: center;
+    margin-bottom: 80px;
+}
+.section-header h2 {
+    color: #061421;
+    font-weight: bold;
+    font-size: 30px;
+    position: relative;
+}
+.section-header h2::before {
+    content: '';
+    position: absolute;
+    top: 45px;
+    left: 47%;
+    width: 80px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: #3498DB;
+}
