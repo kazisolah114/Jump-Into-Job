@@ -1,8 +1,6 @@
-# React + Vite
+WELCOME TO THE REPOSITORY OF JUMP INTO JOB!👋
+This is going to be a huge achivement once we are done with building our dream job portal.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Project Timeline:
+25 Nov 2023: Deployed the frontend on jumpintojob.com as well as a updated git repository with major changes, completing more than half of the works for employer section including resume builder.
+To be continued...
