@@ -12,7 +12,14 @@
     align-items: center;
     padding: 15px 0;
 }
-.web-header .header-logo{}
+.web-header .header-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.web-header .header-logo .mobile-menu-icon{
+    display: none;
+}
 .web-header .header-menu {
     display: flex;
     gap: 90px;
@@ -20,16 +27,51 @@
 }
 .web-header .header-menu .main-menu{
     position: relative;
+    height: 40px;
+    line-height: 40px;
+    /* display: flex;
+    align-items: center; */
 }
 .web-header .header-menu .main-menu::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 10px;
     right: -45px;
     background-color: #dfdfdf5e;
     width: 1px;
     height: 25px;
     border-radius: 50px;
+}
+.web-header .header-menu .main-menu li{
+    position: relative;
+}
+.web-header .header-menu .main-menu li a{
+    height: 135%;
+    display: block;
+}
+.web-header .header-menu .main-menu .dropdown-menu {
+    position: absolute;
+    width: 220px;
+    background-color: #fff;
+    padding: 10px 15px;
+    top: 136%;
+    box-shadow: 1px 2px 14px #9b9b9b33;
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+}
+.web-header .header-menu .main-menu li:hover .dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.web-header .header-menu .main-menu .dropdown-menu li{
+    margin-bottom: 0;
+}
+.web-header .header-menu .main-menu .dropdown-menu li a{
+    transition: .3s;
+}
+.web-header .header-menu .main-menu .dropdown-menu li a:hover{
+    letter-spacing: 1px;
 }
 .web-header .header-menu ul {
     display: flex;
@@ -48,14 +90,180 @@
 .web-header .header-menu ul li a:hover{
     color:#3498DB;
 }
-.web-header .header-menu .main-menu li:nth-child(2) a, .web-header .header-menu ul li:nth-child(5) a {
-    display: flex;
-    align-items: center;
-    gap: 2px;
+.web-header .header-menu ul li a.active{
+    color: #3498DB;
 }
-.web-header .header-menu ul li a svg{}
+.web-header .header-menu .main-menu li:nth-child(2) a, .web-header .header-menu ul li:nth-child(5) a {
+    /* display: flex;
+    align-items: end;
+    gap: 0px; */
+}
+.web-header .header-menu ul li a svg {
+    font-size: 20px;
+    margin-right: 5px;
+    position: relative;
+    top: 5px;
+}
 .header-menu .account-menu {
     flex-direction: row-reverse;
+}
+.header-menu .account-menu li{}
+.header-menu .account-menu li a{}
+.loggedin-user-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+
+
+
+
+.loggedin-user-container .local-global{}
+/* ToggleSwitch.css */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 28px;
+  }
+  
+  .toggle-switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/world-map-in-blue-michael-tompsett.jpg'); /* Replace 'your-image-url.png' with your image URL */
+    background-size: cover; /* Adjust this as needed to fit your image */
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 7px;
+    bottom: 4px;
+    background-color: #d2d2d2e6;
+    transition: .4s;
+}
+  
+  input:checked + .slider {
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmB-yQ2zFUyD9BgDpBCSWKFDEDe4pYk2pOSoPQ8PEG&s'); /* Replace 'your-image-url-checked.png' with your checked image URL */
+    background-size: cover; /* Adjust this as needed to fit your image */
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  
+
+
+  
+
+.loggedin-user-container svg {
+    font-size: 25px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    /* padding: 3px; */
+    border-radius: 50px;
+    color: #666666;
+}
+.loggedin-user-container svg:hover {
+    box-shadow: 0px 0px 8px #00000021;
+}
+.loggedin-user-container .user-profile-icon {
+    position: absolute;
+    top: 45px;
+    right: -10px;
+    width: 300px;
+    background: #fff;
+    /* border: 1px solid #80808057; */
+    padding-top: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 14px #9b9b9b33;
+}
+.user-profile-active{
+    box-shadow: 0px 0px 10px #00000038;
+    border-radius: 50px;
+    /* padding: 3px; */
+}
+.user-profile-icon-header{
+    padding: 0 20px
+}
+.user-profile-icon-header h4 {
+    color: #061421;
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+.user-profile-icon-header p{
+    color: #061421;
+}
+.header-menu .account-menu .loggedin-user-container .user-profile-icon .loggedin-user-options {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+.header-menu .account-menu .loggedin-user-container .user-profile-icon .loggedin-user-options a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    margin-bottom: 7px;
+    color: #061421;
+    padding: 0 20px;
+    height: 45px;
+    transition: .3s;
+}
+.header-menu .account-menu .loggedin-user-container .user-profile-icon .loggedin-user-options a:hover{
+    background-color: #3498db14;
+}
+.header-menu .account-menu .loggedin-user-container .user-profile-icon .loggedin-user-options a svg {
+    font-size: 23px;
+    color: #061421;
+}
+.signout-btn {
+    background: transparent;
+    color: #8b0000d1;
+    border: none;
+    cursor: pointer;
+    border-top: 1px solid gray;
+    width: 100%;
+    height: 50px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px!important;
+}
+.signout-btn:hover{
+    background-color: rgba(139, 0, 0, 0.099);
+}
+.signout-btn svg{
+    color: #8b0000d1!important;
 }
 .register-btn {
     background: #3498DB;
@@ -72,7 +280,7 @@
 .login-btn {
     background: transparent;
     border: 1px solid #80808057;
-    color: #3B3B3B!important;
+    color: #3B3B3B;
     display: block;
     width: 120px;
     height: 38px;
@@ -84,14 +292,14 @@
     transition: .3s;
 }
 .login-btn:hover{
-    background: #3498DB;
+    /* background: #3498DB;
     color: #fff!important;
-    border: 1px solid transparent;
+    border: 1px solid transparent; */
 }
 .register-btn, .login-btn {
-    display: flex;
+    /* display: flex;
     align-items: center;
     gap: 7px;
-    justify-content: center;
+    justify-content: center; */
 }
 /* .register-btn, .login-btn a{} */

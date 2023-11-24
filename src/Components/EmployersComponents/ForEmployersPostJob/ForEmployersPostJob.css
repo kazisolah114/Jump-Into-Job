@@ -1,0 +1,74 @@
+.post-job-main{
+    padding: 50px 0;
+    
+}
+.post-job-header{
+    text-align: center;
+}
+.post-job-content {
+    border: 1px solid #3498db26;
+    width: 60%;
+    padding: 50px;
+}
+.post-job-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 48px;
+}
+.post-job-content form{}
+.post-job-content form h3 {
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-size: 22px;
+    color: #061421;
+}
+.post-job-content form .job-post-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.post-job-content form .job-post-info label {
+    font-size: 15px;
+    color: #061421;
+}
+.post-job-content form .job-post-info label::after{
+    content: '*';
+    color: rgba(6, 6, 6, 0.711);
+    font-size: 14px;
+}
+.post-job-content form .job-post-info .not-required::after{
+    content: '';
+    color: rgba(6, 6, 6, 0.711);
+    font-size: 14px;
+}
+.post-job-content form .job-post-info div{
+    width: 400px;
+}
+.post-job-content form .job-post-info div svg{}
+.post-job-content form .job-post-info div input, select {
+    outline: none;
+    border: none;
+    width: 100%;
+}
+.post-job-content form .job-post-info div input{}
+.post-job-content form .job-post-info div select{}
+.post-job-content form .job-post-info div select option{}
+.post-job-content form .job-post-text-editor{
+    margin-bottom: 30px;
+}
+.job-post-button {
+    width: 170px;
+    height: 40px;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    background: #3498DB;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+.job-post-button:hover{
+    background: #2b7eb6;
+}

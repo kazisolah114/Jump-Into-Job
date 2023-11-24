@@ -1,0 +1,29 @@
+.job-category{
+    margin: 40px 0;
+}
+.job-category-items {
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    gap: 35px 40px;
+    text-align: center;
+    width: 83%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.job-category-item {
+    border: 1px solid #80808057;
+    padding: 20px 50px;
+    border-radius: 5px;
+}
+
+.job-category-item img {
+    width: 50px;
+}
+.job-category-item h3{
+    margin-top: 5px;
+    color: #061421;
+    transition: .3s;
+}
+.job-category-item:hover h3{
+    color: #3498DB;
+}

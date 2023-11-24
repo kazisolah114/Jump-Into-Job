@@ -9,20 +9,19 @@ const Register = () => {
     // Register User:
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    // const [userName, setUserName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [userType, setUserType] = useState('Job Seeker');
-    const [registerBy, setRegisterBy] = useState('email');
 
 
     const handleRegistration = async (e) => {
+        e.target.reset()
         e.preventDefault();
-        const userData = {'first_name' : firstName, 'last_name' : lastName , 'email_or_phone' :  email, 'password' : password, 'password_confirmation' : confirmPassword, 'user_type' :  userType, 'register_by' : registerBy };
+        const userData = {'first_name' : firstName, 'last_name' : lastName , 'email' :  email, 'password' : password, 'password_confirmation' : confirmPassword, 'user_type' :  userType };
 
         // console.log(userData)
-        const response = await fetch('https://unitechholdingsltd.com/api/v1/auth/signup', {
+        const response = await fetch('https://unitechholdingsltd.com/api/v1/auth/job-seeker/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -35,9 +34,11 @@ const Register = () => {
         if (response.ok) {
             // Handle successful registration, e.g., show a success message
             console.log('Success Registration!', data)
+            alert("Registration Successfull! Please Verify Your Email")
         } else {
             // Handle registration error, e.g., display an error message
             console.log('Something is wrong!', data)
+            alert(data.message)
         }
     };
 
@@ -48,39 +49,39 @@ return (
             <h2>Register Account</h2>
             <span>.</span>
         </div>
-        <div className="account-form">
+        <div className="account-form account-form-register">
             <form action="" onSubmit={handleRegistration}>
-                <div className='account-info'>
+                <div className='account-info account-info-register'>
                     <label htmlFor="first_name">First Name</label>
-                    <div className="account-input">
+                    <div className="account-input  account-input-register">
                         <HiOutlineUserCircle></HiOutlineUserCircle>
                         <input type="text" placeholder='David' name="first_name" id="first_name" required value={firstName} onChange={e => setFirstName(e.target.value)} />
                     </div>
                 </div>
-                {<div className='account-info'>
+                {<div className='account-info account-info-register'>
                         <label htmlFor="last_name">Last Name</label>
-                        <div className="account-input">
+                        <div className="account-input account-input-register">
                             <HiOutlineUserCircle></HiOutlineUserCircle>
                             <input type="text" placeholder='Warner' name="last_name" id="last_name" required value={lastName} onChange={e => setLastName(e.target.value)} />
                         </div>
                     </div>}
-                {<div className='account-info'>
+                {<div className='account-info account-info-register'>
                         <label htmlFor="user_name">User Type</label>
-                        <div className="account-input">
+                        <div className="account-input account-input-register">
                             <HiOutlineUserCircle></HiOutlineUserCircle>
                             <input type="text" placeholder='davidwarner' name="user_name" id="user_name" required value={userType} readOnly />
                         </div>
                     </div>}
-                <div className='account-info'>
+                <div className='account-info account-info-register'>
                     <label htmlFor="email">Email</label>
-                    <div className="account-input">
+                    <div className="account-input account-input-register">
                         <HiOutlineMail></HiOutlineMail>
                         <input type="text" placeholder='warner22@info.com' name="email_or_phone" id="email" required value={email} onChange={e => setEmail(e.target.value)} />
                     </div>
                 </div>
-                <div className='account-info'>
+                <div className='account-info account-info-register'>
                     <label htmlFor="password">Password</label>
-                    <div className="account-input account-password">
+                    <div className="account-input account-input-register account-password">
                         {showPassword
                             ?
                             <input type="text" placeholder='Password' name="password" id="password" required value={password} onChange={e => setPassword(e.target.value)} />
@@ -97,9 +98,9 @@ return (
                         </div>
                     </div>
                 </div>
-                {<div className='account-info'>
+                {<div className='account-info account-info-register'>
                         <label htmlFor="confirm_password">Confirm Password</label>
-                        <div className="account-input account-password">
+                        <div className="account-input account-input-register account-password">
                         { showPassword
                               ?
                               <input type="text" placeholder='Confirm Password' name="confirm_password" id="confirm_password" required value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />

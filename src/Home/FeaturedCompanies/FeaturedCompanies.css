@@ -1,0 +1,33 @@
+.featured-company-section{
+    margin: 60px 0;
+}
+.featured-company-content-items {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 25px;
+}
+.featured-companies-showmore {
+    text-align: center;
+    margin-top: 30px;
+}
+.featured-companies-showmore a{
+    color: #fff!important;
+    text-decoration: none;
+}
+.featured-companies-showmore a button {
+    background: #2ECC71;
+    color: #fff;
+    margin: 0 auto;
+    width: 300px;
+    height: 52px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}

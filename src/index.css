@@ -6,27 +6,37 @@
 
 
 .container{
-    width: 1368px;
+    max-width: 1368px;
     margin: 0 auto;
 }
 
 .section-header{
     text-align: center;
     margin-bottom: 80px;
+    position: relative;
 }
 .section-header h2 {
     color: #061421;
     font-weight: bold;
     font-size: 30px;
-    position: relative;
+
 }
-.section-header h2::before {
+.section-header p {
+    width: 40%;
+    margin: 0 auto;
+    color: #2f2f2fd6;
+    margin-top: 10px;
+}
+.section-header::after {
     content: '';
     position: absolute;
-    top: 45px;
-    left: 47%;
-    width: 80px;
+    bottom: -15px;
+    left: 46%;
+    width: 10%;
     height: 5px;
     border-radius: 50px;
-    background-color: #3498DB;
+    background-color: #3498dbb8;
 }
+
+
+

@@ -1,0 +1,14 @@
+.employers-live-data {
+    width: 70%;
+    margin: 0 auto;
+    padding: 40px 0;
+    position: relative;
+    top: -60px;
+    border-radius: 7px;
+    background: linear-gradient(to bottom left, #3498db, #a3ffc8);
+}
+.banner-data {
+    /* margin: 0; */
+    display: flex;
+    justify-content: space-evenly;
+}

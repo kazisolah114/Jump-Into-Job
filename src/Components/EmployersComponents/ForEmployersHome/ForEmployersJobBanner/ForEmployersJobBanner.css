@@ -1,0 +1,38 @@
+.employers-job-banner-section{
+    padding-bottom: 150px;
+    padding-top: 80px;
+    
+}
+.employers-job-banner-content {
+    background: linear-gradient(to bottom right, #3498db, #a3ffc8);
+    width: 60%;
+    text-align: center;
+    padding: 70px 0;
+    border-radius: 10px;
+}
+.employers-job-banner-content h2 {
+    color: #134e84;
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-weight: 500;
+}
+.employers-job-banner-content p {
+    color: #061421;
+    margin-bottom: 25px;
+}
+.employers-job-banner-content a{}
+.employers-job-banner-content a button {
+    color: #fff;
+    background: #2ECC71;
+    border: none;
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+.employers-job-banner-content a button:hover{
+    background: #28b663;
+}

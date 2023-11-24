@@ -1,0 +1,67 @@
+.resume-heading{}
+.resume-heading-content-yesimg {
+    display: grid;
+    grid-template-columns: 120px auto;
+    gap: 20px;
+}
+
+.resume-heading-content .image-upload{}
+.resume-heading-content .heading-form .heading-form-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+}
+.resume-heading-content .heading-form .resume-input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 20px;
+    flex-basis: 48%;
+}
+.resume-heading-content .heading-form .resume-input-field label{
+    font-size: 12px;
+}
+.resume-heading-content .heading-form .resume-input-field input {
+    padding: 8px 5px;
+    outline: none;
+    border: 1px solid #616161;
+    background: transparent;
+    color: #616161;
+}
+.resume-heading-content .heading-form .heading-textarea{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.resume-heading-content .heading-form .heading-textarea label{
+    font-size: 12px;
+}
+.resume-heading-content .heading-form .heading-textarea textarea {
+    height: 170px;
+    width: 97%;
+    resize: none;
+    padding: 8px 5px;
+    outline: none;
+    border: 1px solid #616161;
+    background: transparent;
+}
+
+
+.add-more-education {
+    margin-top: 40px;
+}
+.add-more-education button {
+    font-size: 16px;
+    background: none;
+    border: none;
+    color: #3498DB;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.currently-here{}
+.resume-heading-content .heading-form .resume-input-field input[type="checkbox"] {
+    width: 15px;
+}

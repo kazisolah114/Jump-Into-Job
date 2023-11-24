@@ -1,0 +1,191 @@
+[
+    {
+        "id": 1,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "Bio Tech",
+        "company_category": "Technology and IT",
+        "company_size": "100-150",
+        "company_description": "Bio Tech is a leading technology and IT firm specializing in cutting-edge software solutions. With a team of skilled professionals, we deliver innovative products that transform industries. Our commitment to excellence drives us to deliver robust solutions tailored to meet the unique needs of our clients. Join us on our journey to shape the future of technology."
+    },
+    {
+        "id": 424311,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "Bistro Genc",
+        "company_category": "Technology and IT",
+        "company_size": "100-150",
+        "company_description": "Bistro Gencis a leading technology and IT firm specializing in cutting-edge software solutions. With a team of skilled professionals, we deliver innovative products that transform industries. Our commitment to excellence drives us to deliver robust solutions tailored to meet the unique needs of our clients. Join us on our journey to shape the future of technology."
+    },
+    {
+        "id": 2,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "Sample Corp",
+        "company_category": "Finance and Banking",
+        "company_size": "50-99",
+        "company_description": "Sample Corp is a dynamic player in the finance and banking sector. Our focus on customer-centric services has enabled us to build strong relationships with clients. Through strategic investments and innovative financial solutions, we empower individuals and businesses to achieve their financial goals. Join us to be part of a team that drives economic growth and financial stability."
+    },
+    {
+        "id": 345322,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "Sample Corp",
+        "company_category": "Finance and Banking",
+        "company_size": "50-99",
+        "company_description": "Sample Corp is a dynamic player in the finance and banking sector. Our focus on customer-centric services has enabled us to build strong relationships with clients. Through strategic investments and innovative financial solutions, we empower individuals and businesses to achieve their financial goals. Join us to be part of a team that drives economic growth and financial stability."
+    },
+    {
+        "id": 3,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "Tech Innovators",
+        "company_category": "Retail and Consumer Goods",
+        "company_size": "10-49",
+        "company_description": "Tech Innovators is at the forefront of revolutionizing the retail and consumer goods industry. We leverage advanced technologies to create seamless shopping experiences that delight customers. Our agile approach allows us to rapidly respond to market trends and customer preferences, giving us a competitive edge. Join us and contribute to shaping the future of retail through innovation."
+    },
+    {
+        "id": 4,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "Innovative Healthcare",
+        "company_category": "Healthcare Pharmaceuticals",
+        "company_size": "150-199",
+        "company_description": "Innovative Healthcare Solutions is dedicated to advancing healthcare through groundbreaking technologies and therapies. We strive to improve patient outcomes and enhance the quality of life. Our team of healthcare experts collaborates to develop innovative medical solutions that address the most pressing challenges in the field. Join us to make a meaningful impact on global health."
+    },
+    {
+        "id": 34534544,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "Innovative Healthcare",
+        "company_category": "Healthcare Pharmaceuticals",
+        "company_size": "150-199",
+        "company_description": "Innovative Healthcare Solutions is dedicated to advancing healthcare through groundbreaking technologies and therapies. We strive to improve patient outcomes and enhance the quality of life. Our team of healthcare experts collaborates to develop innovative medical solutions that address the most pressing challenges in the field. Join us to make a meaningful impact on global health."
+    },
+    {
+        "id": 5,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "Precision Manufacturing",
+        "company_category": "Manufacturing and Industrial",
+        "company_size": "200-249",
+        "company_description": "Precision Manufacturing Solutions specializes in producing high-quality industrial components using cutting-edge techniques. Our commitment to precision and quality has positioned us as an industry leader. We serve diverse sectors, from aerospace to electronics. Join our team to contribute to the advancement of manufacturing technology and drive innovation in production processes."
+    },
+    {
+        "id": 34632455,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "Precision Manufacturing",
+        "company_category": "Manufacturing and Industrial",
+        "company_size": "200-249",
+        "company_description": "Precision Manufacturing Solutions specializes in producing high-quality industrial components using cutting-edge techniques. Our commitment to precision and quality has positioned us as an industry leader. We serve diverse sectors, from aerospace to electronics. Join our team to contribute to the advancement of manufacturing technology and drive innovation in production processes."
+    },
+    {
+        "id": 346324555,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "Precision Manufacturing",
+        "company_category": "Manufacturing and Industrial",
+        "company_size": "200-249",
+        "company_description": "Precision Manufacturing Solutions specializes in producing high-quality industrial components using cutting-edge techniques. Our commitment to precision and quality has positioned us as an industry leader. We serve diverse sectors, from aerospace to electronics. Join our team to contribute to the advancement of manufacturing technology and drive innovation in production processes."
+    },
+    {
+        "id": 6,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "Energetic Power ",
+        "company_category": "Energy and Utilities",
+        "company_size": "500-999",
+        "company_description": "Energetic Power Solutions is a key player in the energy and utilities sector. We are committed to providing sustainable and reliable energy solutions to power communities and industries. With a focus on renewable energy sources, we drive innovation in the field of power generation. Join us to be part of a greener future and shape the energy landscape."
+    },
+    {
+        "id": 7,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "Media Magic Productions",
+        "company_category": "Media and Entertainment",
+        "company_size": "20-49",
+        "company_description": "Media Magic Productions is a creative powerhouse in the media and entertainment industry. We produce captivating content that resonates with audiences globally. From film and television to digital media, our diverse portfolio spans various platforms. Join our team of creative minds to influence storytelling and shape the way people experience entertainment."
+    },
+    {
+        "id": 8,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "Urban Living Developers",
+        "company_category": "Real Estate and Property",
+        "company_size": "250-499",
+        "company_description": "Urban Living Developers is dedicated to shaping vibrant and sustainable urban environments. Through innovative architectural design and urban planning, we create spaces where people can thrive. Our projects range from residential complexes to commercial hubs. Join us to contribute to the development of cities that inspire and enrich lives."
+    },
+    {
+        "id": 9,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "Wanderlust Travels",
+        "company_category": "Travel and Hospitality",
+        "company_size": "50-99",
+        "company_description": "Wanderlust Travels is your gateway to unforgettable travel experiences. As a leading travel and hospitality provider, we curate journeys that immerse travelers in diverse cultures and stunning landscapes. From luxury getaways to adventure tours, our offerings cater to every traveler's desires. Join us to help people explore the world and create lasting memories."
+    },
+    {
+        "id": 10,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "EcoTech Motors",
+        "company_category": "Automotive",
+        "company_size": "200-249",
+        "company_description": "EcoTech Motors is dedicated to revolutionizing the automotive industry with eco-friendly solutions. We design and manufacture electric and hybrid vehicles that reduce carbon emissions and promote sustainable transportation. Join us in shaping the future of mobility and contributing to a cleaner and greener environment."
+    },
+    {
+        "id": 11,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "LearnEasy Online",
+        "company_category": "Education and E-learning",
+        "company_size": "10-49",
+        "company_description": "LearnEasy Online is a trailblazer in the education and e-learning industry. We provide innovative online learning solutions that empower students of all ages to succeed. Our platform offers a diverse range of courses taught by experts. Join us in shaping the future of education and making learning accessible to all."
+    },
+    {
+        "id": 12,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "GreenFields Agriculture",
+        "company_category": "Agriculture and Food Production",
+        "company_size": "1000+",
+        "company_description": "GreenFields Agriculture is committed to sustainable food production and agricultural innovation. We harness cutting-edge technologies to optimize crop yields and promote responsible farming practices. Join our team to contribute to global food security and shape the future of agriculture."
+    },
+    {
+        "id": 13,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "BuildWise Construction",
+        "company_category": "Construction and Engineering",
+        "company_size": "250-499",
+        "company_description": "BuildWise Construction is a leader in construction and engineering, delivering high-quality projects that shape cities and infrastructure. Our expertise spans residential, commercial, and public sectors. Join us to contribute to landmark projects and drive innovation in the field of construction."
+    },
+    {
+        "id": 14,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "TransGlobal Logistics",
+        "company_category": "Transportation and Logistics",
+        "company_size": "500-999",
+        "company_description": "TransGlobal Logistics is a driving force in transportation and logistics. We provide efficient and reliable shipping solutions that connect businesses and markets worldwide. Our extensive network and advanced technologies ensure seamless supply chain management. Join our team to shape the movement of goods across the globe."
+    },
+    {
+        "id": 15,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "ConnectX Telecommunications",
+        "company_category": "Telecommunications",
+        "company_size": "100-149",
+        "company_description": "ConnectX Telecommunications powers communication networks of the future. We provide advanced solutions that connect people and businesses with seamless connectivity. From 5G to fiber optics, our innovations shape the way information is shared globally. Join us to shape the future of communication technology."
+    },
+    {
+        "id": 16,
+        "company_logo": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
+        "company_banner": "https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?w=1380&t=st=1693337138~exp=1693337738~hmac=9aa029ff60dc36774d15f2b343ec447362e9cdf1bb8d1ff6cac0374c610278fd",
+        "company_name": "Innovative Ventures",
+        "company_category": "Other",
+        "company_size": "10-49",
+        "company_description": "Innovative Ventures is a versatile company that thrives on exploring new opportunities and creating unique solutions. With a diverse portfolio spanning various sectors, we drive innovation and positive change. Join us to be part of a dynamic team that tackles challenges and shapes industries in unconventional ways."
+    }
+]

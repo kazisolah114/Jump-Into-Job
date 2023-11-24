@@ -1,0 +1,56 @@
+.preview-education {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+    padding: 20px;
+}
+.preview-education .preview-number{
+    width: auto;
+}
+.preview-education .preview-number h2 {
+    font-size: 45px;
+}
+.preview-education .preview-content {
+    width: 70%;
+}
+.preview-education .preview-content h4 {
+    font-size: 15px;
+}
+.preview-education .preview-content p {
+    font-weight: 400;
+    font-size: 15px;
+}
+.preview-education .preview-content div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+.preview-education .preview-content div p{
+    font-size: 13px;
+    color: #616161;
+}
+.preview-education .preview-actions {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.preview-education .preview-actions button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    line-height: 50px;
+    text-align: center;
+}
+.preview-education .preview-actions button svg {
+    font-size: 20px;
+    color: #fff;
+}
+.preview-education .preview-actions .delete{
+    background: #ac381d;
+}
+.preview-education .preview-actions .edit{
+    background: #3498DB;
+}

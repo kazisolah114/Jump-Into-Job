@@ -4,13 +4,12 @@ import { FaFacebook, FaInstagramSquare, FaTwitterSquare, FaYoutubeSquare } from 
 
 const Footer = () => {
     return (
-        <div>
+        <div className="main-footer-section">
             <div className='footer-section'>
                 <div className="main-footer-items container">
                     <div className="about-footer-item">
-                        <h2>JobHubGlobal</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipiusto earum dignissimos, esse ratione aliquid repellendus aspernatur fugiat rem similique. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, adipisci?</p>
-                        <h3>Connect Us With -</h3>
+                        <h2>Jump Into Job</h2>
+                        <p>With Jump Into Job you can browse for jobs, view local and national salary information, discover companies, and learn about the job market in a specific city.</p>
                         <ul className='social-media-footer'>
                             <li><a href="#"><FaFacebook></FaFacebook></a></li>
                             <li><a href="#"><FaInstagramSquare></FaInstagramSquare></a></li>
@@ -19,19 +18,19 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="footer-item">
-                        <h2>Resume</h2>
+                        <h2>Job Type</h2>
                         <ul>
-                            <li><a href="#">Create a Resume</a></li>
-                            <li><a href="#">Resume Examples</a></li>
-                            <li><a href="#">Resume Templates</a></li>
+                            <li><a href="#">Part Time Job</a></li>
+                            <li><a href="#">Full Time Job</a></li>
+                            <li><a href="#">Internship</a></li>
                         </ul>
                     </div>
                     <div className="footer-item">
-                        <h2>Cover Letter</h2>
+                        <h2>Job Categories</h2>
                         <ul>
-                            <li><a href="#">Create a Cover Letter</a></li>
-                            <li><a href="#">Cover Letter Examples</a></li>
-                            <li><a href="#">Cover Letter Templates</a></li>
+                            <li><a href="#">Internship</a></li>
+                            <li><a href="#">Freelance</a></li>
+                            <li><a href="#">Overseas</a></li>
                         </ul>
                     </div>
                     <div className="footer-item">
@@ -44,7 +43,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="footer-item">
-                        <h2>Support</h2>
+                        <h2>Quick Links</h2>
                         <ul>
                             <li><a href="#">FAQ</a></li>
                             <li><a href="#">Contact Us</a></li>
@@ -57,7 +56,7 @@ const Footer = () => {
             </div>
             <div className="bottom-footer">
                 <div className="bottom-footer-text container">
-                    <p>&copy; Copyright 2023 - Job Portal</p>
+                    <p>&copy; Copyright 2023 - JumpIntoJob</p>
                 </div>
             </div>
         </div>

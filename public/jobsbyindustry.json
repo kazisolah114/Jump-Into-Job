@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "name": "Technology and IT",
+      "image": "https://cdn-icons-png.flaticon.com/512/6071/6071490.png"
+    },
+    {
+      "id": 2,
+      "name": "Retail and Consumer Goods",
+      "image": "https://cdn-icons-png.flaticon.com/512/869/869636.png"
+    },
+    {
+      "id": 3,
+      "name": "Finance and Banking",
+      "image": "https://cdn-icons-png.flaticon.com/512/781/781831.png"
+    },
+    {
+      "id": 4,
+      "name": "Healthcare and Pharmaceuticals",
+      "image": "https://cdn-icons-png.flaticon.com/512/2966/2966486.png"
+    },
+    {
+      "id": 5,
+      "name": "Manufacturing and Industrial",
+      "image": "https://cdn-icons-png.flaticon.com/512/1037/1037503.png"
+    },
+    {
+      "id": 6,
+      "name": "Energy and Utilities",
+      "image": "https://cdn-icons-png.flaticon.com/512/4515/4515708.png"
+    },
+    {
+      "id": 7,
+      "name": "Media and Entertainment",
+      "image": "https://cdn-icons-png.flaticon.com/512/2205/2205404.png"
+    },
+    {
+      "id": 8,
+      "name": "Real Estate and Property",
+      "image": "https://cdn-icons-png.flaticon.com/512/6676/6676612.png"
+    },
+    {
+      "id": 9,
+      "name": "Travel and Hospitality",
+      "image": "https://cdn-icons-png.flaticon.com/512/5778/5778508.png"
+    },
+    {
+      "id": 10,
+      "name": "Automotive",
+      "image": "https://cdn-icons-png.flaticon.com/512/2103/2103800.png"
+    },
+    {
+      "id": 11,
+      "name": "Education and E-learning",
+      "image": "https://cdn-icons-png.flaticon.com/512/3976/3976631.png"
+    },
+    {
+      "id": 12,
+      "name": "Agriculture and Food Production",
+      "image": "https://cdn-icons-png.flaticon.com/512/5341/5341375.png"
+    },
+    {
+      "id": 13,
+      "name": "Construction and Engineering",
+      "image": "https://cdn-icons-png.flaticon.com/512/2823/2823550.png"
+    },
+    {
+      "id": 14,
+      "name": "Transportation and Logistics",
+      "image": "https://cdn-icons-png.flaticon.com/512/4363/4363708.png"
+    },
+    {
+      "id": 15,
+      "name": "Telecommunications",
+      "image": "https://cdn-icons-png.flaticon.com/512/2649/2649792.png"
+    },
+    {
+      "id": 16,
+      "name": "Other",
+      "image": "https://cdn-icons-png.flaticon.com/512/2948/2948037.png"
+    }
+  ]
+  

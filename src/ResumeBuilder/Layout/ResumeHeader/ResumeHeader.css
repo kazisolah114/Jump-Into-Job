@@ -1,0 +1,36 @@
+.resume-header {
+    padding: 15px 0;
+    border-bottom: 1px solid #dbdbdb;
+}
+.resume-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.resume-header-content .resume-header-title {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+}
+.resume-header-content .resume-header-title h2{}
+.resume-header-content .resume-header-title span {
+    font-size: 14px;
+    color: #3498DB;
+}
+.resume-header-content .resume-header-button button {
+    width: 130px;
+    height: 45px;
+    font-weight: bold;
+    border-radius: 5px;
+    background: #3498DB;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .2s;
+}
+.resume-header-content .resume-header-button button:hover{
+    background: #2f89c5;
+}
+.resume-header-content .resume-header-button a{}
+.resume-header-content .resume-header-button button{}

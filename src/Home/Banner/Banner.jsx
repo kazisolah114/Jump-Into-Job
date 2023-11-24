@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Banner.css';
 import { Link } from 'react-router-dom';
+import { TbBriefcase, TbUserSearch } from "react-icons/tb";
 
 const Banner = () => {
     const [bannerData, setBannerData] = useState([]);
@@ -14,8 +15,8 @@ const Banner = () => {
         <div className='banner-section'>
             <div className="home-banner-content container">
                 <div className="banner-titles">
-                    <h1>Here Is Your <span>Career</span> Opportunity.</h1>
-                    <p>Job Portal is a new user friendly remote work community for job seekers and employees to get their best services.</p>
+                    <h1>Here Is Your <span>Career</span> Opportunity</h1>
+                    <p>JumpIntoJob is a new user friendly remote work community for job seekers and employees to get their best services.</p>
                     <div className="banner-data">
                         {
                             bannerData.map(data => <div key={data.id} data={data} className='banner-data-content' >
@@ -30,8 +31,8 @@ const Banner = () => {
                         }
                     </div>
                     <div className="home-banner-buttons">
-                        <Link to="findjobs"><button className='banner-btn find-job-btn'>Find Jobs</button></Link>
-                        <Link to="postjobs"><button className='banner-btn post-job-btn'>Post Jobs</button></Link>
+                        <Link to="/findjobs"><button className='banner-btn find-job-btn'>Find Jobs <TbBriefcase></TbBriefcase></button></Link>
+                        <Link to="foremployers"><button className='banner-btn post-job-btn'>Post Jobs <TbBriefcase></TbBriefcase></button></Link>
                     </div>
                 </div>
                 <div className="banner-image">

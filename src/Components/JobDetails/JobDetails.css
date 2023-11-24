@@ -1,0 +1,100 @@
+.job-details {
+    border-radius: 10px;
+    border: 1px solid #80808057;
+    padding: 15px;
+    height: 80vh;
+    overflow: auto;
+    width: 100%;
+    position: sticky;
+    top: 90px;
+    left: 0;
+}
+.job-details-res{
+    display: none;
+}
+.job-details-content{
+    
+}
+.job-details-header {
+    margin-bottom: 20px;
+    width: 100%;
+    position: sticky;
+    top: -15px;
+    left: 0;
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0px 15px 10px -15px #11111112;
+}
+.job-details-header-company {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+.job-details-header-company img {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 50px;
+    border: 1px solid #80808057;
+}
+.job-details-header-company a {
+    font-size: 18px;
+    color: #061421;
+    text-decoration: none;
+}
+.job-details-header-company a:hover{
+    text-decoration: underline;
+}
+.job-details-header-job {
+    display: flex;
+    justify-content: space-between;
+}
+.job-details-header-job div{}
+.job-details-header-job div h2 {
+    font-size: 20px;
+    color: #061421;
+    margin-bottom: 5px;
+}
+.job-details-header-job div p{
+    color: #2f2f2fd6;
+    font-size: 17px;
+}
+
+.job-details-header-job button {
+    width: 190px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    background: #2ECC71;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    transition: .3s;
+}
+.job-details-header-job button:hover{
+    background-color: #2daf63;
+    
+}
+.job-details-header-job button svg{}
+.job-details-main {
+    padding: 0 2px;
+}
+.job-details-main p {
+    font-size: 17px;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    color: #2f2f2fd6;
+}
+.job-details-main p span {
+    font-size: 16px;
+    display: block;
+    font-weight: bold;
+    color: #061421d1;
+}

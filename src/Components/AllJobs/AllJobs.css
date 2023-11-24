@@ -73,20 +73,51 @@
     flex-direction: column;
     gap: 15px;
 }
+.show-all-jobs{}
+.show-all-jobs button {
+    background: #111;
+    color: #fff;
+    margin-top: 25px;
+    width: 94%;
+    cursor: pointer;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #80808057;
+    font-size: 17px;
+    font-weight: bold;
+    transition: .3s;
+}
+.show-all-jobs button:hover{
+    background-color: #2ECC71;
+}
+.show-all-jobs .jobs-reached-end-message {
+    margin-top: 25px;
+    width: 86%;
+    background: #FFF5F5;
+    padding: 20px;
+    border: 1px solid #8b000040;
+    border-radius: 5px;
+}
+.show-all-jobs .jobs-reached-end-message p {
+    text-align: center;
+    color: darkred;
+}
 /* CSS on click, has to be fixed */
-/* .clicked-job{
-    background-color: red;
-} */
+.clicked-job{
+    border-bottom: 7px solid #3a3a3a41!important;
+    box-shadow: 0px 0px 10px #3a3a3a1c!important;
+}
 .all-jobs-container .single-job {
     border-radius: 10px;
     padding: 15px 20px;
     box-shadow: 0px 0px 1px #3a3a3a;
-    border-bottom: 5px solid transparent;
+    border-bottom: 7px solid transparent;
     position: relative;
+    
 }
 .all-jobs-container .single-job:hover {
-    border-bottom: 5px solid #3a3a3a40;
-    box-shadow: 0px 0px 5px #3a3a3a1f;
+    border-bottom: 7px solid #3a3a3a1f;
+    box-shadow: 0px 0px 10px #3a3a3a1c;
 }
 .single-job-header{
     display: flex;
@@ -189,6 +220,9 @@
 
 .default-job-details{
     text-align: center;
+}
+.default-job-none{
+    display: none;
 }
 .default-job-details-img{}
 .default-job-details-img img {

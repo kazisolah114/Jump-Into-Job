@@ -1,0 +1,31 @@
+.resume-footer{
+    padding: 20px 0;
+    border-top: 1px solid gray;
+}
+.resume-footer-content{}
+.resume-footer-content div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.resume-footer-content div ul {
+    display: flex;
+    gap: 20px;
+}
+.resume-footer-content div ul p {
+    color: #616161;
+    font-size: 15px;
+}
+.resume-footer-content div ul li{
+    list-style: none;
+}
+.resume-footer-content div ul li a {
+    text-decoration: none;
+    color: #3694d3;
+    font-size: 15px;
+    transition: .1s;
+}
+.resume-footer-content div ul li a:hover{
+    text-decoration: underline;
+    color: black;
+}

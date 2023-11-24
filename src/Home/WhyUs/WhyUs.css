@@ -1,6 +1,5 @@
 .whyus-section{
     padding: 100px 0;
-    background-color: #F7F7F7;
 }
 .whyus-content {
     display: flex;
@@ -8,26 +7,33 @@
     justify-content: space-between;
     gap: 50px
 }
+.whyus-content-employers{
+    flex-direction: row-reverse;
+}
 .whyus-content .whyus-images {
     display: flex;
     gap: 20px;
 }
-.whyus-content .whyus-images img, div img{
+.whyus-content .whyus-images img, .whyus-images div img{
     
 }
 
 .whyus-content .whyus-images img {
-    width: 350px;
-    height: 550px;
+    width: 370px;
+    height: 625px;
+    border-radius: 10px;
+
 }
+
 .whyus-content .whyus-images div {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 .whyus-content .whyus-images div img {
-    height: 310px;
-    width: 280px;
+    height: 385px;
+    width: 750px;
+    border-radius: 10px;
 }
 .whyus-odd {
     height: 220px!important;
@@ -84,4 +90,28 @@
 .whyus-content .whyus-text-cont div h4 {
     font-size: 18px;
     font-weight: 500;
+}
+.whyus-content .whyus-btn a button {
+    background: #2ECC71;
+    color: #fff;
+    margin-top: 50px;
+    width: 235px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    transition: .3s;
+}
+.whyus-content .whyus-btn a button svg {
+    font-size: 25px;
+    position: relative;
+    top: 7px;
+    left: 2px;
+    transition: .3s;
+}
+.whyus-content .whyus-btn a button:hover svg{
+    left: 8px;
 }

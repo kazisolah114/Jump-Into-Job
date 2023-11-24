@@ -1,0 +1,44 @@
+.resume-help-section {
+    border-top: 1px solid #80808057;
+    /* border-bottom: 1px solid #80808057; */
+    /* padding: 50px 0; */
+}
+.resume-help-contents {
+    display: grid;
+    grid-template-columns: 400px auto 400px;
+    gap: 30px;
+    align-items: center;
+}
+.resume-help-contents .resume-help-image-item{}
+.resume-help-contents .resume-help-image-item img {
+    width: 100%;
+    height: 300px;
+}
+.resume-help-contents .resume-help-text-item {
+    text-align: center;
+}
+.resume-help-contents .resume-help-text-item h2 {
+    color: #061421;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.resume-help-contents .resume-help-text-item p {
+    color: #595959;
+    margin-bottom: 25px;
+}
+.resume-help-contents .resume-help-text-item a{}
+.resume-help-contents .resume-help-text-item a button {
+    background: #2ECC71;
+    border: none;
+    width: 180px;
+    height: 50px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    transition: .3s;
+}
+.resume-help-contents .resume-help-text-item a button:hover{
+    background-color: #28b161;
+}

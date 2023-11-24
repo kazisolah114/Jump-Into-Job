@@ -1,0 +1,404 @@
+
+.dashboard-myjobs-details{
+    padding: 20px;
+}
+
+/* Dashboard */
+.myjobs-dashboard{}
+.dashboard-content {
+    background: #f0f0f066;
+    border-radius: 10px;
+    padding: 30px;
+}
+.dashboard-content .dashboard-data-items {
+    display: flex;
+    justify-content: space-between;
+}
+.saved-item {
+    background: #F08200!important;
+}
+.applied-item{
+    background: #660096;
+}
+.interview-item {
+    background: #7c0635!important;
+}
+.view-item{
+    background: #78b100;
+}
+.dashboard-content .dashboard-data-items .data-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    border-radius: 5px;
+    padding: 20px;
+    color: #fff;
+    justify-content: space-between;
+    width: 180px;
+    height: 80px;
+}
+.dashboard-content .dashboard-data-items .data-item div{
+    text-align: right;
+
+}
+.dashboard-content .dashboard-data-items .data-item svg{
+    font-size: 25px;
+}
+.dashboard-content .dashboard-data-items .data-item h5 {
+    font-weight: normal;
+    font-size: 18px;
+}
+.dashboard-content .dashboard-data-items .data-item h4{
+    font-size: 25px;
+}
+
+.dashboard-stats-and-profile {
+    display: grid;
+    grid-template-columns: 63% auto;
+    margin: 30px 0;
+    gap: 30px;
+}
+.dashboard-stats-and-profile .dashboard-application-stats{
+    background-color: #fff;
+    border-radius: 8px;
+}
+.dashboard-stats-and-profile .dashboard-user-profile {
+    background: #fff;
+    padding: 20px 0;
+    border-radius: 8px;
+}
+.dashboard-stats-and-profile .dashboard-user-profile .user-profile-main {
+    text-align: center;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e9e9e9;
+}
+.dashboard-stats-and-profile .dashboard-user-profile .user-profile-main img {
+    width: 15%;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 100%;
+}
+.dashboard-stats-and-profile .dashboard-user-profile .user-profile-main h4{
+    margin-bottom: 5px
+}
+.dashboard-stats-and-profile .dashboard-user-profile .user-profile-main p{
+    margin-bottom: 8px;
+}
+.dashboard-stats-and-profile .dashboard-user-profile .user-profile-main p svg{}
+.dashboard-stats-and-profile .dashboard-user-profile .user-profile-main .user-address{
+    font-size: 13px;
+}
+.dashboard-stats-and-profile .dashboard-user-profile .user-profile-main .user-address svg {
+    color: #3498db;
+    margin-right: 5px;
+}
+.dashboard-stats-and-profile .dashboard-user-profile .user-profile-contact {
+    padding: 20px 30px;
+}
+.dashboard-stats-and-profile .dashboard-user-profile .user-profile-contact p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.dashboard-stats-and-profile .dashboard-user-profile .user-profile-contact p svg{
+    margin-right: 10px;
+    background-color: #F08200;
+    color: #fff;
+    border-radius: 50px;
+    padding: 5px;
+}
+.dashboard-update-profile-btn {
+    margin-top: 35px;
+}
+.dashboard-update-profile-btn a{}
+.dashboard-update-profile-btn a button {
+    width: 140px;
+    height: 40px;
+    font-weight: bold;
+    background: #F08200;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.dashboard-featuredjobs-and-social-contacts {
+    display: grid;
+    grid-template-columns: 63% auto;
+    gap: 30px;
+}
+.dashboard-jobs{
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+.dashboard-jobs h4 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #061421;
+    margin-bottom: 25px;
+}
+.dashboard-jobs .dashboard-viewmorejobs-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+.dashboard-jobs .dashboard-viewmorejobs-btn a{}
+.dashboard-jobs .dashboard-viewmorejobs-btn a button {
+    width: 140px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #3498DB;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    color: #3498DB;
+}
+.dashboard-jobs .dashboard-jobs-content {
+    width: 100%;
+}
+
+.dashboard-social-resume {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.dashboard-social-resume .dashboard-social {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    /* height: 62%; */
+}
+.dashboard-social-resume .dashboard-social h4 {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #061421;
+}
+.dashboard-social-resume .dashboard-social ul{}
+.dashboard-social-resume .dashboard-social ul li {
+    list-style: none;
+    margin-bottom: 15px;
+    background: #3498db33;
+    padding: 10px 15px;
+    border-radius: 3px;
+    position: relative;
+    transition: .3s;
+}
+.dashboard-social-resume .dashboard-social ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 1px;
+    height: 100%;
+    background: white;
+}
+.dashboard-social-resume .dashboard-social ul li a {
+    text-decoration: none;
+    color: #616161;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.dashboard-social-resume .dashboard-social ul li a svg {
+    /* color: #1877F2; */
+    font-size: 22px;
+}
+.facebook-social{}
+.facebook-social:hover{
+    background-color: #1877F2!important;
+}
+.facebook-social:hover a{
+    color: #fff!important;
+}
+.facebook-social svg{
+    color: #1877F2!important;
+}
+.facebook-social:hover svg{
+    color: #fff!important;
+}
+.linkedin-social{}
+.linkedin-social:hover{
+    background-color: #0063C2!important;
+}
+.linkedin-social:hover a{
+    color: #fff!important;
+}
+.linkedin-social svg{
+    color: #0063C2!important;
+}
+.linkedin-social:hover svg{
+    color: #fff!important;
+}
+.github-social{}
+.github-social:hover{
+    background-color: #000000!important;
+}
+.github-social:hover a{
+    color: #fff!important;
+}
+.github-social svg{
+    color: #181212!important;
+}
+.github-social:hover svg{
+    color: #fff!important;
+}
+.whatsapp-social{}
+.whatsapp-social:hover{
+    background-color: #00a11d!important;
+}
+.whatsapp-social:hover a{
+    color: #fff!important;
+}
+.whatsapp-social svg{
+    color: #00ff1a!important;
+}
+.whatsapp-social:hover svg{
+    color: #00ff62!important;
+}
+.dashboard-resume {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.dashboard-resume h3 {
+    font-size: 18px;
+    margin-top: 24px;
+    margin-bottom: 15px;
+}
+.dashboard-resume img {
+    border-radius: 5px;
+}
+.dashboard-resume p {
+    font-size: 15px;
+    color: #626262d9;
+    margin-bottom: 20px;
+}
+.dashboard-resume button {
+    width: 130px;
+    height: 40px;
+    border: none;
+    background: #2ECC71;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+}
+
+
+
+
+/* Saved Jobs */
+.myjobs-savedjobs {
+    padding: 0 100px 50px;
+}
+.myjobs-savedjobs h2 {
+    color: #061421;
+    font-size: 20px;
+    border-bottom: 1px solid #80808057;
+    padding-bottom: 15px;
+}
+.myjobs-savedjobs .savedjobs-content{}
+.myjobs-savedjobs .savedjobs-content .savedjob-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #c3c3c3ba;
+    padding: 30px 0;
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-data {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-data .saved-jobs-item-data-logo{
+    width: 100px;
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-data .saved-jobs-item-data-logo img{}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-data .saved-jobs-item-data-info{}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-data .saved-jobs-item-data-info .application-status {
+    color: #2ECC71;
+    background: #2ecc7133;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-data .saved-jobs-item-data-info a{
+    text-decoration: none;
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-data .saved-jobs-item-data-info a:hover{
+    /* text-decoration: underline; */
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-data .saved-jobs-item-data-info h3 {
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #061421;
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-data .saved-jobs-item-data-info p {
+    color: #3c3c3c;
+    margin-bottom: 5px;
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-data .saved-jobs-item-data-info span{
+    color: #535353;
+    font-size: 14px;
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-actions a{}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-actions .savedjob-apply {
+    border: none;
+    width: 130px;
+    height: 40px;
+    font-weight: bold;
+    background: #2ECC71;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-actions .savedjob-apply:hover{
+    background: #27af60;
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-actions .appliedjob-status {
+    background: transparent;
+    border: 1px solid rgba(193, 193, 193, 0.679);
+    color: #0a341c;
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-actions .appliedjob-status:hover{
+    background-color: unset;
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-actions abbr button {
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .3s;
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-actions abbr button:hover {
+    background: #2ecc714f;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: #2ECC71;
+}
+.myjobs-savedjobs .savedjobs-content .savedjob-item .saved-job-item-actions button svg {
+    font-size: 22px;
+    position: relative;
+    top: 2px;
+    left: 0px;
+}

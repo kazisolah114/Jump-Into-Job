@@ -1,0 +1,45 @@
+.employers-banner {
+    padding: 50px 0;
+    border-bottom: 1px solid #80808057;
+}
+.employers-banner-content {
+    display: grid;
+    grid-template-columns: 600px auto;
+    gap: 30px;
+    align-items: center;
+}
+.employers-banner-text{}
+.employers-banner-text h2 {
+    color: #061421;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.employers-banner-text p {
+    color: #595959;
+    font-size: 17px;
+    line-height: 1.7em;
+    margin-bottom: 40px;
+}
+.employers-banner-text button {
+    background: #2ECC71;
+    width: 300px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    
+}
+.employers-banner-text button a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 19px;
+    color: #111;
+    transition: .3s;
+}
+.employers-banner-text button:hover a{
+    color: #fff;
+}
+.employers-banner-image{}
+
+.whyus-content .whyus-images img, div img {
+    max-width: 100%;
+}

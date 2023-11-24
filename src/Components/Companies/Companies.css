@@ -1,0 +1,107 @@
+.companies{
+    margin: 20px 0;
+}
+.companies-content{}
+.companies-content{}
+.companies-content .companies-tabs {
+    display: grid;
+    grid-template-columns: 350px auto;
+    gap: 30px;
+}
+.companies-content .companies-tabs .companies-tablist {
+    background: #fff;
+    padding: 0 0 0 0;
+    border-radius: 10px;
+    box-shadow: 11px 10px 40px #34343417;
+    height: 67vh;
+    overflow: auto;
+    position: sticky;
+    top: 70px;
+    left: 0;
+}
+.companies-content .companies-tabs .companies-tablist li {
+    list-style: none;
+    color: #616161;
+    border-left: 5px solid transparent;
+    padding: 13px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: .3s;
+}
+.companies-content .companies-tabs .companies-tablist li:hover {
+    border-left: 5px solid #3498db70; color: #3498DB; box-shadow: 5px 12px 12px #e9e9e961;
+}
+.default-category{
+    border-left: 5px solid #3498dbdb!important; color: #3498DB!important; box-shadow: 5px 12px 12px #e9e9e961;
+}
+
+.companies-content .companies-tabs .companies-tabs-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px 20px;
+}
+.company-item {
+    border: 1px solid #80808057;
+    padding: 15px 15px 0 15px;
+    border-radius: 10px;
+}
+.company-item .company-item-content{}
+.company-item .company-item-content .company-item-content-banner{}
+.company-item .company-item-content .company-item-content-banner img {
+    width: 100%;
+    height: 180px;
+}
+.company-item .company-item-content .company-item-content-main {
+    position: relative;
+    top: -30px;
+    left: 10px;
+    max-width: 98%;
+}
+.company-item .company-item-content .company-item-content-main .main-items {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    align-items: flex-end;
+}
+.company-item .company-item-content .company-item-content-main .main-items img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #8080801c;
+}
+.company-item .company-item-content .company-item-content-main .main-items a{
+    text-decoration: none;
+    color: #061421;
+}
+.company-item .company-item-content .company-item-content-main .main-items a h3{
+    
+}
+.company-item .company-item-content .company-item-content-main .main-items p{
+    color: #616161;
+}
+.company-item .company-item-content .company-item-content-main div .company_description{
+    color: #060606;
+}
+.company-item .company-item-content .company-item-content-footer{
+    display: flex;
+    gap: 15px;
+}
+.company-item .company-item-content .company-item-content-footer .company-button {
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.company-item .company-item-content .company-item-content-footer .company-details-button {
+    background: #3498DB;
+    color: #fff;
+    
+}
+.company-item .company-item-content .company-item-content-footer .company-jobs-button {
+    background: transparent;
+    border: 1px solid #80808057;
+    transition: .3s;
+}

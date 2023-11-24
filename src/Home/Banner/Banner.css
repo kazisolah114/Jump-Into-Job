@@ -42,7 +42,7 @@
 }
 
 .banner-titles p {
-    font-size: 19px;
+    font-size: 18px;
     color: #061421;
 }
 
@@ -103,7 +103,9 @@
     align-items: center;
     justify-content: space-between;
 }
-
+.home-banner-buttons a{
+    text-decoration: none;
+}
 .home-banner-buttons .banner-btn {
     width: 240px;
     height: 45px;
@@ -113,8 +115,16 @@
     color: #fff;
     border: none;
     border-radius: 4px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
 }
-
+.home-banner-buttons .banner-btn svg{
+    font-size: 20px;
+    position: relative;
+    right: 10px
+}
 .home-banner-buttons .find-job-btn {
     background-color: #3498db;
     padding: 10px 20px;

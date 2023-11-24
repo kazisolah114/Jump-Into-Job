@@ -1,0 +1,208 @@
+.job-application-form{}
+.job-application-form .job-application-form-content{
+    width: 500px;
+    padding: 50px;
+    /* border: 1px solid gray; */
+}
+.job-application-form .job-application-form-content .job-application-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #d3d3d3ad;
+    border-radius: 10px;
+    padding: 20px;
+}
+.job-application-form .job-application-form-content .job-application-header div{}
+.job-application-form .job-application-form-content .job-application-header div img{
+    width: 65px;
+    height: 65px;
+}
+.job-application-form .job-application-form-content .job-application-header div h5 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.job-application-form .job-application-form-content .job-application-header div p {
+    font-size: 14px;
+    color: #4e4e4e;
+}
+.job-application-main {
+    border: 1px solid #d3d3d3ad;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 30px;
+}
+.job-application-main form{}
+.job-application-main form .step-applicant-account-info{}
+.job-application-main form .step-applicant-account-info h4 {
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+.job-application-main form .step-applicant-account-info .application-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+.job-application-main form .step-applicant-account-info .phone {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.job-application-main form .step-applicant-account-info .phone label{
+    font-size: 15px;
+    color: #061421;
+}
+.job-application-main form .step-applicant-account-info .application-input label {
+    color: #061421;
+    font-size: 15px;
+}
+.job-application-main form .step-applicant-account-info .application-input label span {
+    font-size: 10px;
+    color: #616161;
+}
+.job-application-main form .step-applicant-account-info .application-input input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #9c9c9c85;
+    padding: 0 10px;
+    outline: none;
+}
+.job-application-main form .step-applicant-account-info .application-input select {
+    height: 40px;
+    border: 1px solid #9c9c9c85;
+    border-radius: 5px;
+    padding: 0 10px;
+    color: #616161;
+}
+.job-application-main form .step-applicant-account-info .application-input select option{}
+.job-application-main form .step-applicant-account-info .phone .phone-input input{
+    width: 100%;
+    height: 40px;
+}
+
+
+.job-application-main form .step-applicant-resume-info{
+    margin-top: 40px;
+}
+.job-application-main form .step-applicant-resume-info h4 {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+.job-application-main form .step-applicant-resume-info .upload-resume{}
+.job-application-main form .step-applicant-resume-info .upload-resume p {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+.job-application-main form .step-applicant-resume-info .upload-resume div{
+    position: relative;
+    border: 2px dashed #9c9c9c85;
+    border-radius: 8px;
+    z-index: 1;
+}
+.job-application-main form .step-applicant-resume-info .upload-resume div input[type=file] {
+    width: 100%;
+    border: 2px dashed #9c9c9c85;
+    padding: 80px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.job-application-main form .step-applicant-resume-info .upload-resume div .document {
+    font-size: 100px;
+    color: #dcdcdc87;
+    position: absolute;
+    top: 0;
+    left: 170px;
+    z-index: -1;
+}
+.job-application-main form .step-applicant-resume-info .upload-resume div .upload {
+    font-size: 30px;
+    color: gray;
+    position: absolute;
+    top: 45px;
+    left: 204px;
+    z-index: -1;
+}
+.job-application-main form .step-applicant-resume-info .upload-resume div p {
+    position: absolute;
+    top: 100px;
+    left: 118px;
+    color: #616161;
+    font-size: 12px;
+    z-index: -1;
+}
+.job-application-main form .step-applicant-resume-info .upload-resume div button {
+    position: absolute;
+    top: 130px;
+    left: 150px;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    color: #3498DB;
+    background: transparent;
+    border: 1px solid #3498DB;
+    border-radius: 4px;
+    z-index: -1;
+}
+
+.job-application-main form .step-applicant-resume-info .upload-coverletter{
+    margin-top: 40px;
+}
+.job-application-main form .apply-job-button {
+    margin-top: 40px;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    background: #3498DB;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+.job-application-main form .apply-job-button:hover{
+    background: transparent;
+    color: #3498DB;
+    border: 1px solid #3498DB;
+}
+.job-application-main form .step-applicant-resume-info .upload-coverletter .cover-letter-options {
+    border: unset;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.job-application-main form .step-applicant-resume-info .upload-coverletter .cover-letter-options .cover-letter-radio {
+    border: unset;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.job-application-main form .step-applicant-resume-info .upload-coverletter .cover-letter-options .cover-letter-radio input{}
+.job-application-main form .step-applicant-resume-info .upload-coverletter .cover-letter-options .cover-letter-radio label {
+    color: #616161;
+    font-size: 15px;
+}
+.job-application-main form .step-applicant-resume-info .upload-coverletter textarea {
+    width: 420px!important;
+    border: 1px solid #c8c8c8a1;
+    border-radius: 5px;
+    padding: 10px;
+    color: #616161;
+    outline: none;
+}
+.job-application-main form .available-joining {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.job-application-main form .available-joining input {
+    width: 12px;
+    height: 12px;
+}
+.job-application-main form .available-joining label{
+    color: #616161;
+
+}

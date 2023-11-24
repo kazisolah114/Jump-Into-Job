@@ -1,7 +1,12 @@
 import React from 'react';
 import './WhyUs.css'
+import { Link } from 'react-router-dom';
+import { useUserContext } from '../../UserContext/UserContext';
+import { HiArrowSmRight } from "react-icons/hi";
 
 const WhyUs = () => {
+    const {userData} = useUserContext();
+    // console.log(userData)
     return (
         <div className='whyus-section'>
             <div className="whyus-content container">
@@ -32,6 +37,13 @@ const WhyUs = () => {
                             <img src="https://demo-egenslab.b-cdn.net/html/jobes/preview/assets/images/icon/job2.svg" alt="" />
                             <h4>Remote Jobs</h4>
                         </div>
+                    </div>
+                    <div className="whyus-btn">
+                        {userData ?
+                        <Link to="/findjobs"><button>Explore Jobs <HiArrowSmRight></HiArrowSmRight></button></Link>
+                        :
+                        <Link to="/register"><button>Create Account <HiArrowSmRight></HiArrowSmRight></button></Link>
+                        }
                     </div>
                 </div>
             </div>
