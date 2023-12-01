@@ -32,8 +32,7 @@ const FeaturedJobs = () => {
 
             <div className="featured-jobs-content container">
                 <div className="featured-jobs-header section-header">
-                    <h2>Featured Jobs At JobHubGlobal</h2>
-                    <p>Featured jobs are shown based on the number of the vacancies available in particuler job. So the users may know where they should apply or not.</p>
+                    <h2>Featured jobs at Jump Into Job</h2>
                 </div>
                 <div className="featured-jobs-items all-jobs-container">
 

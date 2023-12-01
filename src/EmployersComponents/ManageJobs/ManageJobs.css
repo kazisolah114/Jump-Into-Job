@@ -1,0 +1,239 @@
+.manage-jobs-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 180px;
+    justify-content: center;
+    background: linear-gradient(to right, #3498DB, #31c983);
+    padding: 10px;
+    border-radius: 10px 0;
+}
+.manage-jobs-header h2 {
+    font-size: 18px;
+    color: #fff;
+}
+.manage-jobs-header svg {
+    font-size: 22px;
+    color: #fff;
+}
+
+
+/* Dashboard */
+.most-applied-jobs {
+    background: #fff;
+    border-radius: 10px;
+    /* padding: 0 10px; */
+}
+.most-applied-jobs h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding: 20px 10px;
+}
+.most-applied-jobs .post-new-job-btn {
+    padding: 20px 10px;
+}
+.most-applied-jobs .post-new-job-btn button {
+    width: 170px;
+    font-weight: bold;
+    background: #3498DB;
+    color: #fff;
+    border: none;
+    height: 45px;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.active-jobs {
+    background: #F9F9F9;
+    border-radius: 10px;
+}
+.active-jobs-container{
+    padding: 30px;
+    
+}
+.active-jobs-content{}
+.active-jobs-content .active-jobs-table-header {
+    display: grid;
+    grid-template-columns: 40px 179px 115px 90px 105px 150px 110px 100px;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding: 8px;
+}
+.active-jobs-content .active-jobs-table-header li{
+    list-style: none;
+    color: #323232;
+}
+.active-jobs-content .active-jobs-table-body {
+    display: grid;
+    grid-template-columns: 40px 179px 115px 90px 105px 150px 110px 100px;
+    gap: 8px;
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    align-items: center;
+}
+.active-jobs-content .active-jobs-table-body li{
+    list-style: none;
+    color: #323232;
+}
+.active-jobs-content .active-jobs-table-body .index {
+    background: #3498DB;
+    border: none;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+}
+.active-jobs-content .active-jobs-table-body .active-status {
+    background: #31c983;
+    border: none;
+    padding: 0 10px;
+    height: 25px;
+    border-radius: 50px;
+    color: #fff;
+    width: 55px;
+    text-align: center;
+}
+.active-jobs-content .active-jobs-table-body .inactive-status {
+    background: #E14D4D;
+    border: none;
+    padding: 0 10px;
+    height: 25px;
+    border-radius: 50px;
+    color: #fff;
+    width: 55px;
+    text-align: center;
+}
+.managejobs-actions-btn {
+    background: #3498DB;
+    border: none;
+    color: #fff;
+    padding: 0 10px;
+    height: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .2s;
+}
+.managejobs-actions-btn:hover{
+    background: rgba(48, 134, 192, 0.925)
+}
+.active-jobs-content .active-jobs-table-body .active-jobs-actions{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.active-jobs-content .active-jobs-table-body .active-jobs-actions button {
+    background: #31c983;
+    border: none;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    line-height: 42px;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s;
+}
+.active-jobs-content .active-jobs-table-body .active-jobs-actions button:hover{
+    background: #2bad70;
+}
+.active-jobs-content .active-jobs-table-body .active-jobs-actions .delete{
+    background: #e14d4d;
+}
+.active-jobs-content .active-jobs-table-body .active-jobs-actions .delete:hover{
+    background: #c64444;
+}
+.active-jobs-content .active-jobs-table-body .active-jobs-actions button svg {
+    font-size: 20px;
+    color: #fff;
+}
+
+
+
+/* View Applicants */
+.view-applicants-main-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.close-view-applicant {
+    width: 60px;
+    height: 32px;
+    background: #d7d7d7b9;
+    text-align: center;
+    line-height: 41px;
+    margin: 14px 14px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+.close-view-applicant:hover{
+    background: #d7d7d7;
+}
+.close-view-applicant svg{
+    color: #626262be;
+    font-size: 22px;
+}
+.view-jobs-header{
+    width: 380px;
+}
+.applicants-table-header{
+    grid-template-columns: 40px 200px 160px 150px auto!important;
+}
+.applicants-table-body{
+    grid-template-columns: 40px 200px 160px 150px auto!important;
+}
+.applicants-table-body div {
+    display: flex;
+    gap: 10px;
+}
+.applicants-table-body .application-status {
+    border: none;
+    padding: 0 10px;
+    height: 25px;
+    border-radius: 50px;
+    color: #fff!important;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background: #3498DB;
+    cursor: pointer;
+}
+.applicants-table-body .application-status select{
+    background: transparent;
+    color: #fff;
+    font-size: unset;
+    cursor: pointer;
+}
+.applicants-table-body .application-status select option{
+    background: #fff;
+    color: #111;
+}
+.applicants-table-body .application-status span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    font-size: unset;
+}
+.applicants-table-body .application-status svg{
+    font-size: 15px;
+}
+.applicants-table-body .application-status.active{
+    background: #3498DB;
+}
+.applicants-table-body .application-status.shortlisted{
+    background: #F08200;
+}
+.applicants-table-body .application-status.interview{
+    background: #31C983;
+}
+.applicants-table-body .application-status.rejected{
+    background: #E14D4D;
+}

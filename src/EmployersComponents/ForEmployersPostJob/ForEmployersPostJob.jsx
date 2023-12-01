@@ -2,6 +2,7 @@ import React, { } from 'react';
 import './ForEmployersPostJob.css'
 import { HiOutlineUserCircle } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
+import RichEditor from './RichEditor';
 
 
 const ForEmployersPostJob = () => {
@@ -14,7 +15,7 @@ const ForEmployersPostJob = () => {
             </div>
             <div className="post-job-content container">
                 <form action="">
-                    <h3>Job Information:</h3>
+                    <h3>ADD JOB INFORMATION</h3>
                     <div className="post-job-info-container">
                         <div className="job-post-info account-info">
                             <label htmlFor="job_title">Job Title</label>
@@ -27,14 +28,14 @@ const ForEmployersPostJob = () => {
                             <label htmlFor="vacancies">Vacancies</label>
                             <div className="account-input">
                                 <HiOutlineUserCircle></HiOutlineUserCircle>
-                                <input type="text" placeholder='07' id="vacancies" name="vacancies" required />
+                                <input type="number" placeholder='07' id="vacancies" name="vacancies" required />
                             </div>
                         </div>
                         <div className="job-post-info">
                             <label htmlFor="salary">Estimated Salary</label>
                             <div className="account-input">
                                 <HiOutlineUserCircle></HiOutlineUserCircle>
-                                <input type="text" placeholder='$90,000 - $110,000' id="salary" name="salary" required />
+                                <input type="number" placeholder='$90,000 - $110,000' id="salary" name="salary" required />
                             </div>
                         </div>
                         <div className="job-post-info">
@@ -81,7 +82,7 @@ const ForEmployersPostJob = () => {
                         </div>
                     </div>
                     <div className="job-post-text-editor">
-
+                        <RichEditor />
                     </div>
                     <div className="terms-conditions">
                         <p>By posting a job, you understand and agree to Job Portal's <Link to="/terms">Terms</Link>. You also acknowledge our <Link to="/cookie">Cookie</Link> and <Link to="/privacy">Privacy</Link> policies.</p>

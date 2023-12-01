@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { FaAngleDown, FaUserAlt, FaUserCircle, FaUserPlus, FaUserTie } from "react-icons/fa";
 import { HiBookmark, HiBriefcase, HiChevronDown, HiCog, HiOutlineBookmark, HiOutlineUser, HiOutlineUserAdd, HiQuestionMarkCircle } from "react-icons/hi";
 import { TbBell, TbBriefcase, TbLogout, TbUserCircle } from 'react-icons/tb';
-import { useUserContext } from '../../../../UserContext/UserContext';
+import { useUserContext } from '../../../UserContext/UserContext';
+
 
 const ForEmployersHeader = () => {
     const [activeMenu, setActiveMenu] = useState('home');
@@ -21,7 +22,7 @@ const ForEmployersHeader = () => {
             return;
         }
         try {
-            const userLogoutResponse = await fetch('https://unitechholdingsltd.com/api/v1/logout', {
+            const userLogoutResponse = await fetch('https://api.jumpintojob.com/api/v1/logout', {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',
@@ -40,12 +41,12 @@ const ForEmployersHeader = () => {
             alert(error)
         }
     }
-    // console.log(userData?.data?.user)
+
     return (
         <div className='main-header'>
             <div className="web-header container">
-                <div className="header-logo">
-                    <h2>JobHubGlobal</h2>
+                <div className="header-logo employer-header-logo">
+                    <img className='jump-job-logo' src="https://i.ibb.co/RNtVFY1/blue-full.jpg" alt="" />
                     <p>For Employers</p>
                 </div>
                 <div className="header-menu">
@@ -53,13 +54,7 @@ const ForEmployersHeader = () => {
                         <li><Link to="/foremployers" onClick={() => handleActiveMenu('home')} className={activeMenu === 'home' ? 'active' : ''}>Home</Link></li>
                         <li><Link to="/foremployers/postjobs" onClick={() => handleActiveMenu('jobs')} className={activeMenu === 'postjobs' ? 'active' : ''}>Post Jobs </Link></li>
                         <li><Link to="/candidates" onClick={() => handleActiveMenu('candidates')} className={activeMenu === 'candidates' ? 'active' : ''}>Candidates</Link></li>
-                        <li><Link to="/whyus" onClick={() => handleActiveMenu('whyus')} className={activeMenu === 'whyus' ? 'active' : ''}>Why Us <HiChevronDown></HiChevronDown></Link>
-                            <ul className='dropdown-menu'>
-                                <li><Link>Dropdown Menu</Link></li>
-                                <li><Link>Dropdown Menu</Link></li>
-                                <li><Link>Dropdown Menu</Link></li>
-                            </ul>
-                        </li>
+                        <li><Link>Message</Link></li>
                         <li><Link to="/">For Workers</Link></li>
                     </ul>
                     <ul className="account-menu">
@@ -72,22 +67,20 @@ const ForEmployersHeader = () => {
                                         {userProfileClicked &&
                                             <div className="user-profile-icon">
                                                 <div className="user-profile-icon-header">
-                                                <h4>Welcome {userData?.data?.user.first_name} !</h4>
-                                                <p>{userData?.data?.user.email}</p>
+                                                    <h4>Welcome {userData?.data?.user.first_name} {userData?.data?.user.last_name} !</h4>
+                                                    <p>{userData?.data?.user.email}</p>
                                                 </div>
                                                 <div className="loggedin-user-options">
-                                                    <Link><FaUserTie></FaUserTie> Profile</Link>
-                                                    <Link><HiBookmark></HiBookmark> Saved Jobs</Link>
-                                                    <Link><HiBriefcase></HiBriefcase> Applied Jobs</Link>
-                                                    <Link><HiCog></HiCog> Settings</Link>
-                                                    <Link><HiQuestionMarkCircle></HiQuestionMarkCircle> Help Center</Link>
+                                                    <Link to="employerprofile" onClick={() => setUserProfileClicked(false)}><FaUserTie></FaUserTie>Company Profile</Link>
+                                                    <Link to="managejobs/dashboard" onClick={() => setUserProfileClicked(false)}><HiBriefcase></HiBriefcase>Manage Jobs</Link>
+                                                    <Link onClick={() => setUserProfileClicked(false)}><HiBriefcase></HiBriefcase>Subscriptions</Link>
+                                                    <Link onClick={() => setUserProfileClicked(false)}><HiCog></HiCog> Settings</Link>
+                                                    <Link onClick={() => setUserProfileClicked(false)}><HiQuestionMarkCircle></HiQuestionMarkCircle> Help Center</Link>
                                                 </div>
                                                 <button className='signout-btn' onClick={handleLogout}>Sign Out <TbLogout></TbLogout></button>
                                             </div>
                                         }
                                     </>
-
-                                    {/* <button className='signout-btn' onClick={handleLogout}>Sign Out</button> */}
                                 </div>
                                 :
                                 userLoggedout?.result ?

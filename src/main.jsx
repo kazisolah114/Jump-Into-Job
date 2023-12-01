@@ -16,16 +16,16 @@ import AllJobs from './Components/AllJobs/AllJobs.jsx';
 import JobDetails from './Components/JobDetails/JobDetails.jsx';
 import { UserProvider } from './UserContext/UserContext.jsx';
 import FeaturedJobs from './Home/FeaturedJobs/FeaturedJobs.jsx';
-import ForEmployersMain from './Components/EmployersComponents/ForEmployersMain/ForEmployersMain.jsx';
+import ForEmployersMain from './EmployersComponents/ForEmployersMain/ForEmployersMain.jsx';
 import UserProfile from './Components/UserProfile/UserProfile.jsx';
 import AboutMe from './Components/UserProfile/AboutMe.jsx';
 import Qualifications from './Components/UserProfile/Qualifications.jsx';
 import AccountSetting from './Components/UserProfile/AccountSetting.jsx';
 import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
-import ForEmployersRegister from './Components/EmployersComponents/ForEmployersRegister/ForEmployersRegister.jsx';
-import ForEmployersHome from './Components/EmployersComponents/ForEmployersHome/ForEmployersHome.jsx';
-import ForEmployersLogin from './Components/EmployersComponents/ForEmployersLogin/ForEmployersLogin.jsx';
-import ForEmployersPostJob from './Components/EmployersComponents/ForEmployersPostJob/ForEmployersPostJob.jsx';
+import ForEmployersRegister from './EmployersComponents/ForEmployersRegister/ForEmployersRegister.jsx';
+import ForEmployersHome from './EmployersComponents/ForEmployersHome/ForEmployersHome.jsx';
+import ForEmployersLogin from './EmployersComponents/ForEmployersLogin/ForEmployersLogin.jsx';
+import ForEmployersPostJob from './EmployersComponents/ForEmployersPostJob/ForEmployersPostJob.jsx';
 import JobCategory from './Components/JobCategory/JobCategory.jsx';
 import Companies from './Components/Companies/Companies.jsx';
 import EmployersPrivateRoute from './PrivateRoute/EmployersPrivateRoute.jsx';
@@ -39,6 +39,13 @@ import MyJobsInterviews from './Components/UserMyJobs/MyJobsInterviews.jsx';
 import MyJobsArchived from './Components/UserMyJobs/MyJobsArchived.jsx';
 import ApplyJob from './Components/ApplyJob/ApplyJob.jsx';
 import ResumeMain from './ResumeBuilder/ResumeMain/ResumeMain.jsx';
+import EmployerProfile from './EmployersComponents/EmployerProfile/EmployerProfile.jsx';
+import ManageJobs from './EmployersComponents/ManageJobs/ManageJobs.jsx';
+import ManageJobsDashboard from './EmployersComponents/ManageJobs/ManageJobsDashboard.jsx';
+import ManageJobsActiveJobs from './EmployersComponents/ManageJobs/ManageJobsActiveJobs.jsx';
+import ManageJobsHistory from './EmployersComponents/ManageJobs/ManageJobsHistory.jsx';
+import ManageJobsShortlisted from './EmployersComponents/ManageJobs/ManageJobsShortlisted.jsx';
+import ManageJobsInterview from './EmployersComponents/ManageJobs/ManageJobsInterview.jsx';
 
 
 const router = createBrowserRouter([
@@ -161,6 +168,36 @@ const router = createBrowserRouter([
       {
         path: 'signin',
         element: <ForEmployersLogin></ForEmployersLogin>
+      },
+      {
+        path: 'employerprofile',
+        element: <EmployerProfile />
+      },
+      {
+        path: 'managejobs',
+        element: <ManageJobs />,
+        children: [
+          {
+            path: 'dashboard',
+            element: <ManageJobsDashboard />
+          },
+          {
+            path: 'activejobs',
+            element: <ManageJobsActiveJobs />
+          },
+          {
+            path: 'jobshistory',
+            element: <ManageJobsHistory />
+          },
+          {
+            path: 'shortlisted',
+            element: <ManageJobsShortlisted />
+          },
+          {
+            path: 'interview',
+            element: <ManageJobsInterview />
+          }
+        ]
       }
     ]
   }

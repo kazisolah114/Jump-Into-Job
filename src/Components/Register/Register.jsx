@@ -21,7 +21,7 @@ const Register = () => {
         const userData = {'first_name' : firstName, 'last_name' : lastName , 'email' :  email, 'password' : password, 'password_confirmation' : confirmPassword, 'user_type' :  userType };
 
         // console.log(userData)
-        const response = await fetch('https://unitechholdingsltd.com/api/v1/auth/job-seeker/signup', {
+        const response = await fetch('https://api.jumpintojob.com/api/v1/auth/job-seeker/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

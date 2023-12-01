@@ -16,6 +16,9 @@ const FeaturedCompanies = () => {
     return (
         <div className='featured-company-section'>
             <div className="featured-company-content container companies-tabs-content">
+                <div className="featured-companies-header section-header">
+                    <h2>Featured companies on Jump Into Job</h2>
+                </div>
                 <div className="featured-company-content-items">
                     {
                         featuredCompanies.slice(0, 6).map(company => <div key={company.id} className='company-item'>

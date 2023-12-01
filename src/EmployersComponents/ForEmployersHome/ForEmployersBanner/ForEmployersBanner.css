@@ -22,17 +22,17 @@
 }
 .employers-banner-text button {
     background: #2ECC71;
-    width: 300px;
+    width: 250px;
     height: 50px;
     cursor: pointer;
     border: none;
-    
+    border-radius: 5px;
 }
 .employers-banner-text button a{
     text-decoration: none;
     font-weight: bold;
     font-size: 19px;
-    color: #111;
+    color: #fff;
     transition: .3s;
 }
 .employers-banner-text button:hover a{

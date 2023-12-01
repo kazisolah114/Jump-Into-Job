@@ -98,7 +98,8 @@ const Header = () => {
         <div className='main-header'>
             <div className="web-header container">
                 <div className="header-logo">
-                    <h2>Jump Into Job</h2>
+                    <img className='jump-job-logo' src="https://i.ibb.co/RNtVFY1/blue-full.jpg" alt="" />
+                    {/* <p>Explore Apply Conqure</p> */}
                     <div className='mobile-menu-icon'>
                         {userData ?
                             <div className={`loggedin-user-container`}>
@@ -150,6 +151,7 @@ const Header = () => {
                         <li><Link to="/" onClick={() => (handleActiveMenu(activeMenu), setMobileMenuClicked(false))} className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
                         <li><Link to="/findjobs" onClick={() => (handleActiveMenu(activeMenu), setMobileMenuClicked(false))} className={location.pathname === '/findjobs' ? 'active' : ''}>Jobs</Link></li>
                         <li><Link to="/companies" onClick={() => (handleActiveMenu(activeMenu), setMobileMenuClicked(false))} className={location.pathname === '/companies' ? 'active' : ''}>Companies</Link></li>
+                        <li><Link to="/message" onClick={() => (handleActiveMenu(activeMenu), setMobileMenuClicked(false))} className={location.pathname === '/message' ? 'active' : ''}>Message</Link></li>
                         <li><Link onClick={handleSignoutAlert}>For Employers</Link></li>
                     </ul>
                     <ul className="account-menu">
@@ -164,7 +166,7 @@ const Header = () => {
                                             </label>
                                         </div>
                                         <TbBell></TbBell>
-                                        <TbSend></TbSend>
+                                        {/* <TbSend></TbSend> */}
                                         <TbUserCircle onClick={toggleUserProfile} className={userProfileClicked ? 'user-profile-active' : ''}></TbUserCircle>
 
                                         {userProfileClicked ?
@@ -191,7 +193,7 @@ const Header = () => {
                                 userLoggedout?.result ?
                                     <>
                                         <li><Link to="/register" className='register-btn' onClick={() => setMobileMenuClicked(false)}><HiOutlineUserAdd />Register</Link></li>
-                                        <li><Link to="signin" className='login-btn' onClick={() => setMobileMenuClicked(false)}><HiOutlineUser />Sign In</Link></li>
+                                        <li><Link to="signin" className='login-btn' onClick={() => setMobileMenuClicked(false)}><HiOutlineUser />Sign In</Link></li> 
                                     </>
                                     :
                                     <>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useUserContext } from '../../../UserContext/UserContext';
 import { HiOutlineEye, HiOutlineEyeOff, HiOutlineMail } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
+import { useUserContext } from '../../UserContext/UserContext';
 
 
 const ForEmployersLogin = () => {
@@ -15,7 +15,7 @@ const ForEmployersLogin = () => {
         e.preventDefault();
         const userLoginData = { 'email': userEmail, 'password': userPassword, 'remember_me': rememberUser };
         console.log(userLoginData)
-        const loginData = await fetch('https://unitechholdingsltd.com/api/v1/auth/login', {
+        const loginData = await fetch('https://api.jumpintojob.com/api/v1/auth/user/login', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

@@ -17,6 +17,17 @@
     justify-content: space-between;
     align-items: center;
 }
+.web-header .header-logo .jump-job-logo{
+    width: 130px;
+}
+.employer-header-logo{
+    gap: 6px;
+}
+.employer-header-logo p {
+    font-size: 15px;
+    color: #5a5a5a;
+    letter-spacing: 3px;
+}
 .web-header .header-logo .mobile-menu-icon{
     display: none;
 }
@@ -275,7 +286,7 @@
     text-align: center;
     font-size: 15px!important;
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 50px;
 }
 .login-btn {
     background: transparent;
@@ -286,20 +297,11 @@
     height: 38px;
     line-height: 35px;
     text-align: center;
-    border-radius: 4px;
+    border-radius: 50px;
     font-size: 15px!important;
     font-weight: bold;
     transition: .3s;
 }
 .login-btn:hover{
-    /* background: #3498DB;
-    color: #fff!important;
-    border: 1px solid transparent; */
+    color: unset!important;
 }
-.register-btn, .login-btn {
-    /* display: flex;
-    align-items: center;
-    gap: 7px;
-    justify-content: center; */
-}
-/* .register-btn, .login-btn a{} */

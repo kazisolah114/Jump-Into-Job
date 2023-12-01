@@ -7,22 +7,21 @@ import './ForEmployersRegister.css'
 const ForEmployersRegister = () => {
     const [showPassword, setShowPassword] = useState(false)
     // Register User:
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
+    const [companyName, setCompanyName] = useState('');
+    const [companyType, setCompanyType] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [userType, setUserType] = useState('Employer');
-    const [registerBy, setRegisterBy] = useState('email');
 
 
     const handleRegistration = async (e) => {
         e.target.reset()
         e.preventDefault();
-        const userData = { 'first_name': firstName, 'last_name': lastName, 'email_or_phone': email, 'password': password, 'password_confirmation': confirmPassword, 'user_type': userType, 'register_by': registerBy };
+        const userData = { 'company_name': companyName, 'company_type': companyType, 'email': email, 'password': password, 'password_confirmation': confirmPassword, 'user_type': userType };
 
         // console.log(userData)
-        const response = await fetch('https://unitechholdingsltd.com/api/v1/auth/signup', {
+        const response = await fetch('https://api.jumpintojob.com/api/v1/auth/employer/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -53,18 +52,18 @@ const ForEmployersRegister = () => {
                 <div className="account-form account-form-register">
                     <form action="" onSubmit={handleRegistration}>
                         <div className='account-info'>
-                            <label htmlFor="first_name">Company Name</label>
+                            <label htmlFor="company_name">Company Name</label>
                             <div className="account-input  account-input-register">
                                 <HiOutlineUserCircle></HiOutlineUserCircle>
-                                <input type="text" placeholder='Mircosoft Corp.' name="first_name" id="first_name" required value={firstName} onChange={e => setFirstName(e.target.value)} />
+                                <input type="text" placeholder='Mircosoft Corp.' name="company_name" id="company_name" required value={companyName} onChange={e => setCompanyName(e.target.value)} />
                             </div>
                         </div>
                         {<div className='account-info account-info-register'>
-                            <label htmlFor="last_name">Company Type</label>
+                            <label htmlFor="company_type">Company Type</label>
                             <div className="account-input  account-input-register">
                                 <HiOutlineUserCircle></HiOutlineUserCircle>
                                 {/* <input type="text" placeholder='Warner' name="last_name" id="last_name" required value={lastName} onChange={e => setLastName(e.target.value)} /> */}
-                                <select name="last_name" id="last_name" required value={lastName} onChange={e => setLastName(e.target.value)}>
+                                <select name="company_type" id="company_type" required value={companyType} onChange={e => setCompanyType(e.target.value)}>
                                     <option value="">Select Type</option>
                                     <option value="Technology and IT">Technology and IT</option>
                                     <option value="Retail and Consumer Goods">Retail and Consumer Goods</option>
@@ -86,17 +85,17 @@ const ForEmployersRegister = () => {
                             </div>
                         </div>}
                         {<div className='account-info'>
-                            <label htmlFor="user_name">User Type</label>
+                            <label htmlFor="user_type">User Type</label>
                             <div className="account-input  account-input-register">
                                 <HiOutlineUserCircle></HiOutlineUserCircle>
-                                <input type="text" name="user_name" id="user_name" required value={userType} readOnly />
+                                <input type="text" name="user_type" id="user_type" required value={userType} readOnly />
                             </div>
                         </div>}
                         <div className='account-info'>
                             <label htmlFor="email">Email</label>
                             <div className="account-input  account-input-register">
                                 <HiOutlineMail></HiOutlineMail>
-                                <input type="text" placeholder='microsoft@info.com' name="email_or_phone" id="email" required value={email} onChange={e => setEmail(e.target.value)} />
+                                <input type="email" placeholder='microsoft@info.com' name="email" id="email" required value={email} onChange={e => setEmail(e.target.value)} />
                             </div>
                         </div>
                         <div className='account-info'>

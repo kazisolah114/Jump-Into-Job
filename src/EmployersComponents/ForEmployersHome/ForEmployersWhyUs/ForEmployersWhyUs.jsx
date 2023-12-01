@@ -1,7 +1,7 @@
 import React from 'react';
-import { useUserContext } from '../../../../UserContext/UserContext';
 import { HiArrowSmRight } from "react-icons/hi";
 import { Link } from 'react-router-dom';
+import { useUserContext } from '../../../UserContext/UserContext';
 
 const ForEmployersWhyUs = () => {
     const {userData} = useUserContext()

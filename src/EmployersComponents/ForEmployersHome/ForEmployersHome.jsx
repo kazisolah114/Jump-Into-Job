@@ -9,7 +9,7 @@ const ForEmployersHome = () => {
     return (
         <div>
             <ForEmployersBanner></ForEmployersBanner>
-            <ForEmployersLiveData></ForEmployersLiveData>
+            {/* <ForEmployersLiveData></ForEmployersLiveData> */}
             {/* <ForEmployersProcess></ForEmployersProcess> */}
             <ForEmployersWhyUs></ForEmployersWhyUs>
             <ForEmployersJobBanner></ForEmployersJobBanner>

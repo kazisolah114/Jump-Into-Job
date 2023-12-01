@@ -12,7 +12,7 @@
 
 .section-header{
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     position: relative;
 }
 .section-header h2 {
@@ -27,7 +27,7 @@
     color: #2f2f2fd6;
     margin-top: 10px;
 }
-.section-header::after {
+/* .section-header::after {
     content: '';
     position: absolute;
     bottom: -15px;
@@ -36,7 +36,7 @@
     height: 5px;
     border-radius: 50px;
     background-color: #3498dbb8;
-}
+} */
 
 
 
