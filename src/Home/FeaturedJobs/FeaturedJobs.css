@@ -5,7 +5,7 @@
 .featured-jobs-items {
     width: 100%!important;
     display: grid!important;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px!important;
 }
 .featured-jobs-show-more-btn {

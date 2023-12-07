@@ -1,98 +1,132 @@
-import React, { } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ForEmployersPostJob.css'
 import { HiOutlineUserCircle } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import RichEditor from './RichEditor';
+import PostJobReview from './PostJobReview';
 
 
 const ForEmployersPostJob = () => {
-
+    const [showReview, setShowReview] = useState(false);
+    const [jobData, setJobData] = useState({});
+    const [categories, setCategories] = useState([]);
+    useEffect(() => {
+        fetch('https://api.jumpintojob.com/api/v1/categories')
+        .then(res => res.json())
+        .then(data => {
+            setCategories(data.data);
+        })
+    },[])
+    console.log(categories)
     return (
         <div className='post-job-main'>
-            <div className="register-user-header post-job-header">
-                <h2>Post Jobs</h2>
-                <span>.</span>
-            </div>
             <div className="post-job-content container">
-                <form action="">
-                    <h3>ADD JOB INFORMATION</h3>
-                    <div className="post-job-info-container">
-                        <div className="job-post-info account-info">
-                            <label htmlFor="job_title">Job Title</label>
-                            <div className="account-input">
-                                <HiOutlineUserCircle></HiOutlineUserCircle>
-                                <input type="text" placeholder='Junior Back-end Developer' id="job_title" name="job_title" required />
+                {showReview ?
+                    <PostJobReview setShowReview={setShowReview} jobData={jobData} />
+                    :
+                    <form action="">
+                        <h3>ADD JOB INFORMATION</h3>
+                        <div className="post-job-info-container">
+                            <div className="job-post-info account-info">
+                                <label htmlFor="job_title">Job Title</label>
+                                <div className="account-input">
+                                    <HiOutlineUserCircle></HiOutlineUserCircle>
+                                    <input type="text" placeholder='Civil Engineer' id="job_title" name="job_title" onChange={(e) => setJobData({ ...jobData, 'title': e.target.value })} defaultValue={jobData.title} required />
+                                </div>
+                            </div>
+                            <div className="job-post-info">
+                                <label htmlFor="vacancies">Vacancies</label>
+                                <div className="account-input">
+                                    <HiOutlineUserCircle></HiOutlineUserCircle>
+                                    <input type="number" placeholder='1' id="vacancies" name="vacancies" onChange={(e) => setJobData({ ...jobData, 'vacancies': e.target.value })} defaultValue={jobData.vacancies} required />
+                                </div>
+                            </div>
+                            <div className="job-post-info">
+                                <label htmlFor="salary">Estimated Salary</label>
+                                <div className="account-input">
+                                    <HiOutlineUserCircle></HiOutlineUserCircle>
+                                    <input type="number" placeholder='$120000' id="salary" name="salary" onChange={(e) => setJobData({ ...jobData, 'salary': e.target.value })} defaultValue={jobData.salary} required />
+                                </div>
+                            </div>
+                            <div className="job-post-info">
+                                <label htmlFor="job_type">Job Type</label>
+                                <div className="account-input">
+                                    <HiOutlineUserCircle></HiOutlineUserCircle>
+                                    <select name="job_type" id="job_type" onChange={(e) => setJobData({ ...jobData, 'employment_type': e.target.value })} defaultValue={jobData.employment_type} required>
+                                        <option value="Select">Select</option>
+                                        <option value="Full-time">Full-time</option>
+                                        <option value="Part-time">Part-time</option>
+                                        <option value="Internship">Internship</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div className="job-post-info">
+                                <label htmlFor="location_type">Location Type</label>
+                                <div className="account-input">
+                                    <HiOutlineUserCircle></HiOutlineUserCircle>
+                                    <select name="location_type" id="location_type" onChange={(e) => setJobData({ ...jobData, 'location_type': e.target.value })} defaultValue={jobData.location_type} required>
+                                        <option value="Select">Select</option>
+                                        <option value="In-person">In person</option>
+                                        <option value="Remote">Remote</option>
+                                        <option value="Hybrid">Hybrid</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div className="job-post-info">
+                                <label htmlFor="job_location">Location street address</label>
+                                <div className="account-input">
+                                    <HiOutlineUserCircle></HiOutlineUserCircle>
+                                    <input type="text" placeholder='address for this job' onChange={(e) => setJobData({ ...jobData, 'location': e.target.value })} defaultValue={jobData.location} />
+                                </div>
+                            </div>
+                            <div className="job-post-info">
+                                <label htmlFor="job_location">Availability</label>
+                                <div className="account-input">
+                                    <HiOutlineUserCircle></HiOutlineUserCircle>
+                                    <input type="text" placeholder='address for this job' onChange={(e) => setJobData({ ...jobData, 'availability': e.target.value })} defaultValue={jobData.availability} />
+                                </div>
+                            </div>
+                            <div className="job-post-info">
+                                <label htmlFor="category_id" className='not-required'>Job Category</label>
+                                <div className="account-input">
+                                    <HiOutlineUserCircle></HiOutlineUserCircle>
+                                    <select name="category_id" id="category_id" onChange={(e) => setJobData({...jobData, 'category_id': 1, 'category_name': e.target.value})}>
+                                        <option value="">Select</option>
+                                        {
+                                            categories.map((category) => (
+                                                <option key={category.id} value={category.category_name}>
+                                                    {category.category_name}
+                                                </option>
+                                            ))
+                                        }
+                                        {/* <option value="1">IT & Technology</option>
+                                        <option value="2">Real Estate</option>
+                                        <option value="3">Medical</option>
+                                        <option value="4">Other</option> */}
+                                    </select>
+                                </div>
+                            </div>
+                            <div className="job-post-info">
+                                <label htmlFor="deadline" className='not-required'>Deadline</label>
+                                <div className="account-input">
+                                    <HiOutlineUserCircle></HiOutlineUserCircle>
+                                    <input type="date" id="deadline" name="deadline" onChange={(e) => setJobData({ ...jobData, 'deadline': e.target.value })} defaultValue={jobData.deadline} />
+                                </div>
                             </div>
                         </div>
-                        <div className="job-post-info">
-                            <label htmlFor="vacancies">Vacancies</label>
-                            <div className="account-input">
-                                <HiOutlineUserCircle></HiOutlineUserCircle>
-                                <input type="number" placeholder='07' id="vacancies" name="vacancies" required />
+                        <div className="job-post-text-editor">
+                            <RichEditor jobData={jobData} setJobData={setJobData} />
+                        </div>
+                        <div className="terms-conditions">
+                            <p>By posting a job, you understand and agree to Job Portal's <Link to="/terms">Terms</Link>. You also acknowledge our <Link to="/cookie">Cookie</Link> and <Link to="/privacy">Privacy</Link> policies.</p>
+                            <div>
+                                <input type="checkbox" id="termscheck" required />
+                                <label htmlFor="termscheck">I will agree company terms & conditions.</label>
                             </div>
                         </div>
-                        <div className="job-post-info">
-                            <label htmlFor="salary">Estimated Salary</label>
-                            <div className="account-input">
-                                <HiOutlineUserCircle></HiOutlineUserCircle>
-                                <input type="number" placeholder='$90,000 - $110,000' id="salary" name="salary" required />
-                            </div>
-                        </div>
-                        <div className="job-post-info">
-                            <label htmlFor="job_type">Job Type</label>
-                            <div className="account-input">
-                                <HiOutlineUserCircle></HiOutlineUserCircle>
-                                <select name="job_type" id="job_type" required>
-                                    <option value="job_type">Full Time</option>
-                                    <option value="job_type">Part Time</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div className="job-post-info">
-                            <label htmlFor="experience" className='not-required'>Job Category</label>
-                            <div className="account-input">
-                                <HiOutlineUserCircle></HiOutlineUserCircle>
-                                <select name="last_name" id="last_name" required>
-                                    <option value="">Select Type</option>
-                                    <option value="Technology and IT">Technology and IT</option>
-                                    <option value="Retail and Consumer Goods">Retail and Consumer Goods</option>
-                                    <option value="Finance and Banking">Finance and Banking</option>
-                                    <option value="Healthcare and Pharmaceuticals">Healthcare and Pharmaceuticals</option>
-                                    <option value="Manufacturing and Industrial">Manufacturing and Industrial</option>
-                                    <option value="Energy and Utilities">Energy and Utilities</option>
-                                    <option value="Media and Entertainment">Media and Entertainment</option>
-                                    <option value="Real Estate and Property">Real Estate and Property</option>
-                                    <option value="Travel and Hospitality">Travel and Hospitality</option>
-                                    <option value="Automotive">Automotive</option>
-                                    <option value="Education and E-learning">Education and E-learning</option>
-                                    <option value="Agriculture and Food Production">Agriculture and Food Production</option>
-                                    <option value="Construction and Engineering">Construction and Engineering</option>
-                                    <option value="Transportation and Logistics">Transportation and Logistics</option>
-                                    <option value="Telecommunications">Telecommunications</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div className="job-post-info">
-                            <label htmlFor="deadline" className='not-required'>Deadline</label>
-                            <div className="account-input">
-                                <HiOutlineUserCircle></HiOutlineUserCircle>
-                                <input type="date" id="deadline" name="deadline" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="job-post-text-editor">
-                        <RichEditor />
-                    </div>
-                    <div className="terms-conditions">
-                        <p>By posting a job, you understand and agree to Job Portal's <Link to="/terms">Terms</Link>. You also acknowledge our <Link to="/cookie">Cookie</Link> and <Link to="/privacy">Privacy</Link> policies.</p>
-                        <div>
-                            <input type="checkbox" id="termscheck" required />
-                            <label htmlFor="termscheck">I will agree company terms & conditions.</label>
-                        </div>
-                    </div>
-                    <input className='job-post-button' type="submit" value="Post" />
-                </form>
+                        <button className='post-continue-btn' onClick={() => setShowReview(true)}>Continue</button>
+                    </form>
+                }
             </div>
         </div>
     );

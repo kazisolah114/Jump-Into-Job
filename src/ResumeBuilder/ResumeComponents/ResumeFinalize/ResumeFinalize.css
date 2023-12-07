@@ -1,0 +1,29 @@
+.resume-finalize-content{}
+.resume-finalize-content .addmore-btn {
+    width: 110px;
+    font-weight: bold;
+    height: 35px;
+    background: #3498DB;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.addmore {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.addmore li {
+    list-style: none;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.addmore li label{
+    color: #343434;
+}
+.addmore li input{}
+.addmore li input[type="text"] {
+    width: 100px;
+    outline: none;
+}

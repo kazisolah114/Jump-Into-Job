@@ -12,13 +12,16 @@ const FeaturedJobs = () => {
     const [featuredJobs, setFeaturedJobs] = useState([])
     const isMobileScreen = useMediaQuery("only screen and (max-width : 1368px)");
     useEffect(() => {
-        fetch('/alljobs.json')
+        fetch('https://api.jumpintojob.com/api/v1/circular')
             .then(res => res.json())
             .then(data => {
-                setAllJobs(data);
+                setAllJobs(data.data);
                 const filteredFeaturedJobs = allJobs.filter(job => job.job_vacancy >= 5);
                 const sortedFeaturedJobs = filteredFeaturedJobs.sort((a, b) => b.job_vacancy - a.job_vacancy);
                 setFeaturedJobs(sortedFeaturedJobs);
+            })
+            .catch((error) => {
+                console.log("Error fetching data:", error);
             });
 
     }, [featuredJobs])

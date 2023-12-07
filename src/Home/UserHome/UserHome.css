@@ -54,7 +54,7 @@
     color: #fff;
 }
 .user-home-content .user-home-jobs div {
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px!important;
 }
 

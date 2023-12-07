@@ -18,7 +18,7 @@ const ForEmployersRegister = () => {
     const handleRegistration = async (e) => {
         e.target.reset()
         e.preventDefault();
-        const userData = { 'company_name': companyName, 'company_type': companyType, 'email': email, 'password': password, 'password_confirmation': confirmPassword, 'user_type': userType };
+        const userData = { 'name': companyName, 'company_type': companyType, 'email': email, 'password': password, 'password_confirmation': confirmPassword, 'user_type': userType };
 
         // console.log(userData)
         const response = await fetch('https://api.jumpintojob.com/api/v1/auth/employer/signup', {

@@ -1,3 +1,4 @@
+import { useThrottle } from '@uidotdev/usehooks';
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 const UserContext = createContext();
@@ -11,11 +12,17 @@ export const UserProvider = ({ children }) => {
     const [userData, setUserData] = useState(initialUserData);
     const [clickedFeaturedJob, setClickedFeaturedJob] = useState(null);
 
+    const [bearerToken, setBearerToken] = useState(null);
+
     useEffect(() => {
         if (userData === null) {
+            
             localStorage.removeItem('userData');
+
         } else {
             localStorage.setItem('userData', JSON.stringify(userData));
+
+            // console.log(userData);
         }
     }, [userData]);
 

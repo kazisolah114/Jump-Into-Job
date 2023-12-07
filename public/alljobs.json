@@ -1,21 +1,5 @@
 [
-    {
-      "id": 1,
-      "image": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",
-      "job_title": "Front-end Engineer",
-      "company_name": "Google LLC",
-      "job_place": ["Remote", "On-Site"],
-      "availability": ["Full Time"],
-      "address": "Quins Town, NY, USA",
-      "salary": "$100K - $150K",
-      "job_description": " A UI/UX (User Interface/User Experience) designer is responsible for designing and creating engaging and effective interfaces for software and web applications. This includes designing the layout, visual design, and interactivity of the ng with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team membuser interface. This includes designing the layout, visual design, and interactivity of the user interface. This includes designing the layout, visual design, and interactivity of the user interface. This includes designing the layout, visual design, and interactivity of the user interface.",
-      "job_resposibilities": "Collaborating with cross-functional teams: UI/UX designers often work closely with other teams, including product management, engineering, and marketing, to ensure that the user interface is aligned with business and technical requirements. You will need to be able to effectively communicate your design ideas and gather feedback from other team members.",
-      "educational_requirements": "Bachelor degree from any reputational university.",
-      "experience": "2 - 3 years in this or similar field",
-      "phone": 1428820402,
-      "email": "info@example.com",
-      "job_vacancy": 4
-    },
+    
     {
       "id": 2,
       "image": "https://img.freepik.com/free-vector/logo-with-abstract-s_1043-45.jpg?w=740&t=st=1693337101~exp=1693337701~hmac=efbbe2f16fb6d911c64ea9606c1fb67668cb6fe50b7ce12e09823a1d162a0ed1",

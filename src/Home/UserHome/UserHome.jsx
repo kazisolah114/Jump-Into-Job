@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './UserHome.css'
 import { useUserContext } from '../../UserContext/UserContext';
 import { useMediaQuery } from '@uidotdev/usehooks';
-import { HiMail, HiMap, HiOutlineBookmark, HiPhone } from 'react-icons/hi';
+import { HiMap, HiOutlineBookmark } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
-import { FcBriefcase, FcBusinessman, FcCallback, FcFinePrint, FcOnlineSupport } from "react-icons/fc";
+import { FcBriefcase, FcBusinessman, FcFinePrint, FcOnlineSupport } from "react-icons/fc";
 
 const UserHome = () => {
     const { setClickedFeaturedJob } = useUserContext();
@@ -23,13 +23,16 @@ const UserHome = () => {
     }, [])
 
     useEffect(() => {
-        fetch('/alljobs.json')
+        fetch('https://api.jumpintojob.com/api/v1/circular')
             .then(res => res.json())
             .then(data => {
-                setAllJobs(data);
+                setAllJobs(data.data);
                 const filteredFeaturedJobs = allJobs.filter(job => job.job_vacancy >= 2);
                 const sortedFeaturedJobs = filteredFeaturedJobs.sort((a, b) => b.job_vacancy - a.job_vacancy);
                 setFeaturedJobs(sortedFeaturedJobs);
+            })
+            .catch((error) => {
+                console.log("Error fetching jobs:", error)
             });
 
     }, [featuredJobs])
@@ -50,7 +53,7 @@ const UserHome = () => {
         <div className='user-home'>
             <div className="user-home-content container">
                 <div className="user-home-companies res-second-div">
-                    <h4>Featured Companies:</h4>
+                    {/* <h4>Featured Companies:</h4> */}
                     <div className='user-home-company'>
                         {
                             featuredCompanies.slice(0, 3).map(company => <div key={company.id} className='company-item'>
@@ -86,7 +89,7 @@ const UserHome = () => {
                     </div>
                 </div>
                 <div className="user-home-jobs res-first-div">
-                    <h4>Featured Jobs:</h4>
+                    {/* <h4>Featured Jobs:</h4> */}
                     <div className='featured-jobs-items all-jobs-container'>
                         {
                             featuredJobs.slice(0, 10).map(job =>
@@ -116,7 +119,7 @@ const UserHome = () => {
                     </div>
                 </div>
                 <div className="user-home-profile res-third-div">
-                    <h4>User Profile:</h4>
+                    {/* <h4>User Profile:</h4> */}
                     <div className='user-home-profile-content'>
                         <div className='home-profile'>
                             <div className="home-user-profile">

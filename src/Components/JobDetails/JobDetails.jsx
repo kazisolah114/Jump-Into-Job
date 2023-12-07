@@ -12,12 +12,12 @@ const JobDetails = () => {
     const { userData } = useUserContext();
     const loginNavigate = useNavigate();
     useEffect(() => {
-        if (jobs.length > 0) {
-            const job = jobs.find(job => job.id == id);
+        if (jobs.data.length > 0) {
+            const job = jobs.data.find(job => job.id == id);
             setShowJobDetails(job)
         }
     }, [id, jobs])
-
+    
 
     const handleApplyJob = () => {
         if (userData) {

@@ -6,7 +6,7 @@
     text-align: center;
 }
 .post-job-content {
-    border: 1px solid #3498db26;
+    /* border: 1px solid #3498db26; */
     width: 60%;
     padding: 50px;
 }
@@ -56,19 +56,131 @@
 .post-job-content form .job-post-text-editor{
     margin-bottom: 30px;
 }
-.job-post-button {
-    width: 170px;
-    height: 40px;
-    margin-top: 50px;
-    border-radius: 5px;
-    border: none;
-    font-size: 17px;
+.post-continue-btn {
+    width: 145px;
+    height: 42px;
     font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-top: 60px;
     background: #3498DB;
     color: #fff;
     cursor: pointer;
+    font-size: 15px;
     transition: .3s;
 }
-.job-post-button:hover{
+.post-continue-btn:hover{
     background: #2b7eb6;
+}
+
+
+/* Post Job Review */
+.postjob-review{}
+/* .postjob-review .header-banner {
+    background-image: url('https://img.freepik.com/free-vector/flat-design-business-people-set_23-2148953160.jpg?w=1060&t=st=1701609856~exp=1701610456~hmac=33ba4dac0ce2aee78a7ebf4f4ab3a591040a2b8ce7e9cd6736dc3d7c56a9f29e');
+    height: 350px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    margin-bottom: 50px;
+    position: relative;
+}
+.postjob-review .header-banner h3{
+    position: relative;
+    
+} */
+.postjob-review h3 {
+    color: #061421;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.review-content{}
+.review-content .main{}
+.review-content .main .review-item {
+    display: grid;
+    grid-template-columns: 250px auto;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.review-content .main .review-item h4{
+    color: #3a3a3a;
+}
+.review-content .main .review-item div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 20px;
+    border-radius: 5px;
+    transition: .2s;
+    cursor: pointer;
+    gap: 20px;
+}
+.review-content .main .review-item div:hover{
+    background: rgba(238, 238, 238, 0.548);
+}
+.review-content .main .review-item div p{
+    color: #616161;
+    text-align: justify;
+}
+.review-content .main .review-item div svg{
+    color: #319AD9;
+}
+.review-content .main .review-item.details{
+    align-items: start;
+}
+.review-content .main .details div:hover{
+    /* align-items: unset; */
+    background: none!important;
+}
+.review-content .main .review-item .details-description {
+    align-items: start;
+    padding: 0 20px;
+}
+.review-content .main .review-item .details-description svg{
+    font-size: 16px;
+}
+
+.jobpost-review-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+.jobpost-review-actions div{}
+.jobpost-review-actions div button {
+    width: 145px;
+    height: 42px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 15px;
+}
+.jobpost-review-actions .back-btn {
+    border: 1px solid #111;
+    color: #111;
+}
+.jobpost-review-actions .preview-post{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.jobpost-review-actions .preview-post .preview-btn {
+    color: #3498DB;
+    border: 1px solid #3498DB;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+.jobpost-review-actions .preview-post .preview-btn svg{
+    font-size: 16px;
+}
+.jobpost-review-actions .preview-post .post-btn {
+    background: #3498DB;
+    color: #fff;
+    transition: .2s;
+}
+.jobpost-review-actions .preview-post .post-btn:hover{
+    background:#3291d1;
 }

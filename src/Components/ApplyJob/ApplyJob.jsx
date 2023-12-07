@@ -13,8 +13,8 @@ const ApplyJob = () => {
   const [applyJobData, setApplyJobData] = useState([]);
   const [coverLetterOption, setCoverLetterOption] = useState('text')
   useEffect(() => {
-    if (jobsData.length > 0) {
-      const sortedJob = jobsData.find(job => job.id == id);
+    if (jobsData.data.length > 0) {
+      const sortedJob = jobsData.data.find(job => job.id == id);
       setApplyJobData(sortedJob)
     }
   }, [])
@@ -22,7 +22,7 @@ const ApplyJob = () => {
   const handleCoverLetter = (e) => {
     setCoverLetterOption(e);
   }
-  console.log(coverLetterOption)
+  console.log(applyJobData)
   return (
     <div className='job-application-form'>
       <div className="job-application-form-content container">

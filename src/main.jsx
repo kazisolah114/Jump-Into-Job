@@ -64,7 +64,7 @@ const router = createBrowserRouter([
           {
             path: 'jobdetails/:id',
             element: <JobDetails></JobDetails>,
-            loader: () => fetch('/alljobs.json')
+            loader: () => fetch('https://api.jumpintojob.com/api/v1/circular')
           }
         ]
       },
@@ -143,7 +143,7 @@ const router = createBrowserRouter([
   {
     path: 'applyjob/:id',
     element: <ApplyJob></ApplyJob>,
-    loader: () => fetch('/alljobs.json')
+    loader: () => fetch('https://api.jumpintojob.com/api/v1/circular')
   },
   {
     path: 'resumebuilder',
