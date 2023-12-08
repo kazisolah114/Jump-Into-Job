@@ -27,6 +27,7 @@ import '@/ResumeBuilder/ResumeComponents/ResumeSkills/AddSkills.css'
 import '@/ResumeBuilder/ResumeComponents/ResumeSteps/ResumeSteps.css'
 import '@/ResumeBuilder/ResumeComponents/ResumeTemplates/ResumeTemplates.css'
 import { UserProvider } from "@/UserContext/UserContext"
+import JobContext from '@/jobContext/JobContext'
 
 function layout({children}) {
 
@@ -35,9 +36,9 @@ function layout({children}) {
     <html lang="en">
       <body className='fou'>
       <UserProvider>
-
+      <JobContext>
         {children}
-
+      </JobContext>
       </UserProvider>
         </body>
     </html>

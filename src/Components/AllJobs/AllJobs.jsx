@@ -6,30 +6,21 @@ import JobDetails from '../JobDetails/JobDetails';
 import { HiOutlineBookmark, HiOutlineBriefcase, HiOutlineCursorClick, HiOutlineLocationMarker } from 'react-icons/hi';
 import { useMediaQuery } from '@uidotdev/usehooks';
 import { useUserContext } from '../../UserContext/UserContext';
+import { useJobContext } from '@/jobContext/JobContext';
 
 const AllJobs = ({children}) => {
     const { clickedFeaturedJob } = useUserContext();
-    const [allJobs, setAllJobs] = useState([]);
+    const {allJobs, setAllJobs} =useJobContext()
     const [filteredJobs, setFilteredJobs] = useState([]);
     const [jobsToShow, setJobsToShow] = useState(6)
     const [clickedJob, setClickedJob] = useState();
     const jobsToShowIncrement = 6;
     const isMobileScreen = useMediaQuery("only screen and (max-width : 1368px)");
     useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/circular`)
-            .then(res => res.json())
-            .then(data => {
-                // console.log(data.data);
-                setAllJobs(data.data);
-                // If you want to use filteredJobs for filtering logic later on,
-                // you might want to keep it separate initially
-                setFilteredJobs(data.data);
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-                // Handle errors appropriately (e.g., show an error message to the user)
-            });
-    }, []);
+        setFilteredJobs(allJobs)
+    }, [allJobs])
+    
+
     const handleClickedJob = (e) => {
         setClickedJob(e)
     }

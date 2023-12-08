@@ -6,16 +6,17 @@ import Swal from 'sweetalert2';
 import { useUserContext } from '../../UserContext/UserContext';
 import { useParams, useRouter } from 'next/navigation';
 
-const JobDetails = () => {
+const JobDetails = ({props}) => {
     const { id } = useParams();
+    console.log(props)
 
-    const jobs = [];
+    const {jobs} = props;
     const [showJobDetails, setShowJobDetails] = useState({});
     const { userData } = useUserContext();
     const loginNavigate = useRouter();
     useEffect(() => {
-        if (jobs.data.length > 0) {
-            const job = jobs.data.find(job => job.id == id);
+        if (jobs.length > 0) {
+            const job = jobs.find(job => job.id == id);
             setShowJobDetails(job)
         }
     }, [id, jobs])
