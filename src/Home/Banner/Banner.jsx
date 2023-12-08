@@ -1,6 +1,7 @@
+"use client"
 import React, { useEffect, useState } from 'react';
 import './Banner.css';
-import { Link } from 'react-router-dom';
+import  Link  from 'next/link';
 import { TbBriefcase, TbUserSearch } from "react-icons/tb";
 
 const Banner = () => {
@@ -31,8 +32,8 @@ const Banner = () => {
                         }
                     </div>
                     <div className="home-banner-buttons">
-                        <Link to="/findjobs"><button className='banner-btn find-job-btn'>Find Jobs <TbBriefcase></TbBriefcase></button></Link>
-                        <Link to="foremployers"><button className='banner-btn post-job-btn'>Post Jobs <TbBriefcase></TbBriefcase></button></Link>
+                        <Link href="/findjobs"><button className='banner-btn find-job-btn'>Find Jobs <TbBriefcase/></button></Link>
+                        <Link href="foremployers"><button className='banner-btn post-job-btn'>Post Jobs <TbBriefcase/></button></Link>
                     </div>
                 </div>
                 <div className="banner-image">

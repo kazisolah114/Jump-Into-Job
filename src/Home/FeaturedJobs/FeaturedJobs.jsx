@@ -1,18 +1,28 @@
+"use client"
 import React, { useEffect, useState } from 'react';
 import { HiOutlineArrowNarrowRight, HiOutlineBookmark, HiOutlineCursorClick } from 'react-icons/hi';
-import { Link, Outlet } from 'react-router-dom';
+import  Link  from 'next/link';
 import './FeaturedJobs.css'
 import { FaUpRightFromSquare } from 'react-icons/fa6';
 import { useMediaQuery } from '@uidotdev/usehooks';
 import { useUserContext } from '../../UserContext/UserContext';
-
 const FeaturedJobs = () => {
     const {setClickedFeaturedJob} = useUserContext();
     const [allJobs, setAllJobs] = useState([]);
     const [featuredJobs, setFeaturedJobs] = useState([])
-    const isMobileScreen = useMediaQuery("only screen and (max-width : 1368px)");
+
+    
+    let isClient = false;
+    setTimeout(() => {
+        isClient = true
+    }, 1000);
+
+    
+
+    const isMobileScreen = isClient? useMediaQuery("only screen and (max-width : 1368px)") : false;
+    
     useEffect(() => {
-        fetch('https://api.jumpintojob.com/api/v1/circular')
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/circular`)
             .then(res => res.json())
             .then(data => {
                 setAllJobs(data.data);
@@ -44,7 +54,7 @@ const FeaturedJobs = () => {
                             <div className={`featured-job-item single-job`} key={job.id}>
                                 <div className="single-job-header">
                                     <h2>{job.job_title}</h2>
-                                    <HiOutlineBookmark></HiOutlineBookmark>
+                                    <HiOutlineBookmark/>
                                 </div>
                                 <h3>{job.company_name}</h3>
                                 <p>{job.address}</p>
@@ -54,9 +64,9 @@ const FeaturedJobs = () => {
                                     <p className='posting-date'>22d</p>
                                 </div>
                                 {isMobileScreen ?
-                                    <Link onClick={() => handleClickedFeaturedJob(job.id)} to={`/jobdetailsres/${job.id}`}>View Details</Link>
+                                    <Link onClick={() => handleClickedFeaturedJob(job.id)} href={`/jobdetailsres/${job.id}`}>View Details</Link>
                                     :
-                                    <Link onClick={() => handleClickedFeaturedJob(job.id)} to={`/findjobs/jobdetails/${job.id}`}>View Details</Link>
+                                    <Link onClick={() => handleClickedFeaturedJob(job.id)} href={`/findjobs/jobdetails/${job.id}`}>View Details</Link>
                                 }
                             </div>
                         )
@@ -65,7 +75,7 @@ const FeaturedJobs = () => {
 
                 </div>
                 <div className="featured-jobs-show-more-btn">
-                    <button><Link to="/findjobs">Show More Jobs</Link></button>
+                    <button><Link href="/findjobs">Show More Jobs</Link></button>
                 </div>
             </div>
         </div>

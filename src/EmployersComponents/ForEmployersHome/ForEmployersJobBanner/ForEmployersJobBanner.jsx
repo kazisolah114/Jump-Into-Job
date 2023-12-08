@@ -1,6 +1,6 @@
 import React from 'react';
 import './ForEmployersJobBanner.css'
-import { Link } from 'react-router-dom';
+import  Link  from 'next/link';
 
 const ForEmployersJobBanner = () => {
     return (
@@ -8,7 +8,7 @@ const ForEmployersJobBanner = () => {
             <div className="employers-job-banner-content container">
                 <h2>Ready to start hiring?</h2>
                 <p>Begin posting your jobs on JobHubGlobal today.</p>
-                <Link to="/foremployers/postjobs"><button>Post a job now</button></Link>
+                <Link href="/foremployers/postjobs"><button>Post a job now</button></Link>
             </div>
         </div>
     );

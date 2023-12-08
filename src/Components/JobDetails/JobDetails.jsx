@@ -1,16 +1,18 @@
+"use client"
 import React, { useEffect, useState } from 'react';
-import './JobDetails.css'
 import { FaUpRightFromSquare } from "react-icons/fa6";
-import { Link, useLoaderData, useNavigate, useParams } from 'react-router-dom';
+import Link from 'next/link';
 import Swal from 'sweetalert2';
 import { useUserContext } from '../../UserContext/UserContext';
+import { useParams, useRouter } from 'next/navigation';
 
 const JobDetails = () => {
     const { id } = useParams();
-    const jobs = useLoaderData();
+
+    const jobs = [];
     const [showJobDetails, setShowJobDetails] = useState({});
     const { userData } = useUserContext();
-    const loginNavigate = useNavigate();
+    const loginNavigate = useRouter();
     useEffect(() => {
         if (jobs.data.length > 0) {
             const job = jobs.data.find(job => job.id == id);
@@ -36,7 +38,7 @@ const JobDetails = () => {
                 confirmButtonText: 'Yes'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    loginNavigate('/signin')
+                    loginNavigate.push('/signin')
                 }
             })
         }
@@ -49,14 +51,14 @@ const JobDetails = () => {
                 <div className="job-details-header">
                     <div className="job-details-header-company">
                         <img src={showJobDetails.image} alt="" />
-                        <Link>{showJobDetails.company_name}</Link>
+                        <Link href={""}>{showJobDetails.company_name}</Link>
                     </div>
                     <div className="job-details-header-job">
                         <div>
                             <h2>{showJobDetails.job_title}</h2>
                             <p>{showJobDetails.address}</p>
                         </div>
-                        <button onClick={handleApplyJob}>Apply Now <FaUpRightFromSquare></FaUpRightFromSquare></button>
+                        <button onClick={handleApplyJob}>Apply Now <FaUpRightFromSquare/></button>
                     </div>
                 </div>
                 <div className="job-details-main">

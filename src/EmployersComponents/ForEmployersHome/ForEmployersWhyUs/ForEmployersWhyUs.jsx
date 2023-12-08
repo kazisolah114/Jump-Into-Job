@@ -1,10 +1,13 @@
-import React from 'react';
+"use client"
+import React,{ useContext } from 'react';
 import { HiArrowSmRight } from "react-icons/hi";
-import { Link } from 'react-router-dom';
-import { useUserContext } from '../../../UserContext/UserContext';
+import  Link  from 'next/link';
+
+import { UserContext } from '@/UserContext/UserContext';
+
 
 const ForEmployersWhyUs = () => {
-    const {userData} = useUserContext()
+    const {userData} = useContext(UserContext)
     return (
         <div className='whyus-section'>
             <div className="whyus-content container">
@@ -38,9 +41,9 @@ const ForEmployersWhyUs = () => {
                     </div>
                     <div className="whyus-btn">
                         {userData ?
-                        <Link to="/foremployers/postjobs"><button>Post a Job <HiArrowSmRight></HiArrowSmRight></button></Link>
+                        <Link href="/foremployers/postjobs"><button>Post a Job <HiArrowSmRight/></button></Link>
                         :
-                        <Link to="/foremployers/register"><button>Create Account <HiArrowSmRight></HiArrowSmRight></button></Link>
+                        <Link href="/foremployers/register"><button>Create Account <HiArrowSmRight/></button></Link>
                         }
                     </div>
                 </div>

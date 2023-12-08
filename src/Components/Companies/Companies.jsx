@@ -1,7 +1,7 @@
+"use client"
 import React, { useEffect, useState } from 'react';
-import './Companies.css'
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
-import { Link } from 'react-router-dom';
+import  Link  from 'next/link';
 
 const Companies = () => {
 
@@ -66,7 +66,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href={""}><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -78,8 +78,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 140)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href={""}><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href={""}><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -99,7 +99,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href={""}><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -111,8 +111,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href={""}><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href={""}><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -132,7 +132,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href={""}><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -144,8 +144,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href={""}><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href={""}><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -165,7 +165,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href={""}><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -177,8 +177,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href={""}><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href={""}><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -198,7 +198,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href={""}><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -210,8 +210,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href={""}><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href={""}><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -231,7 +231,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href={""}><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -243,8 +243,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href={""}><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href={""}><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -264,7 +264,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href={""}><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -276,8 +276,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href={""}><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href=""><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -297,7 +297,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href=""><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -309,8 +309,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href=""><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href=""><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -330,7 +330,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href=""><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -342,8 +342,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href=""><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href=""><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -363,7 +363,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href=""><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -375,8 +375,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href=""><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href=""><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -396,7 +396,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href=""><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -408,8 +408,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href=""><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href=""><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -429,7 +429,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href=""><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -441,8 +441,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href=""><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href=""><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -462,7 +462,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href=""><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -474,8 +474,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href=""><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href=""><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -495,7 +495,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href=""><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -507,8 +507,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href=""><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href=""><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -528,7 +528,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href=""><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -540,8 +540,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href=""><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href=""><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -561,7 +561,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href=""><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -573,8 +573,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href=""><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href=""><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>
@@ -594,7 +594,7 @@ const Companies = () => {
                                             <div className='main-items'>
                                                 <img src={company.company_logo} alt="" />
                                                 <div>
-                                                    <Link><h3>{company.company_name}</h3></Link>
+                                                    <Link href=""><h3>{company.company_name}</h3></Link>
                                                     <p>Verified Profile</p>
                                                 </div>
                                             </div>
@@ -606,8 +606,8 @@ const Companies = () => {
                                                 <p className='company_description'>{company.company_description.slice(0, 250)}...</p>
                                             </div>
                                             <div className="company-item-content-footer">
-                                                <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                                <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                                <Link href=""><button className='company-button company-details-button'>View Details</button></Link>
+                                                <Link href=""><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                             </div>
                                         </div>

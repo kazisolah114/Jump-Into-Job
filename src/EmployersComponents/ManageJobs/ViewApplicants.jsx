@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { HiArrowLeft, HiOutlineBriefcase, HiOutlineChevronDown, HiOutlinePencilAlt, HiOutlineTrash } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
+import  Link  from 'next/link';
 
 const ViewApplicants = ({ applicants, setShowViewApplicants, job }) => {
     
@@ -69,9 +69,9 @@ const ViewApplicants = ({ applicants, setShowViewApplicants, job }) => {
                                 </li>
 
                                 <div>
-                                    <Link to=""><button className='managejobs-actions-btn'>View Resume</button></Link>
-                                    <Link to=""><button className='managejobs-actions-btn'>Cover Letter</button></Link>
-                                    <Link to=""><button className='managejobs-actions-btn'>View profile</button></Link>
+                                    <Link href=""><button className='managejobs-actions-btn'>View Resume</button></Link>
+                                    <Link href=""><button className='managejobs-actions-btn'>Cover Letter</button></Link>
+                                    <Link href=""><button className='managejobs-actions-btn'>View profile</button></Link>
                                 </div>
                             </ul>)
                         }

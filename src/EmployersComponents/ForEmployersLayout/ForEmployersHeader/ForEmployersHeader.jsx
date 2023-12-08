@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+"use client"
+import React, { useState,useContext,useEffect } from 'react';
+import  Link  from 'next/link';
 import { FaAngleDown, FaUserAlt, FaUserCircle, FaUserPlus, FaUserTie } from "react-icons/fa";
 import { HiBookmark, HiBriefcase, HiChevronDown, HiCog, HiOutlineBookmark, HiOutlineUser, HiOutlineUserAdd, HiQuestionMarkCircle } from "react-icons/hi";
 import { TbBell, TbBriefcase, TbLogout, TbUserCircle } from 'react-icons/tb';
-import { useUserContext } from '../../../UserContext/UserContext';
+import { UserContext } from '@/UserContext/UserContext';
+import { usePathname } from 'next/navigation';
+
 
 
 const ForEmployersHeader = () => {
-    const [activeMenu, setActiveMenu] = useState('home');
-    const { userData, setUserData } = useUserContext();
+    const [isClient,setClient] = useState(false)
+    const activeMenu = usePathname();
+    const { userData, setUserData } = useContext(UserContext);
     const [userLoggedout, setUserLoggedout] = useState(false)
     const [userProfileClicked, setUserProfileClicked] = useState(false)
-    const handleActiveMenu = (e) => {
-        setActiveMenu(e);
-    }
+    useEffect(() => {
+      setClient(true)
+    }, [])
+    
+
     const handleLogout = async (e) => {
         localStorage.removeItem('userData')
         const token = userData?.data?.access_token;
@@ -22,7 +28,7 @@ const ForEmployersHeader = () => {
             return;
         }
         try {
-            const userLogoutResponse = await fetch('https://api.jumpintojob.com/api/v1/logout', {
+            const userLogoutResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/logout`, {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',
@@ -43,6 +49,7 @@ const ForEmployersHeader = () => {
     }
 
     return (
+        isClient&&
         <div className='main-header'>
             <div className="web-header container">
                 <div className="header-logo employer-header-logo">
@@ -51,18 +58,18 @@ const ForEmployersHeader = () => {
                 </div>
                 <div className="header-menu">
                     <ul className="main-menu">
-                        <li><Link to="/foremployers" onClick={() => handleActiveMenu('home')} className={activeMenu === 'home' ? 'active' : ''}>Home</Link></li>
-                        <li><Link to="/foremployers/postjobs" onClick={() => handleActiveMenu('jobs')} className={activeMenu === 'postjobs' ? 'active' : ''}>Post Jobs </Link></li>
-                        <li><Link to="/candidates" onClick={() => handleActiveMenu('candidates')} className={activeMenu === 'candidates' ? 'active' : ''}>Candidates</Link></li>
-                        <li><Link>Message</Link></li>
-                        <li><Link to="/">For Workers</Link></li>
+                        <li><Link href="/foremployers" className={activeMenu === '/foremployers' ? 'active' : ''}>Home</Link></li>
+                        <li><Link href="/foremployers/postjobs"  className={activeMenu === '/foremployers/postjobs' ? 'active' : ''}>Post Jobs </Link></li>
+                        <li><Link href="/candidates"  className={activeMenu === '/candidates' ? 'active' : ''}>Candidates</Link></li>
+                        <li><Link href={""}>Message</Link></li>
+                        <li><Link href="/">For Workers</Link></li>
                     </ul>
                     <ul className="account-menu">
                         {
                             userData?.data ?
                                 <div className="loggedin-user-container">
                                     <>
-                                        <TbBell></TbBell>
+                                        <TbBell/>
                                         <TbUserCircle onClick={() => setUserProfileClicked(!userProfileClicked)} className={userProfileClicked ? 'user-profile-active' : ''}></TbUserCircle>
                                         {userProfileClicked &&
                                             <div className="user-profile-icon">
@@ -71,11 +78,11 @@ const ForEmployersHeader = () => {
                                                     <p>{userData?.data?.user.email}</p>
                                                 </div>
                                                 <div className="loggedin-user-options">
-                                                    <Link to="employerprofile" onClick={() => setUserProfileClicked(false)}><FaUserTie></FaUserTie>Company Profile</Link>
-                                                    <Link to="managejobs/dashboard" onClick={() => setUserProfileClicked(false)}><HiBriefcase></HiBriefcase>Manage Jobs</Link>
-                                                    <Link onClick={() => setUserProfileClicked(false)}><HiBriefcase></HiBriefcase>Subscriptions</Link>
-                                                    <Link onClick={() => setUserProfileClicked(false)}><HiCog></HiCog> Settings</Link>
-                                                    <Link onClick={() => setUserProfileClicked(false)}><HiQuestionMarkCircle></HiQuestionMarkCircle> Help Center</Link>
+                                                    <Link href="employerprofile" onClick={() => setUserProfileClicked(false)}><FaUserTie></FaUserTie>Company Profile</Link>
+                                                    <Link href="managejobs/dashboard" onClick={() => setUserProfileClicked(false)}><HiBriefcase></HiBriefcase>Manage Jobs</Link>
+                                                    <a onClick={() => setUserProfileClicked(false)} style={{"cursor" : "pointer"}} ><HiBriefcase></HiBriefcase>Subscriptions</a>
+                                                    <a onClick={() => setUserProfileClicked(false)} style={{"cursor" : "pointer"}}><HiCog></HiCog> Settings</a>
+                                                    <a onClick={() => setUserProfileClicked(false)} style={{"cursor" : "pointer"}}><HiQuestionMarkCircle></HiQuestionMarkCircle> Help Center</a>
                                                 </div>
                                                 <button className='signout-btn' onClick={handleLogout}>Sign Out <TbLogout></TbLogout></button>
                                             </div>
@@ -85,13 +92,13 @@ const ForEmployersHeader = () => {
                                 :
                                 userLoggedout?.result ?
                                     <>
-                                        <li><Link to="/foremployers/register" className='register-btn'><HiOutlineUserAdd />Register</Link></li>
-                                        <li><Link to="/foremployers/signin" className='login-btn'><HiOutlineUser />Sign In</Link></li>
+                                        <li><Link href="/foremployers/register" className='register-btn'><HiOutlineUserAdd />Register</Link></li>
+                                        <li><Link href="/foremployers/signin" className='login-btn'><HiOutlineUser />Sign In</Link></li>
                                     </>
                                     :
                                     <>
-                                        <li><Link to="/foremployers/register" className='register-btn'><HiOutlineUserAdd />Register</Link></li>
-                                        <li><Link to="/foremployers/signin" className='login-btn'><HiOutlineUser />Sign In</Link></li>
+                                        <li><Link href="/foremployers/register" className='register-btn'><HiOutlineUserAdd />Register</Link></li>
+                                        <li><Link href="/foremployers/signin" className='login-btn'><HiOutlineUser />Sign In</Link></li>
                                     </>
                         }
                     </ul>

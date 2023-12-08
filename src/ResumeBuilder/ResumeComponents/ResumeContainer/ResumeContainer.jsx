@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 import ResumeSteps from '../ResumeSteps/ResumeSteps';
 import ResumeTemplates from '../ResumeTemplates/ResumeTemplates';

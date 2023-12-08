@@ -1,31 +1,37 @@
+"use client"
 import React, { useEffect, useState } from 'react';
 import './UserHome.css'
 import { useUserContext } from '../../UserContext/UserContext';
 import { useMediaQuery } from '@uidotdev/usehooks';
 import { HiMap, HiOutlineBookmark } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
+import  Link  from 'next/link';
 import { FcBriefcase, FcBusinessman, FcFinePrint, FcOnlineSupport } from "react-icons/fc";
 
 const UserHome = () => {
     const { setClickedFeaturedJob } = useUserContext();
     const [allJobs, setAllJobs] = useState([]);
     const [featuredJobs, setFeaturedJobs] = useState([])
-    const isMobileScreen = useMediaQuery("only screen and (max-width : 1368px)");
+    let isClient = false;
+    setInterval(() => {
+        isClient = true;
+    }, 1000);
+    const isMobileScreen = isClient? useMediaQuery("only screen and (max-width : 1368px)"): false;
     const [userData, setUserData] = useState([]);
 
     const [featuredCompanies, setFeaturedCompanies] = useState([]);
     useEffect(() => {
-        fetch('/companies.json')
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/companies`)
             .then(res => res.json())
             .then(data => {
-                setFeaturedCompanies(data);
+                setFeaturedCompanies(data.data);
             })
     }, [])
 
     useEffect(() => {
-        fetch('https://api.jumpintojob.com/api/v1/circular')
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/circular`)
             .then(res => res.json())
             .then(data => {
+
                 setAllJobs(data.data);
                 const filteredFeaturedJobs = allJobs.filter(job => job.job_vacancy >= 2);
                 const sortedFeaturedJobs = filteredFeaturedJobs.sort((a, b) => b.job_vacancy - a.job_vacancy);
@@ -50,6 +56,7 @@ const UserHome = () => {
 
 
     return (
+        
         <div className='user-home'>
             <div className="user-home-content container">
                 <div className="user-home-companies res-second-div">
@@ -65,7 +72,7 @@ const UserHome = () => {
                                         <div className='main-items'>
                                             <img src={company.company_logo} alt="" />
                                             <div>
-                                                <Link><h3>{company.company_name}</h3></Link>
+                                                <Link href=""><h3>{company.company_name}</h3></Link>
                                                 <p>Verified Profile</p>
                                             </div>
                                         </div>
@@ -77,8 +84,8 @@ const UserHome = () => {
                                             <p className='company_description'>{company.company_description.slice(0, 90)}...</p>
                                         </div>
                                         <div className="company-item-content-footer">
-                                            <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                            <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                            <Link href=""><button className='company-button company-details-button'>View Details</button></Link>
+                                            <Link href=""><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                         </div>
                                     </div>
@@ -106,16 +113,16 @@ const UserHome = () => {
                                         <p className='posting-date'>22d</p>
                                     </div>
                                     {isMobileScreen ?
-                                        <Link onClick={() => handleClickedFeaturedJob(job.id)} to={`/jobdetailsres/${job.id}`}>View Details</Link>
+                                        <Link onClick={() => handleClickedFeaturedJob(job.id)} href={`/jobdetailsres/${job.id}`}>View Details</Link>
                                         :
-                                        <Link onClick={() => handleClickedFeaturedJob(job.id)} to={`/findjobs/jobdetails/${job.id}`}>View Details</Link>
+                                        <Link onClick={() => handleClickedFeaturedJob(job.id)} href={`/findjobs/jobdetails/${job.id}`}>View Details</Link>
                                     }
                                 </div>
                             )
                         }
                     </div>
                     <div className="featured-jobs-more">
-                        <Link to="/findjobs"><button>Explore More</button></Link>
+                        <Link href="/findjobs"><button>Explore More</button></Link>
                     </div>
                 </div>
                 <div className="user-home-profile res-third-div">
@@ -124,8 +131,9 @@ const UserHome = () => {
                         <div className='home-profile'>
                             <div className="home-user-profile">
                                 {
-                                    userData.map(data => <>
-                                        <div className="user-profile-main">
+                                    userData.map(data => <div key={data.user_name}>
+
+                                        <div className="user-profile-main" >
                                             <img src="https://img.freepik.com/free-icon/man_318-677829.jpg" alt="" />
                                             <h3>{data.user_name}</h3>
                                             <p>{data.job_role}</p>
@@ -164,7 +172,7 @@ const UserHome = () => {
 
                                         </div>
 
-                                    </>)
+                                    </div>)
                                 }
                             </div>
                         </div>

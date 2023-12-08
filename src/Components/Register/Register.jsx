@@ -1,8 +1,9 @@
+"use client"
 import React, { useState } from 'react';
 import './Register.css'
 import { HiOutlineEye, HiOutlineEyeOff, HiOutlineMail, HiOutlineUserCircle } from 'react-icons/hi';
 import { FcGoogle } from "react-icons/fc";
-import { Link } from 'react-router-dom';
+import  Link  from 'next/link';
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -21,7 +22,7 @@ const Register = () => {
         const userData = {'first_name' : firstName, 'last_name' : lastName , 'email' :  email, 'password' : password, 'password_confirmation' : confirmPassword, 'user_type' :  userType };
 
         // console.log(userData)
-        const response = await fetch('https://api.jumpintojob.com/api/v1/auth/job-seeker/signup', {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/job-seeker/signup`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -118,7 +119,7 @@ return (
                         </div>
                     </div>}
                 <div className="terms-conditions">
-                    <p>By creating an account or logging in, you understand and agree to Job Portal's <Link to="/terms">Terms</Link>. You also acknowledge our <Link to="/cookie">Cookie</Link> and <Link to="/privacy">Privacy</Link> policies.</p>
+                    <p>By creating an account or logging in, you understand and agree to Job Portal's <Link href="/terms">Terms</Link>. You also acknowledge our <Link href="/cookie">Cookie</Link> and <Link href="/privacy">Privacy</Link> policies.</p>
                     <div>
                         <input type="checkbox" id="termscheck" required />
                         <label htmlFor="termscheck">I will agree company terms & conditions.</label>
@@ -130,7 +131,7 @@ return (
                 </div>
 
                 <div className="register-to-login">
-                    <p>Already have an account? <Link to="/signin">Login</Link> Here</p>
+                    <p>Already have an account? <Link href="/signin">Login</Link> Here</p>
                     <span>OR</span>
                 </div>
             </form>

@@ -58,7 +58,7 @@ const JobDetailsResponsive = () => {
                         <div>
                         <h2>{showJobDetails.job_title}</h2>
                         <div className="job-details-header-company">
-                        <Link>{showJobDetails.company_name}</Link>
+                        <Link href="">{showJobDetails.company_name}</Link>
                         </div>
                         <p>{showJobDetails.address}</p>
                         </div>
@@ -77,9 +77,9 @@ const JobDetailsResponsive = () => {
                 </div>
 
                 <div className="job-details-res-buttons">
-                    <Link><button onClick={handleApplyJob} className='res-btn apply-btn'>Apply Now <FaUpRightFromSquare></FaUpRightFromSquare></button></Link>
+                    <Link href=""><button onClick={handleApplyJob} className='res-btn apply-btn'>Apply Now <FaUpRightFromSquare></FaUpRightFromSquare></button></Link>
                     <button className='res-btn bookmark-btn'><FaRegBookmark></FaRegBookmark> Bookmark this job</button>
-                    <Link to="/findjobs"><button className='res-btn more-jobs-btn'><HiOutlineBriefcase></HiOutlineBriefcase> See More Jobs</button></Link>
+                    <Link href="/findjobs"><button className='res-btn more-jobs-btn'><HiOutlineBriefcase></HiOutlineBriefcase> See More Jobs</button></Link>
                 </div>
             </div>
         </div>

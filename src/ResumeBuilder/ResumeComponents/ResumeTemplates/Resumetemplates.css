@@ -1,4 +1,4 @@
-.resume-templates{}
+/* .resume-templates{} */
 .resume-form-header h3 {
     margin-bottom: 30px;
     color: #616161;
@@ -17,9 +17,9 @@
     border: none;
     
 }
-.resume-templates .templates .template:hover{
+/* .resume-templates .templates .template:hover{
     
-}
+} */
 
 .resume-templates .templates .template img {
     width: 300px;

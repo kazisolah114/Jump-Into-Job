@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { HiBookmark, HiBriefcase, HiEye, HiMail, HiMap, HiOutlineBriefcase, HiPhone, HiPhoneIncoming } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
+import  Link  from 'next/link';
 import { HiOutlinePencilAlt, HiOutlineTrash } from "react-icons/hi";
 
 const ManageJobsDashboard = () => {
@@ -81,7 +81,7 @@ const ManageJobsDashboard = () => {
                                     <p><HiPhone /> {data.user_phone}</p>
                                     <p><HiMail /> {data.user_email}</p>
                                     <div className="dashboard-update-profile-btn">
-                                        <Link to="/userprofile/aboutme"><button>Update Profile</button></Link>
+                                        <Link href="/userprofile/aboutme"><button>Update Profile</button></Link>
                                     </div>
                                 </div>
 
@@ -112,8 +112,8 @@ const ManageJobsDashboard = () => {
                                         <li>{item.date_posted}</li>
                                         <li className={`${item.status == "active" ? "active-status" : "inactive-status"}`}>{item.status}</li>
                                         <li>{item.applications}</li>
-                                        <Link to=""><button className='managejobs-actions-btn'>View Applicants</button></Link>
-                                        <Link to=""><button className='managejobs-actions-btn'>Job Details</button></Link>
+                                        <Link href=""><button className='managejobs-actions-btn'>View Applicants</button></Link>
+                                        <Link href=""><button className='managejobs-actions-btn'>Job Details</button></Link>
                                         <div className='active-jobs-actions'>
                                             <button><HiOutlinePencilAlt /></button>
                                             <button className='delete'><HiOutlineTrash /></button>
@@ -125,7 +125,7 @@ const ManageJobsDashboard = () => {
                         </div>
                     </div>
                     <div className="post-new-job-btn">
-                        <Link to="/foremployers/postjobs"><button>Post a new job</button></Link>
+                        <Link href="/foremployers/postjobs"><button>Post a new job</button></Link>
                     </div>
                 </div>
             </div>

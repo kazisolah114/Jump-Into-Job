@@ -1,9 +1,11 @@
+"use client"
 import React, { useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { HiOutlineEye, HiOutlineEyeOff, HiOutlineMail, HiOutlineUserCircle } from 'react-icons/hi';
-import { Link, useNavigate } from 'react-router-dom';
+import  Link from 'next/link';
 import { useUserContext } from '../../UserContext/UserContext';
 import Swal from 'sweetalert2';
+import { useRouter } from 'next/navigation';
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -11,12 +13,14 @@ const Login = () => {
     const [userPassword, setUserPassword] = useState('');
     const [rememberUser, setRememberUser] = useState(false);
     const { setUserData } = useUserContext();
-    const navigate = useNavigate();
+    const navigate = useRouter();
     const handleLogin = async (e) => {
         e.preventDefault();
+        
         const userLoginData = { 'email': userEmail, 'password': userPassword, 'remember_me': rememberUser };
         console.log(userLoginData)
-        const loginData = await fetch('https://api.jumpintojob.com/api/v1/auth/user/login', {
+        const loginData = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/user/login`, {
+            
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -25,9 +29,11 @@ const Login = () => {
             body: JSON.stringify(userLoginData)
         });
         const loginUserData = await loginData.json();
+        console.log(loginUserData)
         if (loginData.ok) {
             console.log('Login Successfull', loginUserData);
             setUserData(loginUserData);
+            console.log(loginUserData)
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
@@ -35,7 +41,7 @@ const Login = () => {
                 showConfirmButton: false,
                 timer: 1500
             })
-            navigate('/')
+            navigate.push('/')
         } else {
             console.log('Something is wrong', loginUserData)
             alert(loginUserData.message)
@@ -53,7 +59,7 @@ const Login = () => {
                     <div className='account-info'>
                         <label htmlFor="email">Email</label>
                         <div className="account-input">
-                            <HiOutlineMail></HiOutlineMail>
+                            <HiOutlineMail/>
                             <input type="email" placeholder='info@example.com' name="email" id="email" required value={userEmail} onChange={e => setUserEmail(e.target.value)} />
                         </div>
                     </div>
@@ -69,9 +75,9 @@ const Login = () => {
                             <div onClick={() => setShowPassword(!showPassword)}>
                                 {showPassword
                                     ?
-                                    <HiOutlineEye></HiOutlineEye>
+                                    <HiOutlineEye/>
                                     :
-                                    <HiOutlineEyeOff></HiOutlineEyeOff>
+                                    <HiOutlineEyeOff/>
                                 }
                             </div>
                         </div>
@@ -82,14 +88,14 @@ const Login = () => {
                             <label htmlFor="rememberme">Remember me</label>
                         </div>
                         <div>
-                            <Link>Forget Password?</Link>
+                            <Link href={""}>Forget Password?</Link>
                         </div>
                     </div>
                     <div className="register-button">
                         <input type="submit" value="Login" />
                     </div>
                     <div className="register-to-login">
-                        <p>Already have an account? <Link to="/register">Register</Link> here</p>
+                        <p>Already have an account? <Link href="/register">Register</Link> here</p>
                     </div>
                 </form>
             </div>

@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 import { HiAcademicCap, HiX } from 'react-icons/hi';
 import { FaAtlas, FaMedal, FaPencilAlt } from "react-icons/fa";

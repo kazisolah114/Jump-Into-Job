@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './FeaturedCompanies.css'
-import { Link } from 'react-router-dom';
+import  Link  from 'next/link';
 
 const FeaturedCompanies = () => {
 
@@ -30,7 +30,7 @@ const FeaturedCompanies = () => {
                                     <div className='main-items'>
                                         <img src={company.company_logo} alt="" />
                                         <div>
-                                            <Link><h3>{company.company_name}</h3></Link>
+                                            <Link href={""} ><h3>{company.company_name}</h3></Link>
                                             <p>Verified Profile</p>
                                         </div>
                                     </div>
@@ -42,8 +42,8 @@ const FeaturedCompanies = () => {
                                         <p className='company_description'>{company.company_description.slice(0, 140)}...</p>
                                     </div>
                                     <div className="company-item-content-footer">
-                                        <Link><button className='company-button company-details-button'>View Details</button></Link>
-                                        <Link><button className='company-button company-jobs-button'>View Jobs</button></Link>
+                                        <Link href={""}><button className='company-button company-details-button'>View Details</button></Link>
+                                        <Link href={""}><button className='company-button company-jobs-button'>View Jobs</button></Link>
 
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@ const FeaturedCompanies = () => {
                     }
                 </div>
                 <div className="featured-companies-showmore">
-                    <Link to="/companies"><button>Show More Companies</button></Link>
+                    <Link href="/companies"><button>Show More Companies</button></Link>
                 </div>
             </div>
         </div>

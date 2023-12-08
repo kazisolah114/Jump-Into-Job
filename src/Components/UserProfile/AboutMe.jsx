@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState } from 'react';
 import { useUserContext } from '../../UserContext/UserContext';
 import { FaUserCircle } from "react-icons/fa";
@@ -50,7 +51,7 @@ const AboutMe = () => {
 
 
     useEffect(() => {
-        fetch('https://unitechholdingsltd.com/api/v1/profile', {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/profile`, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json",
@@ -74,7 +75,7 @@ const AboutMe = () => {
                     <div className='about-me-personal-header'>
                         <FaUserCircle></FaUserCircle>
                         <div>
-                            <h4>{userData?.data?.user?.email}</h4>
+                            <h4 suppressHydrationWarning={true}>{userData?.data?.user?.email}</h4>
                             <p>{userData?.data?.user?.user_type}</p>
                         </div>
                     </div>

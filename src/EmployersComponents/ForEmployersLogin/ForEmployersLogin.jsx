@@ -1,8 +1,10 @@
+"use client"
 import React, { useState } from 'react';
 import { HiOutlineEye, HiOutlineEyeOff, HiOutlineMail } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
+import  Link  from 'next/link';
 import { FcGoogle } from 'react-icons/fc';
 import { useUserContext } from '../../UserContext/UserContext';
+import { useRouter } from 'next/navigation';
 
 
 const ForEmployersLogin = () => {
@@ -11,11 +13,12 @@ const ForEmployersLogin = () => {
     const [userPassword, setUserPassword] = useState('');
     const [rememberUser, setRememberUser] = useState(false);
     const { setUserData } = useUserContext();
+    const router = useRouter();
     const handleLogin = async (e) => {
         e.preventDefault();
         const userLoginData = { 'email': userEmail, 'password': userPassword, 'remember_me': rememberUser };
         console.log(userLoginData)
-        const loginData = await fetch('https://api.jumpintojob.com/api/v1/auth/user/login', {
+        const loginData = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/user/login`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -28,6 +31,7 @@ const ForEmployersLogin = () => {
             console.log('Login Successfull', loginUserData);
             setUserData(loginUserData);
             alert("Login Successfull!")
+            router.replace('/foremployers')
         } else {
             console.log('Something is wrong', loginUserData)
             alert(loginUserData.message)
@@ -44,7 +48,7 @@ const ForEmployersLogin = () => {
                     <div className='account-info'>
                         <label htmlFor="email">Email</label>
                         <div className="account-input">
-                            <HiOutlineMail></HiOutlineMail>
+                            <HiOutlineMail/>
                             <input type="email" placeholder='info@example.com' name="email" id="email" required value={userEmail} onChange={e => setUserEmail(e.target.value)} />
                         </div>
                     </div>
@@ -60,9 +64,9 @@ const ForEmployersLogin = () => {
                             <div onClick={() => setShowPassword(!showPassword)}>
                                 {showPassword
                                     ?
-                                    <HiOutlineEye></HiOutlineEye>
+                                    <HiOutlineEye/>
                                     :
-                                    <HiOutlineEyeOff></HiOutlineEyeOff>
+                                    <HiOutlineEyeOff/>
                                 }
                             </div>
                         </div>
@@ -73,14 +77,14 @@ const ForEmployersLogin = () => {
                             <label htmlFor="rememberme">Remember me</label>
                         </div>
                         <div>
-                            <Link>Forget Password?</Link>
+                            <Link href={""}>Forget Password?</Link>
                         </div>
                     </div>
                     <div className="register-button">
                         <input type="submit" value="Login" />
                     </div>
                     <div className="register-to-login">
-                        <p>Already have an account? <Link to="/signin">Login</Link> Here</p>
+                        <p>Already have an account? <Link href="/signin">Login</Link> Here</p>
                     </div>
                 </form>
             </div>

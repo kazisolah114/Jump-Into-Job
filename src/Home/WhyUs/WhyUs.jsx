@@ -1,6 +1,6 @@
 import React from 'react';
 import './WhyUs.css'
-import { Link } from 'react-router-dom';
+import  Link  from 'next/link';
 import { useUserContext } from '../../UserContext/UserContext';
 import { HiArrowSmRight } from "react-icons/hi";
 
@@ -40,9 +40,9 @@ const WhyUs = () => {
                     </div>
                     <div className="whyus-btn">
                         {userData ?
-                        <Link to="/findjobs"><button>Explore Jobs <HiArrowSmRight></HiArrowSmRight></button></Link>
+                        <Link href="/findjobs"><button>Explore Jobs <HiArrowSmRight></HiArrowSmRight></button></Link>
                         :
-                        <Link to="/register"><button>Create Account <HiArrowSmRight></HiArrowSmRight></button></Link>
+                        <Link href="/register"><button>Create Account <HiArrowSmRight></HiArrowSmRight></button></Link>
                         }
                     </div>
                 </div>

@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+"use client"
+import React, { useContext,useState,useEffect } from 'react';
 import Banner from '../Banner/Banner';
 import WhyUs from '../WhyUs/WhyUs';
 import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
@@ -9,21 +10,31 @@ import UserHome from '../UserHome/UserHome';
 
 const Home = () => {
     const { userData } = useUserContext();
-    // console.log(userData)
+    const [isClient,setClient] = useState(false);
+
+    useEffect(() => {
+        setClient(true)
+      
+    }, [])
     
-    return (
+
+    // console.log(userData)
+
+
+    
+    return (isClient&&
         <div>
             {userData ?
                 <UserHome></UserHome>
                 :
-                <>
+                <div>
                     <Banner></Banner>
                     <FeaturedJobs></FeaturedJobs>
                     <FeaturedCompanies></FeaturedCompanies>
                     <WhyUs></WhyUs>
-                </>
+                </div>
             }
-            <ResumeHelp></ResumeHelp>
+            <ResumeHelp/>
         </div>
     );
 };

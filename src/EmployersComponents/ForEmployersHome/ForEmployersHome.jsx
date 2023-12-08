@@ -8,7 +8,7 @@ import ForEmployersJobBanner from './ForEmployersJobBanner/ForEmployersJobBanner
 const ForEmployersHome = () => {
     return (
         <div>
-            <ForEmployersBanner></ForEmployersBanner>
+            <ForEmployersBanner/>
             {/* <ForEmployersLiveData></ForEmployersLiveData> */}
             {/* <ForEmployersProcess></ForEmployersProcess> */}
             <ForEmployersWhyUs></ForEmployersWhyUs>

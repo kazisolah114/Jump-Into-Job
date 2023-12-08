@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './ManageJobs.css';
-import { Link } from 'react-router-dom';
+import  Link  from 'next/link';
 import { HiOutlineBriefcase, HiOutlinePencilAlt, HiOutlineTrash } from "react-icons/hi";
 import ViewApplicants from './ViewApplicants';
 
@@ -57,8 +57,8 @@ const ManageJobsHistory = () => {
                                     <li>{item.date_posted}</li>
                                     <li className={`${item.status == "active" ? "active-status" : "inactive-status"}`}>{item.status}</li>
                                     <li>{item.applications}</li>
-                                    <Link to=""><button onClick={() => handleViewApplicants(item)} className='managejobs-actions-btn'>View Applicants</button></Link>
-                                    <Link to=""><button className='managejobs-actions-btn'>Job Details</button></Link>
+                                    <Link href=""><button onClick={() => handleViewApplicants(item)} className='managejobs-actions-btn'>View Applicants</button></Link>
+                                    <Link href=""><button className='managejobs-actions-btn'>Job Details</button></Link>
                                     <div className='active-jobs-actions'>
                                         <button><HiOutlinePencilAlt /></button>
                                         <button className='delete'><HiOutlineTrash /></button>

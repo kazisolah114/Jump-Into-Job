@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import  Link  from 'next/link';
 import './ResumeFooter.css'
 
 const ResumeFooter = () => {
@@ -10,12 +10,12 @@ const ResumeFooter = () => {
                     <div>
                         <ul>
                             <p>2023 &copy; jobshub</p>
-                            <li><Link to="">Do not sell my data</Link></li>
-                            <li><Link to="">Terms and conditions</Link></li>
+                            <li><Link href="">Do not sell my data</Link></li>
+                            <li><Link href="">Terms and conditions</Link></li>
                         </ul>
                         <ul>
-                            <li><Link to="/findjobs">Browse jobs</Link></li>
-                            <li><Link to="/companies">Browse companies</Link></li>
+                            <li><Link href="/findjobs">Browse jobs</Link></li>
+                            <li><Link href="/companies">Browse companies</Link></li>
                         </ul>
 
                     </div>

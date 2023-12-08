@@ -3,7 +3,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { HiBookmark, HiBriefcase, HiEye, HiMail, HiMap, HiOutlineBookmark, HiOutlineBriefcase, HiOutlineEye, HiOutlinePhoneIncoming, HiPhone, HiPhoneIncoming } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
+import  Link  from 'next/link';
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaWhatsappSquare } from "react-icons/fa";
 
 const MyJobsDashboard = () => {
@@ -80,7 +80,7 @@ const MyJobsDashboard = () => {
                                     <p><HiPhone /> {data.user_phone}</p>
                                     <p><HiMail /> {data.user_email}</p>
                                     <div className="dashboard-update-profile-btn">
-                                        <Link to="/userprofile/aboutme"><button>Update Profile</button></Link>
+                                        <Link href="/userprofile/aboutme"><button>Update Profile</button></Link>
                                     </div>
                                 </div>
 
@@ -107,26 +107,26 @@ const MyJobsDashboard = () => {
                                             <p className='posting-date'>22d</p>
                                         </div>
                                         {isMobileScreen ?
-                                            <Link onClick={() => handleClickedJob(job.id)} to={`/jobdetailsres/${job.id}`}>View Details</Link>
+                                            <Link onClick={() => handleClickedJob(job.id)} href={`/jobdetailsres/${job.id}`}>View Details</Link>
                                             :
-                                            <Link onClick={() => handleClickedJob(job.id)} to={`/findjobs/jobdetails/${job.id}`}>View Details</Link>
+                                            <Link onClick={() => handleClickedJob(job.id)} href={`/findjobs/jobdetails/${job.id}`}>View Details</Link>
                                         }
                                     </div>
                                 )
                             }
                         </div>
                         <div className="dashboard-viewmorejobs-btn">
-                        <Link to="/findjobs"><button>View More</button></Link>
+                        <Link href="/findjobs"><button>View More</button></Link>
                         </div>
                     </div>
                     <div className="dashboard-social-resume">
                         <div className="dashboard-social">
                             <h4>Social Contacts</h4>
                             <ul>
-                                <li className='facebook-social'><Link><FaFacebookF /> /kazisolah114</Link></li>
-                                <li className='linkedin-social'><Link><FaLinkedinIn /> /kazisolah114</Link></li>
-                                <li className='github-social'><Link><FaGithub /> /kazisolah114</Link></li>
-                                <li className='whatsapp-social'><Link><FaWhatsappSquare /> /kazisolah114</Link></li>
+                                <li className='facebook-social'><Link href={""}><FaFacebookF /> /kazisolah114</Link></li>
+                                <li className='linkedin-social'><Link> href={""}<FaLinkedinIn /> /kazisolah114</Link></li>
+                                <li className='github-social'><Link href={""}><FaGithub /> /kazisolah114</Link></li>
+                                <li className='whatsapp-social'><Link href={""}><FaWhatsappSquare /> /kazisolah114</Link></li>
                             </ul>
                         </div>
                         <div className="dashboard-resume">

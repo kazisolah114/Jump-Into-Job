@@ -1,12 +1,13 @@
+"use client"
 import React, { useEffect, useState } from 'react';
 import './AllJobs.css'
-import { Link, Outlet } from 'react-router-dom';
+import  Link  from 'next/link';
 import JobDetails from '../JobDetails/JobDetails';
 import { HiOutlineBookmark, HiOutlineBriefcase, HiOutlineCursorClick, HiOutlineLocationMarker } from 'react-icons/hi';
 import { useMediaQuery } from '@uidotdev/usehooks';
 import { useUserContext } from '../../UserContext/UserContext';
 
-const AllJobs = () => {
+const AllJobs = ({children}) => {
     const { clickedFeaturedJob } = useUserContext();
     const [allJobs, setAllJobs] = useState([]);
     const [filteredJobs, setFilteredJobs] = useState([]);
@@ -15,10 +16,10 @@ const AllJobs = () => {
     const jobsToShowIncrement = 6;
     const isMobileScreen = useMediaQuery("only screen and (max-width : 1368px)");
     useEffect(() => {
-        fetch('https://api.jumpintojob.com/api/v1/circular')
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/circular`)
             .then(res => res.json())
             .then(data => {
-                console.log(data.data);
+                // console.log(data.data);
                 setAllJobs(data.data);
                 // If you want to use filteredJobs for filtering logic later on,
                 // you might want to keep it separate initially
@@ -58,11 +59,11 @@ const AllJobs = () => {
                 <div className="search-content">
                     <form action="" onSubmit={handleFilteredJobs}>
                         <div>
-                            <HiOutlineBriefcase></HiOutlineBriefcase>
+                            <HiOutlineBriefcase/>
                             <input type="text" name="jobTitle" placeholder='Job title or keywords' />
                         </div>
                         <div>
-                            <HiOutlineLocationMarker></HiOutlineLocationMarker>
+                            <HiOutlineLocationMarker/>
                             <input type="text" name='jobLocation' placeholder='Location' />
                         </div>
                         <input type="submit" value="Search" />
@@ -78,7 +79,7 @@ const AllJobs = () => {
                                     <div className={`single-job ${clickedJob === job.id ? "clicked-job" : ""}`} key={job.id}>
                                         <div className="single-job-header">
                                             <h2>{job.job_title}</h2>
-                                            <HiOutlineBookmark></HiOutlineBookmark>
+                                            <HiOutlineBookmark/>
                                         </div>
                                         <h3>{job.company_name}</h3>
                                         <p>{job.address}</p>
@@ -88,9 +89,9 @@ const AllJobs = () => {
                                             <p className='posting-date'>22d</p>
                                         </div>
                                         {isMobileScreen ?
-                                            <Link onClick={() => handleClickedJob(job.id)} to={`/jobdetailsres/${job.id}`}>View Details</Link>
+                                            <Link onClick={() => handleClickedJob(job.id)} href={`/jobdetailsres/${job.id}`}>View Details</Link>
                                             :
-                                            <Link onClick={() => handleClickedJob(job.id)} to={`/findjobs/jobdetails/${job.id}`}>View Details</Link>
+                                            <Link onClick={() => handleClickedJob(job.id)} href={`/findjobs/jobdetails/${job.id}`}>View Details</Link>
                                         }
                                     </div>
                                 )
@@ -109,7 +110,7 @@ const AllJobs = () => {
 
                     {
                         (clickedFeaturedJob || clickedJob) ?
-                            <Outlet></Outlet>
+                            <>{children}</>
                             :
                             <div className='default-job-details job-details'>
                                 <div className="default-job-details-img">

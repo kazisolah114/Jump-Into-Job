@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import  Link  from 'next/link';
 import { HiOutlineBookmark } from 'react-icons/hi';
 import { FaBookmark } from "react-icons/fa";
 
@@ -22,14 +22,14 @@ const MyJobsSaved = () => {
                                 <img src={savedjob.image} alt="" />
                             </div>
                             <div className="saved-jobs-item-data-info">
-                                <Link><h3>{savedjob.job_title}</h3></Link>
+                                <Link  href={""}><h3>{savedjob.job_title}</h3></Link>
                                 <p>{savedjob.company_name}</p>
                                 <p>{savedjob.address}</p>
                                 <span>Bookmarked 2 days ago</span>
                             </div>
                         </div>
                         <div className="saved-job-item-actions">
-                            <Link><button className='savedjob-apply'>Apply now</button></Link>
+                            <Link  href={""}><button className='savedjob-apply'>Apply now</button></Link>
                             <abbr title="Unsave job"><button><FaBookmark/></button></abbr>
                         </div>
                     </div>)

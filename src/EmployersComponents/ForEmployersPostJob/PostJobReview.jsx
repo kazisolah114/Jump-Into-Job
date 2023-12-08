@@ -11,7 +11,7 @@ const PostJobReview = ({ setShowReview, jobData }) => {
     console.log(token.data.access_token)
     const handlePostJob = async () => {
         try {
-            const response = await fetch('https://api.jumpintojob.com/api/v1/circular/store', {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/circular/store`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
