@@ -1,10 +1,10 @@
 import ManageJobsHistory from '@/EmployersComponents/ManageJobs/ManageJobsHistory'
 import React from 'react'
 
-function paje() {
+function page() {
   return (
     <ManageJobsHistory/>
   )
 }
 
-export default paje
+export default page

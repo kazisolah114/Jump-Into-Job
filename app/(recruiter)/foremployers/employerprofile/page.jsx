@@ -1,3 +1,4 @@
+import EmployerProfile from '@/EmployersComponents/EmployerProfile/EmployerProfile'
 import React from 'react'
 
 function paje() {

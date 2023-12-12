@@ -14,6 +14,7 @@ function JobContext({children}) {
             .then(data => {
                 // console.log(data.data);
                 setAllJobs(data.data);
+
                 // If you want to use filteredJobs for filtering logic later on,
                 // you might want to keep it separate initially
                 // setFilteredJobs(data.data);

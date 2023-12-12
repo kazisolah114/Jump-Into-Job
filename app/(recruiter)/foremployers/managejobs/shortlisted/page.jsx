@@ -1,10 +1,10 @@
 import ManageJobsShortlisted from '@/EmployersComponents/ManageJobs/ManageJobsShortlisted'
 import React from 'react'
 
-function paje() {
+function page() {
   return (
     <ManageJobsShortlisted/>
   )
 }
 
-export default paje
+export default page

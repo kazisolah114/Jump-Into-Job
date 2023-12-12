@@ -59,6 +59,12 @@ app.get('/companies',(req,resp)=>{
 app.get('/job-categories',(req,resp)=>{
     resp.send({data : categories})
 })
+app.get('/logout',(req,resp)=>{
+
+
+    resp.send({})
+})
+
 
 app.listen(PORT,()=>{
     console.log(`Server is running on http://localhost:${PORT}`)
