@@ -7,8 +7,13 @@ import { HiOutlineBookmark, HiOutlineBriefcase, HiOutlineCursorClick, HiOutlineL
 import { useMediaQuery } from '@uidotdev/usehooks';
 import { useUserContext } from '../../UserContext/UserContext';
 import { useJobContext } from '@/jobContext/JobContext';
+import { usePathname } from 'next/navigation';
+
+
 
 const AllJobs = ({children}) => {
+
+    const pathname = usePathname();
     const { clickedFeaturedJob } = useUserContext();
     const {allJobs, setAllJobs} =useJobContext()
     const [filteredJobs, setFilteredJobs] = useState([]);
@@ -79,11 +84,7 @@ const AllJobs = ({children}) => {
                                             <p className='single-job-salary'>{job.salary} <span>(Estimated)</span></p>
                                             <p className='posting-date'>22d</p>
                                         </div>
-                                        {isMobileScreen ?
-                                            <Link onClick={() => handleClickedJob(job.id)} href={`/jobdetailsres/${job.id}`}>View Details</Link>
-                                            :
-                                            <Link onClick={() => handleClickedJob(job.id)} href={`/findjobs/jobdetails/${job.id}`}>View Details</Link>
-                                        }
+                                    <Link onClick={() => handleClickedJob(job.id)} href={isMobileScreen?`/jobdetailsres/${job.id}`:`/findjobs/jobdetails/${job.id}`}>View Details</Link>
                                     </div>
                                 )
                             }
@@ -100,7 +101,8 @@ const AllJobs = ({children}) => {
                     {/* <Outlet></Outlet> */}
 
                     {
-                        (clickedFeaturedJob || clickedJob) ?
+                        (pathname!='/findjobs') ?
+
                             <>{children}</>
                             :
                             <div className='default-job-details job-details'>
