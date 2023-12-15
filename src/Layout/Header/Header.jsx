@@ -164,7 +164,8 @@ const Header = () => {
                 <div className={`header-menu ${!mobileMenuClicked ? 'hide-header-menu' : 'show-header-menu'}`}>
                     <ul className="main-menu">
                         <li><Link href="/" onClick={() => (handleActiveMenu(activeMenu), setMobileMenuClicked(false))} className={location === '/' ? 'active' : ''}>Home</Link></li>
-                        <li><Link href="/findjobs" onClick={() => (handleActiveMenu(activeMenu), setMobileMenuClicked(false))} className={location === '/findjobs' ? 'active' : ''}>Jobs</Link></li>
+
+                        <li><Link href="/findjobs" onClick={() => (handleActiveMenu(activeMenu), setMobileMenuClicked(false))} className={location.indexOf('/findjobs')!=-1 ? 'active' : ''}>Jobs</Link></li>
                         <li><Link href="/companies" onClick={() => (handleActiveMenu(activeMenu), setMobileMenuClicked(false))} className={location === '/companies' ? 'active' : ''}>Companies</Link></li>
                         <li><Link href="/message" onClick={() => (handleActiveMenu(activeMenu), setMobileMenuClicked(false))} className={location === '/message' ? 'active' : ''}>Message</Link></li>
                         <li><a onClick={handleSignoutAlert} style={{"cursor" : "pointer"}}>For Employers</a></li>
