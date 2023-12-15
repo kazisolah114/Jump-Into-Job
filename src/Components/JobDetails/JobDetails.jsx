@@ -8,7 +8,7 @@ import { useParams, useRouter } from 'next/navigation';
 
 const JobDetails = ({props}) => {
     const { id } = useParams();
-    console.log(props)
+    // console.log(props)
 
     const {jobs} = props;
     const [showJobDetails, setShowJobDetails] = useState({});
