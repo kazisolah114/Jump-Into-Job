@@ -60,10 +60,6 @@ const AllJobs = ({children}) => {
                 <div className="all-jobs-content container">
                     <div className="show-all-jobs">
                         <JobListView props ={{filteredJobs : allJobs,handleClickedJob,jobsToShow,clickedJob}}/>
-                    {console.log('shuld not re render',new Date().getSeconds())}
-
-
-                        {console.log('shuld not re render',new Date().getSeconds())}
 
                         {shouldShowButton ?
                             <button onClick={() => setJobsToShow(previousJobs => previousJobs + jobsToShowIncrement)}>Show More</button>
