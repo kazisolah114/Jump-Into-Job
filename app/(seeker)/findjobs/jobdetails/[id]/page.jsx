@@ -13,7 +13,8 @@ function Page() {
 
 
     const {allJobs} = useJobContext();
-    console.log(allJobs)
+    // console.log(allJobs)
+
 
   return (<JobDetails props={{  jobs : allJobs}} />);
 }
