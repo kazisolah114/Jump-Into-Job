@@ -17,8 +17,7 @@ const AllJobs = ({children}) => {
 
 
 
-    // const { clickedFeaturedJob } = useUserContext();
-    // const {allJobs, setAllJobs} =useState([])
+
     const {allJobs, setAllJobs} =useJobContext()
     const [filteredJobs, setFilteredJobs] = useState([]);
     const [jobsToShow, setJobsToShow] = useState(6)
