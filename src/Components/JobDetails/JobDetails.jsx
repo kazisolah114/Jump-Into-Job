@@ -5,11 +5,10 @@ import Link from 'next/link';
 import Swal from 'sweetalert2';
 import { useUserContext } from '../../UserContext/UserContext';
 import { useParams, useRouter } from 'next/navigation';
+import DefaultJobDetails from '../AllJobs/DefaultJobDetails';
 
 const JobDetails = ({props}) => {
     const { id } = useParams();
-    // console.log(props)
-
     const {jobs} = props;
     const [showJobDetails, setShowJobDetails] = useState({});
     const { userData } = useUserContext();
@@ -45,7 +44,6 @@ const JobDetails = ({props}) => {
         }
 
     }
-
     return (
         <div className='job-details'>
             <div className="job-details-content">
