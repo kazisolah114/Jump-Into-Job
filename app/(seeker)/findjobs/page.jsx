@@ -1,9 +1,10 @@
+import DefaultJobDetails from '@/Components/AllJobs/DefaultJobDetails'
 import React from 'react'
 
-function page() {
+function Page() {
   return (
-    <div></div>
+    <DefaultJobDetails/>
   )
 }
 
-export default page
+export default Page
