@@ -1,13 +1,12 @@
-"use client"
 import React from 'react';
 import AllJobs from '@/Components/AllJobs/AllJobs';
 
-// export const metadata = {
-//   title: 'This is findjobs',
-//   description: '...',
-// }
+export const metadata = {
+  title: 'This is findjobs',
+  description: '...',
+}
 
-function RootLayout({ children }) {
+const RootLayout =({ children }) =>{
 
 
   return (<>
