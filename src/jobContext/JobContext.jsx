@@ -15,6 +15,8 @@ function JobContext({children}) {
                 // console.log(data.data);
                 setAllJobs(data.data);
 
+                console.log('job is not updating')
+
                 // If you want to use filteredJobs for filtering logic later on,
                 // you might want to keep it separate initially
                 // setFilteredJobs(data.data);
