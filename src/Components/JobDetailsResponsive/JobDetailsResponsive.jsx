@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { FaArrowLeft, FaArrowRightArrowLeft, FaRegBookmark, FaUpRightFromSquare } from "react-icons/fa6";
 import { HiBookmark, HiBookmarkAlt, HiOutlineBookmark, HiOutlineBriefcase } from 'react-icons/hi';
-import { Link, useLoaderData, useNavigate, useParams } from 'react-router-dom';
-import { useUserContext } from '../../UserContext/UserContext';
+import Link from 'next/link';
+import { useRouter,useParams } from 'next/navigation';
 import Swal from 'sweetalert2';
+import { useUserContext } from '../../UserContext/UserContext';
+import { useJobContext } from '@/jobContext/JobContext';
+
 
 const JobDetailsResponsive = () => {
     const {userData} = useUserContext();
     const {id} = useParams();
-    const jobs = useLoaderData();
-    const loginNavigate = useNavigate();
+    const jobs = useJobContext().alljobs;
+    const loginNavigate = useRouter();
     const [showJobDetails, setShowJobDetails] = useState({});
-    const navigate = useNavigate()
+
     useEffect(() => {
         if(jobs.length > 0) {
             const job = jobs.find(job => job.id == id);
@@ -19,7 +22,7 @@ const JobDetailsResponsive = () => {
         }
     }, [id, jobs])
     const handleGoBackBtn = () => {
-        navigate(-1);
+        loginNavigate.back();
     }
 
     const handleApplyJob = () => {
@@ -39,7 +42,7 @@ const JobDetailsResponsive = () => {
                 confirmButtonText: 'Yes'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    loginNavigate('/signin')
+                    loginNavigate.push('/signin')
                 }
             })
         }
