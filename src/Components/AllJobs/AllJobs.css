@@ -270,3 +270,12 @@
     background-color: #28b060;
     
 }
+
+.scroll-container{
+
+
+    height: 100%;
+    max-height: 300px;
+    overflow-y: auto; 
+    border: 1px solid #ccc; 
+}
