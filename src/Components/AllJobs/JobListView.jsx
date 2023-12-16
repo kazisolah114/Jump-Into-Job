@@ -3,13 +3,19 @@ import React from 'react'
 import { HiOutlineBookmark } from 'react-icons/hi';
 import Link from 'next/link';
 import { useMediaQuery } from '@uidotdev/usehooks';
-function JobListView({props}) {
+function JobListView({props,children}) {
     const {filteredJobs,handleClickedJob,jobsToShow,clickedJob} = props;
     console.log(filteredJobs)
-    
-    const isMobileScreen = useMediaQuery("only screen and (max-width : 1368px)");
+    let isClient = false;
 
-// return <div className='scroll-container'> 
+    setInterval(() => {
+        isClient = true;
+        
+    }, 1000);
+    
+    const isMobileScreen =isClient && useMediaQuery("only screen and (max-width : 1368px)");
+
+// return <div className='scroll-container'> <>
 //                         <Link href={'/findjobs/jobdetails/6'}>Job 1</Link>
 //                         <br />
 //                         <Link href={'/findjobs/jobdetails/7'}>Job 2</Link>
@@ -74,10 +80,12 @@ function JobListView({props}) {
 //                         <Link href={'/findjobs/jobdetails/8'}>Job 3</Link>
 //                         <br />
 //                         <Link href={'/findjobs/jobdetails/9'}>Job 4</Link>
+//         </>
+
 //                         </div>
 
   return (
-    <div className="all-jobs-container scroll-container">
+    <div className="all-jobs-container">
     {
         
         filteredJobs.slice(0, jobsToShow).map(job =>
