@@ -8,6 +8,7 @@ import DefaultJobDetails from './DefaultJobDetails';
 import SearchSection from './SearchSection';
 import JobListView from './JobListView';
 import Link from 'next/link';
+import MoreJobButton from './MoreJobButton';
 
 
 
@@ -18,6 +19,7 @@ const AllJobs = ({children}) => {
 
 
 
+    // const {allJobs, setAllJobs} =useState([])
     const {allJobs, setAllJobs} =useJobContext()
     const [filteredJobs, setFilteredJobs] = useState([]);
     const [jobsToShow, setJobsToShow] = useState(6)
@@ -53,24 +55,16 @@ const AllJobs = ({children}) => {
 
 
     return (
-        <div className='all-jobs'>
+        <div className='all-jobs' style={{'height' : '100%'}}>
             <SearchSection handleFilteredJobs={handleFilteredJobs}/>
 
-            <div className="all-jobs-main">
+            <div className="all-jobs-main" >
                 <div className="all-jobs-content container">
-                    <div className="show-all-jobs">
+                    <div className="show-all-jobs  scroll-container">
                         <JobListView props ={{filteredJobs : allJobs,handleClickedJob,jobsToShow,clickedJob}}/>
+                        <MoreJobButton props={{shouldShowButton,jobsToShowIncrement,setJobsToShow}}/>
 
-                        {shouldShowButton ?
-                            <button onClick={() => setJobsToShow(previousJobs => previousJobs + jobsToShowIncrement)}>Show More</button>
-                            :
-                            <div className='jobs-reached-end-message'>
-                                <p>Ops!!! You have reached the end. There's no more jobs at this time. Please check back later.</p>
-                            </div>
-                        }
                     </div>
-
-                
                     <div>
                      {children}
                     </div>
