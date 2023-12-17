@@ -15,64 +15,91 @@ const ResumeContainer = () => {
     const [templateType, setTemplateType] = useState(null);
     const [selectedTemplateId, setSelectedTemplateId] = useState(null);
     const [selectedTemplate, setSelectedTemplate] = useState([]);
+
+
+
+
     const handleSelectedTemplate = (template) => {
         setSelectedTemplateId(template.id);
         setTemplateType(template.type)
         setSelectedTemplate(template);
+
     }
     // console.log(resumeData)
     const handleCurrentStep = (step) => {
-        switch (step) {
-            case 1:
-                return <ResumeTemplates handleSelectedTemplate={handleSelectedTemplate} selectedTemplateId={selectedTemplateId} />
-            case 2:
-                return <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '30px' }}>
-                    <div className="resume-form">
-                        <ResumeHeading templateType={templateType} />
-                    </div>
-                    <div className="resume-preview">
-                        <ResumePreview selectedTemplate={selectedTemplate} />
-                    </div>
-                </div>
 
-            case 3:
-                return <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '30px' }}>
-                    <div className="resume-form">
-                        <ResumeEducation />
-                    </div>
-                    <div className="resume-preview">
-                        <ResumePreview selectedTemplate={selectedTemplate} />
-                    </div>
-                </div>
-            case 4:
-                return <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '30px' }}>
-                    <div className="resume-form">
-                        <ResumeExperiences />
-                    </div>
-                    <div className="resume-preview">
-                        <ResumePreview selectedTemplate={selectedTemplate} />
-                    </div>
-                </div>
-            case 5:
-                return <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '30px' }}>
-                <div className="resume-form">
-                    <ResumeSkills />
-                </div>
-                <div className="resume-preview">
-                    <ResumePreview selectedTemplate={selectedTemplate} />
-                </div>
-            </div>
-            case 6:
-                return <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '30px' }}>
-                <div className="resume-form">
-                    <ResumeFinalize />
-                </div>
-                <div className="resume-preview">
-                    <ResumePreview selectedTemplate={selectedTemplate} />
-                </div>
-            </div>
-
+        if(step==1){
+            return  <ResumeTemplates handleSelectedTemplate={handleSelectedTemplate} selectedTemplateId={selectedTemplateId} />
         }
+
+        return <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '30px' }}>
+                    <div className="resume-form">
+                       {step==2 && <ResumeHeading templateType={templateType} />}
+                       {step==3 && <ResumeEducation />}
+                       {step==4 &&  <ResumeExperiences /> }
+                       {step==5 &&  <ResumeSkills /> }
+                       {step==6 &&  <ResumeFinalize /> }
+                    </div>
+                    <div className="resume-preview">
+                        <ResumePreview selectedTemplate={selectedTemplate} />
+                    </div>
+                </div>
+
+
+
+
+
+    //     switch (step) {
+    //         case 1:
+    //             return <ResumeTemplates handleSelectedTemplate={handleSelectedTemplate} selectedTemplateId={selectedTemplateId} />
+    //         case 2:
+    //             return <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '30px' }}>
+    //                 <div className="resume-form">
+    //                     <ResumeHeading templateType={templateType} />
+    //                 </div>
+    //                 <div className="resume-preview">
+    //                     <ResumePreview selectedTemplate={selectedTemplate} />
+    //                 </div>
+    //             </div>
+
+    //         case 3:
+    //             return <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '30px' }}>
+    //                 <div className="resume-form">
+    //                     <ResumeEducation />
+    //                 </div>
+    //                 <div className="resume-preview">
+    //                     <ResumePreview selectedTemplate={selectedTemplate} />
+    //                 </div>
+    //             </div>
+    //         case 4:
+    //             return <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '30px' }}>
+    //                 <div className="resume-form">
+    //                     <ResumeExperiences />
+    //                 </div>
+    //                 <div className="resume-preview">
+    //                     <ResumePreview selectedTemplate={selectedTemplate} />
+    //                 </div>
+    //             </div>
+    //         case 5:
+    //             return <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '30px' }}>
+    //             <div className="resume-form">
+    //                 <ResumeSkills />
+    //             </div>
+    //             <div className="resume-preview">
+    //                 <ResumePreview selectedTemplate={selectedTemplate} />
+    //             </div>
+    //         </div>
+    //         case 6:
+    //             return <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '30px' }}>
+    //             <div className="resume-form">
+    //                 <ResumeFinalize />
+    //             </div>
+    //             <div className="resume-preview">
+    //                 <ResumePreview selectedTemplate={selectedTemplate} />
+    //             </div>
+    //         </div>
+        // }
+
     }
     return (
         <div style={{ padding: '50px 0' }} className='container'>
