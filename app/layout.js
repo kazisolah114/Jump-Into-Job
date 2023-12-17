@@ -25,7 +25,7 @@ import '@/ResumeBuilder/ResumeComponents/ResumeFinalize/ResumeFinalize.css'
 import '@/ResumeBuilder/ResumeComponents/ResumeHeading/ResumeHeading.css'
 import '@/ResumeBuilder/ResumeComponents/ResumeSkills/AddSkills.css'
 import '@/ResumeBuilder/ResumeComponents/ResumeSteps/ResumeSteps.css'
-import '@/ResumeBuilder/ResumeComponents/ResumeTemplates/ResumeTemplates.css'
+import '@/ResumeBuilder/ResumeComponents/ResumeTemplates/ResumeTemplatesCSS.css'
 import { UserProvider } from "@/UserContext/UserContext"
 import JobContext from '@/jobContext/JobContext'
 
