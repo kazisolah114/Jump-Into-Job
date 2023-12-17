@@ -10,12 +10,35 @@ const ResumePreview = ({ selectedTemplate }) => {
                 <div>
                     <p>{resumeData.firstName}</p>
                     <p>{resumeData.lastName}</p>
-                    <p>{resumeData.institution_name}</p>
-                    <p>{resumeData.institution_location}</p>
-                    <p>{resumeData.field_study}</p>
-                    <p>{resumeData.degree}</p>
-                    <p>{resumeData.education_starting_year}</p>
-                    <p>{resumeData.education_graduation_year}</p>
+                    <>{resumeData.educations.map((education)=>{
+                    return<div key ={education.institution_name}>
+                    <p>{education.institution_name}</p>
+                    <p>{education.institution_location}</p>
+                    <p>{education.degree}</p>
+                    <p>{education.field_study}</p>
+                    <p>{education.education_starting_year}</p>
+                    <p>{education.education_graduation_year}</p>
+                    <p>{education.education_achivements}</p>
+                        </div>
+                    })
+                    
+                    }</>
+                    {/* job_title, company, job_city, job_country, job_starting_year, job_ending_year */}
+
+                    <>{resumeData.experiences.map((job)=>{
+                    return<>
+                    <p>{job.job_title}</p>
+                    <p>{job.company}</p>
+                    <p>{job.job_city}</p>
+                    <p>{job.job_country}</p>
+                    <p>{job.job_starting_year}</p>
+                    <p>{job.job_ending_year}</p>
+
+                        </>
+                    })
+                    
+                    }</>
+
                 </div>}
         </div>
     );
