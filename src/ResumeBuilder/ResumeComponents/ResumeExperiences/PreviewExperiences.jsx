@@ -2,11 +2,23 @@ import React from 'react';
 import { FaPencilAlt, FaTrashAlt } from 'react-icons/fa';
 
 const PreviewExperiences = ({resumeData, setEditExperience, editExperience, setDeleteExperience, deleteExperience}) => {
-    const {job_title, company, job_city, job_country, job_starting_year, job_ending_year} = resumeData;
-    return (
-        <div className='preview-education'>
+    const len = resumeData.experiences.length;
+
+    return <>
+    {resumeData&& resumeData.experiences.map((experience,key) =>{
+
+        //check if the last item is in editng mode
+        if (len>1 && key==len-1){
+
+            return <></>
+        }
+
+        
+        const {job_title, company, job_city, job_country, job_starting_year, job_ending_year} = experience;
+        return (
+            <div className='preview-education' key={key}>
             <div className='preview-number'>
-                <h2>1</h2>
+                <h2>{key+1}</h2>
             </div>
             <div className='preview-content'>
                 <h4>{job_title}</h4>
@@ -18,11 +30,14 @@ const PreviewExperiences = ({resumeData, setEditExperience, editExperience, setD
                 </div>
             </div>
             <div className='preview-actions'>
-                <button className='edit' onClick={() => setEditExperience(!editExperience)}><FaPencilAlt /></button>
-                <button className='delete' onClick={() => setDeleteExperience(!deleteExperience)}><FaTrashAlt /></button>
+                {/* {console.log('hi there')} */}
+                <button className='edit' onClick={() => setEditExperience(key)  && console.log('clicked')}><FaPencilAlt /></button>
+                <button className='delete' onClick={() => setDeleteExperience(key)}><FaTrashAlt /></button>
             </div>
         </div>
     );
+}
+)}</>
 };
 
 export default PreviewExperiences;
