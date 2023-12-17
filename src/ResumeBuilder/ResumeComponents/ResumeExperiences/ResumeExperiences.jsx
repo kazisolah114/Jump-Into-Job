@@ -3,6 +3,7 @@ import { useUserContext } from '../../../UserContext/UserContext';
 import { FaPlus } from 'react-icons/fa';
 import PreviewExperiences from './PreviewExperiences';
 import ExperienceFildes from './ExperienceFields'
+import PrevNextButton from '@/ResumeBuilder/Layout/Button/PrevNextButton';
 const ResumeExperiences = () => {
     const { currentStep, setCurrentStep, resumeData, setResumeData } = useUserContext();
     const [addMore, setAddMore] = useState(false);
@@ -23,24 +24,7 @@ const ResumeExperiences = () => {
     const [isFormFilled,setFormFilled] = useState(false)
     const [editExperience, setEditExperience] = useState(false)
     const [deleteExperience, setDeleteExperience] = useState(false);
-    // useEffect(() => {
-    //     if(editExperience) {
-    //         return setAddMore(false);
-    //     }
-    // }, [editExperience])
-    
-    // useEffect(() => {
-    //     if (deleteExperience) {
-    //         setAddMore(false);
-    //         resumeData.job_title = "";
-    //         resumeData.company = "";
-    //         resumeData.job_city = "";
-    //         resumeData.job_country = "";
-    //         resumeData.job_description = "";
-    //         resumeData.job_starting_year = null;
-    //         resumeData.job_ending_year = null;
-    //     }
-    // }, [deleteExperience])
+
     useEffect(() => {
         console.log('calledme');
         if (editExperience!==false) {
@@ -86,9 +70,12 @@ const ResumeExperiences = () => {
                         </div>
                     }
                 </div>
-                <div className="resume-prev-next-buttons">
+                {/* <div className="resume-prev-next-buttons">
                     <button className='prev-button' onClick={() => setCurrentStep(currentStep - 1)}>Previous</button>
                     <button className='next-button' onClick={() => setCurrentStep(currentStep + 1)}>Next</button>
+                </div> */}
+                <div>
+                <PrevNextButton  props={{setCurrentStep}}/>
                 </div>
             </div>
         </div>

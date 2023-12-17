@@ -5,19 +5,16 @@ function EperienceFiels({props}) {
     
     const {setResumeData,resumeData,isFormFilled,formIndex,setFormFilled} = props;
 
-    const isEmptyFiledPresent =useCallback((array)=>{
+    const isEmptyFieldPresent =useCallback((array)=>{
         console.log(Object.values(array))
-
         let ValueList = Object.values(array);
-        // console.log(ValueList.indexOf('') )
-
         return ValueList.indexOf('')!==-1
 
     })
 
 
     const handleFormChange =useCallback((formData,fieldCount)=>{
-        let status = true && !isEmptyFiledPresent(formData) &&Object.keys(formData).length ==fieldCount 
+        let status = true && !isEmptyFieldPresent(formData) &&Object.keys(formData).length ==fieldCount 
         setFormFilled(status)
         console.log(status)
     })
@@ -33,11 +30,11 @@ function EperienceFiels({props}) {
             return prev
         })
 
-    console.log(resumeData,experienceFields)
+    // console.log(resumeData,experienceFields)
     const resumeEexperiences = resumeData.experiences;
 
     //check if the item is in the array
-    console.log(resumeEexperiences[formIndex],formIndex)
+    // console.log(resumeEexperiences[formIndex],formIndex)
     if(resumeEexperiences[formIndex]!=undefined){
 
         
@@ -55,6 +52,7 @@ function EperienceFiels({props}) {
         return {...prev, experiences: resumeEexperiences}  })
         handleFormChange(experienceFields,7)
     })
+    
   return (
     <form action="" className="heading-form" style={{ marginTop: '50px' }}>
     <div className="heading-form-main">

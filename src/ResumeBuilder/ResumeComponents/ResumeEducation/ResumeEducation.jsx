@@ -5,52 +5,38 @@ import { FaPlus } from "react-icons/fa";
 import { useState } from 'react';
 import PreviewEducation from './PreviewEducation';
 import EducationFields from './EducationFields';
+import PrevNextButton from '@/ResumeBuilder/Layout/Button/PrevNextButton';
 
 const ResumeEducation = () => {
     const { currentStep, setCurrentStep, resumeData, setResumeData } = useUserContext();
+
+    const [inputType,setInputType]= useState('insert')
     const [addMore, setAddMore] = useState(false);
-
+    const [educationFields,setEducationFields] = useState({});
     const [formIndex ,setformIndex] = useState(0);
-
-
     const handleAddMore = () => {
-        isFormFilled && setAddMore(true) && setEditEducation(false);
+       setAddMore(true) && setEditEducation(false);
+       setformIndex(prev =>prev+1)
+       
     }
-    // const isFormFilled =true || (
-    //     resumeData.educations &&
-    //     resumeData.educations.institution_name &&
-    //     resumeData.educations.institution_location &&
-    //     resumeData.educations.degree &&
-    //     resumeData.educations.field_study &&
-    //     resumeData.educations.education_starting_year &&
-    //     resumeData.educations.education_graduation_year
-    // )
     const  [isFormFilled,setFormFilled] = useState(false);
-
-
 
     const [editEducation, setEditEducation] = useState(false);
     const [deleteEducation, setDeleteEducation] = useState(false);
-    useEffect(() => {
-        if (editEducation!==false) {
+    // useEffect(() => {
+    //     if (editEducation!==false) {
         
-            return setAddMore(false);
-        }
-    }, [editEducation])
-    useEffect(() => {
-        if (deleteEducation!==false) {
-            setAddMore(false);
-            let resumeEducations = resumeData.educations;
-            resumeEducations[deleteEducation] = {}
-
-
-            setResumeData({...resumeData,educations : resumeEducations })
-            // resumeData.educations[deleteEducation].institution_name=""
-        }
-    }, [deleteEducation])
-
-    // console.log(resumeData)
-    // console.log(resumeData)
+    //         return setAddMore(false);
+    //     }
+    // }, [editEducation])
+    // useEffect(() => {
+    //     if (deleteEducation!==false) {
+    //         setAddMore(false);
+    //         let resumeEducations = resumeData.educations;
+    //         resumeEducations[deleteEducation] = {}
+    //         setResumeData({...resumeData,educations : resumeEducations })
+    //     }
+    // }, [deleteEducation])
 
     return (
         <div className='resume-education'>
@@ -59,27 +45,19 @@ const ResumeEducation = () => {
                     <h3>Now complete your <span>education</span></h3>
                 </div>
                 <div className="resume-education-content resume-heading-content">
-
+                    <PreviewEducation props={{resumeData,setEditEducation,deleteEducation,deleteEducation,setDeleteEducation,setEducationFields,inputType,setInputType}}  />
+                    <EducationFields props={{setResumeData,resumeData,isFormFilled,formIndex,isFormFilled,setFormFilled,educationFields,setEducationFields,deleteEducation ,inputType,setInputType}}/>
+                    
                     {
-                        addMore ?
-                            <PreviewEducation resumeData={resumeData} setEditEducation={setEditEducation} editEducation={editEducation} deleteEducation={deleteEducation} setDeleteEducation={setDeleteEducation} />
-                            :
-                            <EducationFields props={{setResumeData,resumeData,isFormFilled,formIndex,isFormFilled,setFormFilled}}/>
-                    }
-                    {
-                        addMore && <EducationFields props={{setResumeData,resumeData,isFormFilled,formIndex : formIndex+1,isFormFilled,setFormFilled}}/>
-                    }
-                    {
-
                         addMore ||
                         <div className="add-more-education">
-                            <button onClick={() => handleAddMore()} style={{ cursor: isFormFilled ? 'pointer' : 'not-allowed', opacity: isFormFilled ? 1 : 0.5 }}><FaPlus /> ADD MORE EDUCATION</button>
+                            <button onClick={() => isFormFilled && handleAddMore()} style={{ cursor: isFormFilled ? 'pointer' : 'not-allowed', opacity: isFormFilled ? 1 : 0.5 }}><FaPlus /> ADD MORE EDUCATION</button>
                         </div>
                     }
                 </div>
-                <div className="resume-prev-next-buttons">
-                    <button className='prev-button' onClick={() => setCurrentStep(currentStep - 1)}>Previous</button>
-                    <button className='next-button' onClick={() => setCurrentStep(currentStep + 1)}>Next</button>
+                <div>
+
+                  <PrevNextButton  props={{setCurrentStep}}/>
                 </div>
             </div>
         </div>

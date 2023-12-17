@@ -13,7 +13,6 @@ const PreviewExperiences = ({resumeData, setEditExperience, editExperience, setD
             return <></>
         }
 
-        
         const {job_title, company, job_city, job_country, job_starting_year, job_ending_year} = experience;
         return (
             <div className='preview-education' key={key}>
@@ -31,7 +30,7 @@ const PreviewExperiences = ({resumeData, setEditExperience, editExperience, setD
             </div>
             <div className='preview-actions'>
                 {/* {console.log('hi there')} */}
-                <button className='edit' onClick={() => setEditExperience(key)  && console.log('clicked')}><FaPencilAlt /></button>
+                <button className='edit' onClick={() => setEditExperience(key) }><FaPencilAlt /></button>
                 <button className='delete' onClick={() => setDeleteExperience(key)}><FaTrashAlt /></button>
             </div>
         </div>
