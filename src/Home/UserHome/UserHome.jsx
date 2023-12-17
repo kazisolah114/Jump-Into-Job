@@ -28,6 +28,7 @@ const UserHome = () => {
     }, [])
 
     useEffect(() => {
+
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/circular`)
             .then(res => res.json())
             .then(data => {
