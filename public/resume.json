@@ -1,0 +1,66 @@
+{
+    "firstName": "Kazi",
+    "lastName": "Solayman",
+    "email": "kazisolayman123@gmail.com",
+    "phone": "01790033329",
+    "title": "Front-end Engineer",
+    "linkedinurl": "https/www.linkedin.kazi123/in.com",
+    "portfoliourl": "https/www.devkazi.com",
+    "city": "Dhaka",
+    "state": "Dhaka",
+    "country": "Bangladesh",
+    "summary": "Lorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum nore. Lorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum nore.",
+    "educations": [
+        {
+            "institution_name": "University of Dhaka",
+            "institution_location": "Dhaka, Bangladesh",
+            "degree": "Bachelor of Science",
+            "field_study": "Computer Science",
+            "education_starting_year": "2018-05-20",
+            "education_graduation_year": "2022-05-20",
+            "education_achivements": "Lorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet."
+        },
+        {
+            "institution_name": "University of Dhaka",
+            "institution_location": "Dhaka, Bangladesh",
+            "degree": "Bachelor of Science",
+            "field_study": "Computer Science",
+            "education_starting_year": "2018-05-20",
+            "education_graduation_year": "2022-05-20",
+            "education_achivements": "Lorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet."
+        }
+    ],
+    "experiences": [
+        {
+            "job_title": "University of Dhaka",
+            "company": "Dhaka, Bangladesh",
+            "job_city": "Bachelor of Science",
+            "job_country": "Computer Science",
+            "job_starting_year": "2018-05-20",
+            "job_ending_year": "2022-05-20",
+            "job_description": "Lorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet."
+        },
+        {
+            "job_title": "University of Dhaka",
+            "company": "Dhaka, Bangladesh",
+            "job_city": "Bachelor of Science",
+            "job_country": "Computer Science",
+            "job_starting_year": "2018-05-20",
+            "job_ending_year": "2022-05-20",
+            "job_description": "Lorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet kunte dolor ipsum noreLorem ipsum dolor semet."
+        }
+    ],
+    "skills": [
+        "Javascript",
+        "React.js",
+        "Node.js",
+        "MongoDB",
+        "Three.js",
+        "Python"
+    ],
+    "languages": [
+        "English",
+        "Bengali",
+        "Spanish"
+    ]
+}

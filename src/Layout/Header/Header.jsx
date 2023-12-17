@@ -92,6 +92,7 @@ const Header = () => {
         }
     };
 
+    console.log(userData)
     
 
     return (
@@ -115,8 +116,8 @@ const Header = () => {
 
                                 <div className={`user-profile-icon ${!userProfileClicked ? 'hide-profile-menu' : 'show-profile-menu'}`}>
                                     <div className="user-profile-icon-header">
-                                        <h4>Welcome {userData?.data?.user.first_name} !</h4>
-                                        <p>{userData?.data?.user.email}</p>
+                                        <h4>Welcome Kazi !</h4>
+                                        <p>kazisolah@gmail.com</p>
                                     </div>
                                     <div className="loggedin-user-options">
                                         <Link to="/userprofile/aboutme" onClick={toggleUserProfile}><FaUserTie></FaUserTie> Profile</Link>
@@ -172,8 +173,8 @@ const Header = () => {
                                         {userProfileClicked ?
                                             <div className="user-profile-icon">
                                                 <div className="user-profile-icon-header">
-                                                    <h4>Welcome {userData?.data?.user.first_name} !</h4>
-                                                    <p>{userData?.data?.user.email}</p>
+                                                    <h4>Welcome Kazi !</h4>
+                                                    <p>kazisolah@gmail.com</p>
                                                 </div>
                                                 <div className="loggedin-user-options">
                                                     <Link to="/userprofile/aboutme" onClick={toggleUserProfile}><FaUserTie></FaUserTie> Profile</Link>

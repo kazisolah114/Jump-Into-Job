@@ -3,7 +3,8 @@ import './PreviewEducation.css'
 import { FaPencilAlt, FaTrashAlt } from 'react-icons/fa';
 
 const PreviewEducation = ({ resumeData, setEditEducation, editEducation, setDeleteEducation, deleteEducation }) => {
-    const { institution_name, institution_location, degree, education_starting_year, education_graduation_year, field_study } = resumeData;
+    
+    const { institution_name, institution_location, degree, education_starting_year, education_graduation_year, field_study } = resumeData.educations;
     
     return (
         <div className='preview-education'>

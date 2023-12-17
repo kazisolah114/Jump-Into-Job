@@ -28,7 +28,9 @@ export const UserProvider = ({ children }) => {
 
     // For Resume
     const [currentStep, setCurrentStep] = useState(1);
-    const [resumeData, setResumeData] = useState(null);
+    const [resumeData, setResumeData] = useState({
+        educations: [],
+    });
     const handleSubmitResume = () => {
         useEffect(() => {
             localStorage.setItem('userResume', JSON.stringify(resumeData))
