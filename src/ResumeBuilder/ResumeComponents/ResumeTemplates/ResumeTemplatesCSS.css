@@ -1,0 +1,76 @@
+/* .resume-templates{} */
+.resume-form-header h3 {
+    margin-bottom: 30px;
+    color: #616161;
+}
+.resume-form-header h3 span{
+    color: #3498DB;
+}
+.resume-templates .templates {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.resume-templates .templates .template{
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    
+}
+/* .resume-templates .templates .template:hover{
+    
+} */
+
+.resume-templates .templates .template img {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 5px;
+    border: 3px solid rgb(230, 230, 230);
+    transition: .1 ease-in-out;
+}
+.resume-templates .templates .template img:hover{
+    border: 3px solid #3498DB;
+}
+.resume-templates .templates .template img.selected-template{
+    border: 3px solid #3498DB;
+}
+.resume-templates .templates .template p{
+    color: #616161;
+}
+
+.resume-prev-next-buttons {
+    margin-top: 50px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.resume-prev-next-buttons button {
+    width: 140px;
+    height: 45px;
+    line-height: 45px;
+    font-weight: bold;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.resume-prev-next-buttons .prev-button{
+    border: 1px solid #111;
+    background: transparent;
+    color: #111;
+}
+.resume-prev-next-buttons .next-button {
+    background: #3498DB;
+    color: #fff;
+}
+.slick-prev:before, .slick-next:before {
+    font-size: 27px!important;
+    color: #919191!important;
+
+}
+.slick-next {
+    right: 30px!important;
+}
+.slick-prev {
+    left: 0px!important;
+    z-index: 1!important;
+}
