@@ -4,21 +4,18 @@ import React, { useState, useCallback, useEffect } from "react";
 function EducationFields({ props }) {
   const [index, setIndex] = useState(0);
 
+  const [educationFields, setEducationFields] = useState({});
   const BaseFormat = {
     institution_name : '',
     education_achivements : '',
-    education_graduation_year :'off',
+    education_graduation_year : educationFields.education_graduation_year =='on'?'off' : '',
     education_starting_year : '',
     field_study : '',
     degree:'',
     institution_location :'',
     institution_name :'',
     status : 'edit'
-
-
-
   };
-  const [educationFields, setEducationFields] = useState({});
   const {
     setResumeData,
     resumeData,
