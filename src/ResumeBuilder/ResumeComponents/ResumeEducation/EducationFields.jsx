@@ -6,93 +6,69 @@ function EducationFields({ props }) {
 
   const [educationFields, setEducationFields] = useState({});
   const BaseFormat = {
-    institution_name : '',
-    education_achivements : '',
-    education_graduation_year : educationFields.education_graduation_year =='on'?'off' : '',
-    education_starting_year : '',
-    field_study : '',
-    degree:'',
-    institution_location :'',
-    institution_name :'',
-    status : 'edit'
+    institution_name: "",
+    education_achivements: "",
+    education_graduation_year: educationFields.education_graduation_year == "on" ? "off" : "",
+    education_starting_year: "",
+    field_study: "",
+    degree: "",
+    institution_location: "",
+    institution_name: "",
+    status: "edit",
   };
   const {
     setResumeData,
     resumeData,
     formIndex,
-    isFormFilled,
-    setFormFilled,
-    deleteEducation,
-    inputType,
-    setInputType,
+    state,
+    setState,
   } = props;
 
-
-  const isEmptyFiledPresent = useCallback((array) => {
-    console.log(Object.values(array));
-    let ValueList = Object.values(array);
-    return ValueList.indexOf("") !== -1;
-  });
-  const handleFormChange = useCallback((formData, fieldCount) => {
-    let status =
-      !isEmptyFiledPresent(formData) &&
-      Object.keys(formData).length == fieldCount;
-    setFormFilled(status);
-  });
-
   useEffect(() => {
-    handleFormChange(educationFields, 8);
     if (resumeData.educations[index]) {
       setEducationFields(resumeData.educations[index]);
     }
-  }, [resumeData, deleteEducation]);
-
-
-
+  }, [resumeData]);
 
   const handleChange = useCallback((key, value) => {
     setEducationFields((prev) => {
       prev[key] = value;
       return prev;
     });
-
-    console.log(resumeData, educationFields);
-    updateResumeData(index,educationFields);
-
-    handleFormChange(educationFields, 8);
+    updateResumeData(index, educationFields);
   });
 
-  useEffect(() => {
 
-    if (inputType == "insert") {
-        setEducationFields(BaseFormat);
-        setIndex(formIndex);
-        updateResumeData(formIndex,BaseFormat);
-        console.log('form is cleard',resumeData);
+  useEffect(() => {
+    if (state.type == "insert") {
+      setEducationFields(BaseFormat);
+      setIndex(formIndex);
+      updateResumeData(formIndex, BaseFormat);
     }
-    if (inputType == "update") {
-      setEducationFields(resumeData.educations[formIndex]);
+    if (state.type == "update") {
+
+      setEducationFields(resumeData.educations[state.id]);
+      setIndex(state.id)
     }
   }, [formIndex]);
 
-  const updateResumeData = useCallback((index,educationFields) => {
+  const updateResumeData = useCallback((index, educationFields) => {
     const resumeEducations = resumeData.educations;
 
     //check if the item is in the array
-    if (resumeEducations[index] != undefined) {
-      resumeEducations[index] = educationFields;
-    } else {
-      resumeEducations.push(educationFields);
-    }
-
+    resumeEducations[index] = educationFields;
+    console.log(resumeEducations)
     setResumeData((prev) => {
       return { ...prev, educations: resumeEducations };
     });
   });
 
+  const saveChanges = useCallback(() => {
+    setState({ type: "list-view", id: index });
+  });
+
   return (
     <form action="" className="heading-form">
-      {/* {alert(formIndex)} */}
       <div className="heading-form-main">
         <div className="resume-input-field">
           <label htmlFor="institutionname">INSTITUTION NAME</label>
@@ -100,7 +76,7 @@ function EducationFields({ props }) {
             type="text"
             placeholder="University of Dhaka"
             id="institutionname"
-            onChange={(e) => handleChange("institution_name", e.target.value)} //setResumeData({ ...resumeData, educations: [...resumeData.educations, { 'institution_name': e.target.value }]
+            onChange={(e) => handleChange("institution_name", e.target.value)}
             value={educationFields.institution_name}
           />
         </div>
@@ -112,7 +88,7 @@ function EducationFields({ props }) {
             id="institutionloc"
             onChange={(e) =>
               handleChange("institution_location", e.target.value)
-            } // setResumeData({ ...resumeData, educations: [...resumeData.educations, { 'institution_location': e.target.value }]
+            }
             value={educationFields.institution_location}
           />
         </div>
@@ -122,7 +98,7 @@ function EducationFields({ props }) {
             type="text"
             placeholder="Bachelor of Science"
             id="degree"
-            onChange={(e) => handleChange("degree", e.target.value)} // setResumeData({ ...resumeData, educations: [...resumeData.educations, { 'degree': e.target.value }]
+            onChange={(e) => handleChange("degree", e.target.value)}
             value={educationFields.degree}
           />
         </div>
@@ -132,7 +108,7 @@ function EducationFields({ props }) {
             type="text"
             placeholder="Computer Science"
             id="field"
-            onChange={(e) => handleChange("field_study", e.target.value)} // setResumeData({ ...resumeData, educations: [...resumeData.educations, { 'field_study': e.target.value }]
+            onChange={(e) => handleChange("field_study", e.target.value)}
             value={educationFields.field_study}
           />
         </div>
@@ -144,7 +120,7 @@ function EducationFields({ props }) {
             id="starting"
             onChange={(e) =>
               handleChange("education_starting_year", e.target.value)
-            } //setResumeData({ ...resumeData, educations: [...resumeData.educations, { 'education_starting_year': e.target.value }]
+            }
             value={educationFields.education_starting_year}
           />
         </div>
@@ -156,7 +132,7 @@ function EducationFields({ props }) {
             id="end"
             onChange={(e) =>
               handleChange("education_graduation_year", e.target.value)
-            } //setResumeData({ ...resumeData, educations: [...resumeData.educations, { 'education_graduation_year': e.target.value }]
+            }
             value={educationFields.education_graduation_year}
           />
           <div
@@ -173,7 +149,7 @@ function EducationFields({ props }) {
               id="currently_here"
               onChange={(e) =>
                 handleChange("education_graduation_year", e.target.value)
-              } //setResumeData({ ...resumeData, educations: [...resumeData.educations, { 'education_graduation_year': 'Present' }]
+              }
               value={educationFields.education_graduation_year}
             />
             <label htmlFor="currently_here">I currently study here</label>
@@ -190,9 +166,26 @@ function EducationFields({ props }) {
           placeholder="Write your career summary"
           onChange={(e) =>
             handleChange("education_achivements", e.target.value)
-          } //setResumeData({ ...resumeData, educations: [...resumeData.educations, { 'education_achivements': e.target.value }]</div>
+          }
           value={resumeData.educations[index]?.education_achivements}
         ></textarea>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          width: "200px",
+          marginTop: "30px",
+        }}
+      >
+        <button>Dismiss</button>
+        <div
+          onClick={() => {
+            saveChanges()
+          }}
+        >
+          Save
+        </div>
       </div>
     </form>
   );
