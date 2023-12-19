@@ -30,7 +30,43 @@ export const UserProvider = ({ children }) => {
 
     // For Resume
     const [currentStep, setCurrentStep] = useState(1);
-    const [resumeData, setResumeData] = useState({educations : [],experiences :[]});
+    const [resumeData, setResumeData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        title: "",
+        linkedinurl: "",
+        portfoliourl: "",
+        city: "",
+        state: "",
+        country: "",
+        summary: "",
+        educations: [  {
+                nstitution_name: "",
+                institution_location:"",
+                degree: "",
+                field_study: "",
+                education_starting_year: "",
+                education_graduation_year:"",
+                education_achivements:"",
+            },
+        ],
+        experiences: [
+            {
+                job_title: "",
+                company: "",
+                job_city: "",
+                job_country: "",
+                job_starting_year: "",
+                job_ending_year: "",
+                job_description: "",
+            },
+
+        ],
+        skills: [],
+        languages: []
+    });
     const handleSubmitResume = () => {
         useEffect(() => {
             localStorage.setItem('userResume', JSON.stringify(resumeData))

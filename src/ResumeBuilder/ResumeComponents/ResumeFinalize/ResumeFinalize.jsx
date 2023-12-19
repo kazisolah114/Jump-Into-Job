@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useUserContext } from '../../../UserContext/UserContext';
 import AddLanguages from './AddLanguages';
 import './ResumeFinalize.css';
 
 const ResumeFinalize = () => {
-    const { currentStep, setCurrentStep } = useUserContext();
+    const { currentStep, setCurrentStep,resumeData } = useUserContext();
+
+
+    const sendResume = useCallback(()=>{
+
+        console.log(resumeData)
+    });
     return (
         <div className='resume-finalize'>
             {/* <div className="resume-finalize-container container"> */}
@@ -44,9 +50,9 @@ const ResumeFinalize = () => {
             </div>
             <div className="resume-prev-next-buttons">
                 <button className='prev-button' onClick={() => setCurrentStep(currentStep - 1)}>Previous</button>
-                <button className='next-button'>Save & Preview</button>
+                <button className='next-button' onClick={()=> {sendResume()}}>Save & Preview</button>
             </div>
-            {/* </div> */}
+
         </div>
     );
 };

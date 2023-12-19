@@ -40,7 +40,7 @@ const AddLanguages = () => {
             </div>
             <ul className="skills-list">
                 {
-                    resumeData?.languages?.map((language, index) => <li className='skill'>
+                    resumeData?.languages?.map((language, index) => <li className='skill' key={index}>
                         <p>{language}</p>
                         <button onClick={() => handleRemoveLanguage(index)}><FaTrashAlt /></button>
                     </li>)

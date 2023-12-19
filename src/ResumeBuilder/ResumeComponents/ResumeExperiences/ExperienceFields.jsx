@@ -44,13 +44,13 @@ function EperienceFiels({ props }) {
   }, [formIndex]);
 
   const updateResumeData = useCallback((index, experienceFields) => {
-    const resumeEducations = resumeData.experiences;
+    const resumeExperiences = resumeData.experiences;
 
     //check if the item is in the array
-    resumeEducations[index] = experienceFields;
-    console.log(resumeEducations);
+    resumeExperiences[index] = experienceFields;
+    console.log(resumeExperiences);
     setResumeData((prev) => {
-      return { ...prev, educations: resumeEducations };
+      return { ...prev, experiences: resumeExperiences };
     });
   });
 

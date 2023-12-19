@@ -10,6 +10,16 @@ const ResumePreview = ({ selectedTemplate }) => {
                 <div>
                     <p>{resumeData.firstName}</p>
                     <p>{resumeData.lastName}</p>
+                    <p>{resumeData.email}</p>
+                    <p>{resumeData.phone}</p>
+                    <p>{resumeData.title}</p>
+                    <p>{resumeData.linkedinurl}</p>
+                    <p>{resumeData.portfoliourl}</p>
+                    <p>{resumeData.city}</p>
+                    <p>{resumeData.state}</p>
+                    <p>{resumeData.country}</p>
+                    <p>{resumeData.summary}</p>
+
                     <>{resumeData.educations.map((education)=>{
                     return<div key ={education.institution_name}>
                     <p>{education.institution_name}</p>
