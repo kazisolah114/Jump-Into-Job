@@ -1,7 +1,9 @@
 "use client";
+import SaveDismissButtons from "@/ResumeBuilder/Layout/Button/SaveDismissButtons";
 import React, { useState, useCallback, useEffect } from "react";
 
 function EducationFields({ props }) {
+  
   const [index, setIndex] = useState(0);
 
   const [educationFields, setEducationFields] = useState({});
@@ -170,23 +172,7 @@ function EducationFields({ props }) {
           value={resumeData.educations[index]?.education_achivements}
         ></textarea>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          width: "200px",
-          marginTop: "30px",
-        }}
-      >
-        <button>Dismiss</button>
-        <div
-          onClick={() => {
-            saveChanges()
-          }}
-        >
-          Save
-        </div>
-      </div>
+      <SaveDismissButtons  props={{state,setState}}/>
     </form>
   );
 }

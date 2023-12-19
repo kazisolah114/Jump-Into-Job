@@ -1,17 +1,33 @@
-import React from 'react';
+"use client"
+import React, { useCallback, useEffect } from 'react';
 import { FaPencilAlt, FaTrashAlt } from 'react-icons/fa';
 
-const PreviewExperiences = ({resumeData, setEditExperience, editExperience, setDeleteExperience, deleteExperience}) => {
-    const len = resumeData.experiences.length;
+const PreviewExperiences = ({props}) => {
 
+    const {resumeData ,setResumeData,state,setState} = props;
+    useEffect(() => {
+        if(state.type =='delete')
+              {
+                deleteExperience(state.id)
+                setState({ type : 'list-view', id : resumeData.educations.length-1})
+    
+              }   
+        
+       }, [state])
+    
+    
+
+        const deleteExperience = useCallback((index)=>{
+        const educations = resumeData.educations;
+        educations.splice(index, 1);
+        setResumeData({...resumeData,educations: educations})
+        console.log(educations)});
+         
+    
+    
     return <>
     {resumeData&& resumeData.experiences.map((experience,key) =>{
 
-        //check if the last item is in editng mode
-        if (len>1 && key==len-1){
-
-            return <></>
-        }
 
         const {job_title, company, job_city, job_country, job_starting_year, job_ending_year} = experience;
         return (
@@ -29,9 +45,8 @@ const PreviewExperiences = ({resumeData, setEditExperience, editExperience, setD
                 </div>
             </div>
             <div className='preview-actions'>
-                {/* {console.log('hi there')} */}
-                <button className='edit' onClick={() => setEditExperience(key) }><FaPencilAlt /></button>
-                <button className='delete' onClick={() => setDeleteExperience(key)}><FaTrashAlt /></button>
+                <button className='edit' onClick={() => setState({type: 'update', id : state.id}) }><FaPencilAlt /></button>
+                <button className='delete' onClick={() => setState({type: 'delete', id : state.id})}><FaTrashAlt /></button>
             </div>
         </div>
     );

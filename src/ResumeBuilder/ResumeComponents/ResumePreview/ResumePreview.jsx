@@ -33,6 +33,7 @@ const ResumePreview = ({ selectedTemplate }) => {
                     <p>{job.job_country}</p>
                     <p>{job.job_starting_year}</p>
                     <p>{job.job_ending_year}</p>
+                    <p>{job.job_description}</p>
 
                         </>
                     })
